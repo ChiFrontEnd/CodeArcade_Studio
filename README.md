@@ -3,7 +3,7 @@
 
 ## 📌 Overview
 
-This repository contains **production-ready T-SQL scripts** for SQL Server administration, monitoring, and troubleshooting, developed based on real-world DBA experience.
+Welcome to my personal collection of web-based games! This repository serves as a centralized hub for my browser-based game development projects, focusing on logic, user interaction, and clean code.
 
 ---
 
@@ -12,28 +12,30 @@ This repository contains **production-ready T-SQL scripts** for SQL Server admin
 ```text
 Games/
 │
-│   ├── Hangman/
-│   ├── Maze/
-│
-└── README.md
+├── Hangman/         # Word-puzzle game (HTML/CSS/JS)
+├── Maze/            # Procedural maze generation game (HTML/CSS/JS)
+└── README.md        # This documentation
 ```
 
-📊 Available Modules
+🎮 Available Games
 ---
-🔹 Hangman: Contains scripts related to SQL Server health monitoring and diagnostics.
+1. Hangman Game : 
+A classic word-puzzle game where players guess letters to reveal a hidden word before the hangman figure is fully drawn.
 
-  📂 Folder:  [Monitoring](Monitoring)  
+2. Maze Game : 
+An interactive puzzle game where players navigate a procedurally generated maze to reach the house.
 
 
 🎯 Purpose of This Repository
 ---
-  *  Centralized location for reusable SQL Server DBA scripts.
+To practice and demonstrate web development skills, including algorithmic thinking and DOM manipulation.
 
-  *  Focus on proactive monitoring and operational visibility.
+To maintain a modular repository where each game is developed independently as a sub-project.
 
-  *  Continuous enhancement with additional DBA utilities
 
 👧 Author
 ---
-      Auther Name: Trupti Y. Sabale
-      Profession:  Junior DBA
+      Auther Name  :   Trupti Y. Sabale
+      Created By   :   1-Jul-2026
+      Updtaed By   :   1-Jul-2026
+      Profession   :   Junior DBA
