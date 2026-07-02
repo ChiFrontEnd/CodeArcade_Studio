@@ -1,6 +1,6 @@
-# 🧩 Maze Escape
+# 🎮 Hangman Game
 
-Maze Escape is a browser-based puzzle game built with **HTML, CSS, and JavaScript**.  
+Hangman game is a browser-based puzzle game built with **HTML, CSS, and JavaScript**.  
 Your mission: guide the player 😊 through a procedurally generated maze and reach the 🏠 house.  
 Each level gets progressively larger and more challenging, testing your logic and patience.
 
@@ -19,7 +19,6 @@ Each level gets progressively larger and more challenging, testing your logic an
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Open `index.html` in your browser.
-3. Press **Start Game** and begin your maze adventure!
 
 ---
 
@@ -27,6 +26,7 @@ Each level gets progressively larger and more challenging, testing your logic an
 ```text
 MazeGame/
 │
+├── Images/          # All Images and .gif
 ├── index.html       # Main game page
 │── Style.css        # Game styling
 │── Script.js        # Game logic (maze generation, movement, levels)
@@ -57,8 +57,8 @@ For major changes, please open an issue first to discuss what you’d like to im
 ## 🧑‍💻 Author
 ---
     Auther Name:     Trupti Y. Sabale  
-    Created:         29-Jan-2026
-    Updated:         -
+    Created:         01-Jul-2026
+    Updated:         01-Jul-2026
 
 ---
 
