@@ -38,7 +38,7 @@ Hangman/
 ---
 
 ## 🖼️ Screenshots
-![Screenshot of Gallery](Images/Image.PNG)
+![Screenshot of Gallery](images/Image.PNG)
 
 ---
 
