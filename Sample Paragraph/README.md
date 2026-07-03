@@ -2,18 +2,15 @@
 
 A clean, professional, and classy placeholder text generator designed for designers and developers. 
 
-## 🚀 Features
+---
 
+## 🚀 Features
 - **Professional Typography:** Uses the Merriweather Serif font for a classic, high-end reading experience.
 - **Dynamic Content:** Generates unique paragraphs with randomized sentence lengths to mimic natural writing.
 - **Minimalist Design:** A clean, distraction-free interface built for efficiency.
 - **Responsive Layout:** Perfectly centered and readable across all device sizes.
 
-## 🛠 Tech Stack
-
-- **HTML5:** Semantic markup for structure.
-- **CSS3:** Modern styling with Flexbox and system-wide font stacks.
-- **JavaScript:** Custom logic for dynamic and random content generation.
+---
 
 ## 📖 How to Use
 
@@ -21,12 +18,57 @@ A clean, professional, and classy placeholder text generator designed for design
 2. Click the **Generate** button.
 3. The generator will instantly produce the text, ready for your design mockups.
 
-## 💻 Installation
+---
 
-No installation required! You can run this project directly in your browser:
-1. Clone the repository: `git clone https://github.com/your-username/your-repo-name.git`
-2. Open `index.html` in any modern web browser.
+## 🚀 Getting Started
+1. Clone or download this repository.
+2. Open `index.html` in your browser to start playing.
 
-## 📄 License
+---
 
-This project is licensed under the **MIT License**. Feel free to use, modify, and distribute it for your own projects.
+## 📂 Project Structure
+```text
+Sample Paragraph/
+│
+├── Images/           # Images
+├── index.html        # Main game structure
+├── Style.css         # Responsive styling and animations
+├── Script.js         # Core game logic
+└── README.md         # Documentation
+```
+
+---
+
+## 🖼️ Screenshots
+![Screenshot of Gallery](images/Image.PNG)
+
+---
+
+## 🛠 Tech Stack
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/BOOTSTRAP-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+  <img src="https://img.shields.io/badge/JQUERY-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
+  <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <img src="https://img.shields.io/badge/WINDOWS-0078D4?style=for-the-badge&logo=windows&logoColor=white">
+</div>
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome!  
+For major changes, please open an issue first to discuss what you’d like to improve.  
+
+---
+
+## 🧑‍💻 Author
+    Auther Name:     Trupti Y. Sabale  
+    Created:         01-Jul-2026
+    Updated:         01-Jul-2026
+
+---
+
+## 📜 License
+This project is for personal/educational use only.
