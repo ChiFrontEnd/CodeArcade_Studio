@@ -12,7 +12,7 @@
 
 ---
 
-## 📸 Screenshots
+## 🖼️ Preview
 <p align="center">
   <img src="images/Output.PNG" alt="Screenshot">
 </p>
