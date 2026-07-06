@@ -1,0 +1,58 @@
+const articles = [
+  {
+    id: 1,
+    title: 'the WET Codbase',
+    date: new Date(2020, 9, 4),
+    length: 11,
+    snippet: `I'm baby ramps kombucha gluten-free ennui swag tattooed street art. Marfa biodiesel letterpress blue bottle subway tile, pop-up pok pok of.`,
+  },
+  {
+    id: 2,
+    title: 'goodby, clean code',
+    date: new Date(2019, 10, 22),
+    length: 5,
+    snippet: `Biodiesel artisan seitan plaid sriracha copper mug venmo shabby chic. Kickstarter raclette kombucha, yr post-ironic jianbing try-hard flexitarian vaporware normcore.`,
+  },
+  {
+    id: 3,
+    title: 'my decade in review',
+    date: new Date(2018, 7, 11),
+    length: 5,
+    snippet: `Direct trade shabby chic four dollar toast, tilde actually try-hard bicycle rights aesthetic forage. Meditation keytar asymmetrical tacos artisan truffaut. Pabst jean shorts roof party scenester.`,
+  },
+  {
+    id: 4,
+    title: 'what are the react team principles',
+    date: new Date(2015, 5, 4),
+    length: 5,
+    snippet: `Selvage street art hammock affogato VHS. Mustache shaman literally wayfarers schlitz. Direct trade four loko narwhal VHS pop-up, chartreuse trust fund typewriter street art swag thundercats art party.`,
+  },
+    {
+    id: 5,
+    title: 'Understanding SQL Server Backups',
+    date: new Date(2021, 3, 15),
+    length: 8,
+    snippet: `A practical guide to full, differential, and transaction log backups in SQL Server. Learn how to secure your data and automate backup jobs with SQL Server Agent.`,
+  },
+  {
+    id: 6,
+    title: 'Building a Portfolio with React',
+    date: new Date(2022, 6, 10),
+    length: 7,
+    snippet: `Step-by-step walkthrough of creating a recruiter-friendly portfolio using React, styled-components, and Netlify deployment. Includes tips for clean UI and responsive design.`,
+  },
+  {
+    id: 7,
+    title: 'Power BI for Beginners',
+    date: new Date(2023, 1, 5),
+    length: 6,
+    snippet: `Discover how to connect Power BI to SQL Server, transform data with Power Query, and design dashboards with custom themes. Perfect for students and junior DBAs.`,
+  },
+  {
+    id: 8,
+    title: 'Mastering Git Basics',
+    date: new Date(2024, 4, 20),
+    length: 5,
+    snippet: `Learn essential Git commands like init, add, commit, and push. Understand folder navigation in Git Bash and how to collaborate effectively using GitHub workflows.`,
+  },
+];
