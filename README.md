@@ -9,7 +9,7 @@ Welcome to CodeArcade Studio a collection of interactive, browser‑based projec
 
 ## 📁 Repository Structure
 ```text
-Games/
+CodeArcade Studio/
 │
 ├── 3D Card Animation/   # Card Animation (HTML/CSS/JS)
 ├── Amezon Clone/        # Amezon Website clone (HTML/CSS/JS)
