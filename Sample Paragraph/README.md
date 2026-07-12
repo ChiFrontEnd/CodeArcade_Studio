@@ -54,21 +54,3 @@ Sample Paragraph/
   <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white">
   <img src="https://img.shields.io/badge/WINDOWS-0078D4?style=for-the-badge&logo=windows&logoColor=white">
 </div>
-
----
-
-## 🤝 Contributing
-Pull requests are welcome!  
-For major changes, please open an issue first to discuss what you’d like to improve.  
-
----
-
-## 🧑‍💻 Author
-    Auther Name:     Trupti Y. Sabale  
-    Created:         01-Jul-2026
-    Updated:         01-Jul-2026
-
----
-
-## 📜 License
-This project is for personal/educational use only.
