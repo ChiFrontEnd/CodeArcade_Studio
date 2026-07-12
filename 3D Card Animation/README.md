@@ -1,13 +1,13 @@
-## 🃏 3D Card Animation
-
-## 📌 Overview
-A creative 3D card animation built with CSS and JavaScript.
+## 🎡 3D Image Carousel
+***3D Image Carousel*** is an immersive, high-end visual showcase built using **pure CSS and HTML**. It features a smooth, rotating 3D gallery effect that brings static images to life with depth and perspective.
 
 ---
 
-## 🎯 Purpose
-- Explore CSS transforms and transitions.
-- Enhance UI interactivity.
+## ✨ Features
+* **3D Perspective -** Utilizes CSS `perspective` and `transform-style: preserve-3d` for a deep, cinematic rotation effect.
+* **Fluid Animation -** Smooth, continuous `infinite` keyframe animation for an engaging user experience.
+* **Responsive Layout -** Designed with modern CSS (`vmax`, `aspect-ratio`) to maintain its shape across various screen sizes.
+* **Polished Aesthetics -** Uses high-quality Unsplash imagery with subtle grayscale filtering and rounded corners.
 
 ---
 
@@ -20,7 +20,7 @@ A creative 3D card animation built with CSS and JavaScript.
 
 ## 📂 Project Structure
 ```text
-3D Card Animation/
+3d_carousel/
 │
 ├── index.html        # Main game structure
 ├── Style.scss        # styling
@@ -38,6 +38,9 @@ A creative 3D card animation built with CSS and JavaScript.
 
 ---
 
-## 🚀 Features
-- Hover‑based 3D animation.
-- Responsive card layout.
+## 📌 Future Enhancements
+* **Interactive Controls -** Add mouse drag functionality to allow users to rotate the carousel manually.
+* **Hover Effects -** Implement pause-on-hover logic to let users inspect individual images.
+* **Dynamic Content -** Use JavaScript to fetch images from an API (like Unsplash API) instead of hardcoding them.
+* **Light/Dark Mode -** Add a toggle for different ambient backgrounds.
+* **Responsive Scaling -** Further refine the `font-size` and `perspective` values for ultra-wide monitors.
