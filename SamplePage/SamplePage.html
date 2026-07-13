@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fcfaf7;
+            font-family: 'Georgia', serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 60px; /* Thoda kam kiya */
+            max-width: 800px; /* Container ko limit kiya */
+            padding: 20px;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .text-content h1 {
+            color: #241d16;
+            font-size: 2.2rem; /* Size kam kiya */
+            margin-bottom: 15px;
+        }
+
+        .text-content p {
+            color: #5a544e;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+
+        /* Print Details List */
+        .print-specs {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            color: #241d16;
+            font-size: 0.9rem;
+        }
+        .print-specs li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .print-specs li::before {
+            content: "•";
+            color: #d9a441;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            padding: 12px 25px; /* Size balance kiya */
+            background: #241d16;
+            color: #fff7eb;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .hero-art { 
+            position: relative; 
+            flex-shrink: 0; 
+        }
+
+        .frame { 
+            padding: 12px; /* Frame ki thickness kam ki */
+            background: #fffaf2; 
+            border: 1px solid rgba(36, 29, 22, 0.16); 
+            box-shadow: 0 15px 30px rgba(36, 29, 22, 0.1); 
+            transform: rotate(2deg); 
+        }
+
+        .frame img { 
+            height: 500px; /* Height choti aur perfect ki */
+            display: block; 
+            max-width: 100%; 
+            object-fit: cover; 
+        }
+
+        .floating-card { 
+            position: absolute; 
+            left: -20px; 
+            bottom: 20px; 
+            padding: 12px 16px; 
+            border-radius: 12px; 
+            background: #241d16; 
+            color: #fff7eb;
+            font-size: 0.8rem;
+            box-shadow: 0 10px 20px rgba(36, 29, 22, 0.2);
+        }
+
+        .floating-card span {
+            display: block;
+            margin-bottom: 2px;
+            color: #d9a441;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-content">
+            <h1>Art that tells a story.</h1>
+            <p>Explore our latest collection of hand-picked prints. Perfect for your home, office, or creative space. Quality that lasts a lifetime.</p>
+            <!-- Print Related Details -->
+            <ul class="print-specs">
+                <li>High-resolution 300 DPI files</li>
+                <li>Instant digital download</li>
+                <li>Includes A4, A3, and US Letter sizes</li>
+                <li>Optimized for professional framing</li>
+            </ul>
+            <a href="#" class="cta-button">Print</a>
+        </div>
+
+        <div class="hero-art">
+            <div class="frame">
+                <img src="https://assets.codepen.io/11990995/print-000.png" alt="Landscape" />
+            </div>
+            <div class="floating-card">
+                <span>New drop</span>
+                <strong>6 printable pieces</strong>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
