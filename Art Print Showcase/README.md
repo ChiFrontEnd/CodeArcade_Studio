@@ -28,6 +28,7 @@
 Art-Print-Showcase/
 │
 ├── index.html        # Main landing page structure
+└── README.md            # This documentation
 
 ```
 
