@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cookbook Recipe's</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/arcade/64/cookbook.png">
+  <!-- styles -->
+  <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>🍗 Recipe Cookbook 🍗</h1>
+  </header>
+
+  <!-- Index Page -->
+  <div class="index">
+    <button onclick="showCategory('Breakfast')"> 🍳 Breakfast & Brunch</button>
+    <button onclick="showCategory('Main')"> 🍝 Main Course</button>
+    <button onclick="showCategory('Snacks')"> 🍟🌮 Snacks & Street Food</button>
+    <button onclick="showCategory('Sweets')"> 🍰 Desserts & Baking</button>
+  </div>
+
+  <br><br>
+
+  <div class="category" id="Breakfast" style="display:none;">
+
+    <div class="recipe-card" id="card1">
+      <div class="content">
+        <h1>Honey Drenched Toast</h1>
+        <p class="meta">⏱️ Prep 5 min | 🔥 Cook 5 min | 👥 Serves 2</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+
+        <div class="image-row">
+          <img src="Images/HoneyToast1.jpg" alt="Honey Drenched Toast">
+          <img src="Images/HoneyToast2.jpg" alt="Honey Drenched Toast">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>4 slices thick-cut brioche or sourdough bread</li>
+          <li>3 tbsp unsalted butter</li>
+          <li>1/4 cup high-quality honey</li>
+          <li>Optional: Pinch of sea salt</li>
+          <li>Optional: Fresh berries for serving</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Toast the Bread:</strong> In a skillet, melt 1 tablespoon of butter over medium heat. Add the
+            bread slices and toast until golden brown on both sides.</li>
+          <li><strong>Prepare the Honey:</strong> If the honey is thick, gently warm it in a small saucepan or microwave
+            for 10 seconds until it has a pourable consistency.</li>
+          <li><strong>Assemble:</strong> Stack the warm toast slices on a plate.</li>
+          <li><strong>Serve:</strong> Generously drizzle the warm honey over the top, letting it soak into the bread.
+            Sprinkle with a tiny pinch of sea salt if desired, and serve immediately.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card2">
+      <div class="content">
+        <h1>Avocado & Egg Toast</h1>
+        <p class="meta">⏱️ Prep 5 min | 🔥 Cook 5 min | 👥 Serves 1</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/AvocadoToast1.jpg" alt="Avocado Toast">
+          <img src="Images/AvocadoToast2.jpg" alt="Avocado Toast">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>1 slice thick sourdough bread</li>
+          <li>1/2 ripe avocado, sliced</li>
+          <li>1 large egg</li>
+          <li>Red pepper flakes, salt, and pepper</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Toast the bread:</strong> Toast the bread until crisp.</li>
+          <li><strong>Prepare the Egg:</strong> Fry the egg in a pan to your preferred doneness (sunny side up
+            recommended).</li>
+          <li><strong>Prepare the Avocado:</strong> Mash or fan out the avocado on the toast, top with the fried egg.
+          </li>
+          <li><strong>Serve:</strong> Season with salt, pepper, and red pepper flakes.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card3">
+      <div class="content">
+        <h1>Cherry Topped Pancakes</h1>
+        <p class="meta">⏱️ Prep 10 min | 🔥 Cook 10 min | 👥 Serves 2</p>
+        <p class="rating">⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Pancakes1.jpg" alt="Cherry Pancakes">
+          <img src="Images/Pancakes2.jpg" alt="Cherry Pancakes">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>For the Pancakes:</i></b></li>
+          <ul>
+            <li>150g all-purpose flour</li>
+            <li>1 tbsp sugar</li>
+            <li>1 tsp baking powder</li>
+            <li>1/4 tsp salt</li>
+            <li>1 large egg</li>
+            <li>200ml whole milk</li>
+            <li>2 tbsp melted butter</li>
+          </ul>
+          <li><strong><i>For the Cherry Topping:</i></strong></li>
+          <ul>
+            <li>150g fresh or frozen cherries (pitted)</li>
+            <li>2 tbsp maple syrup or honey</li>
+            <li>1 tsp lemon juice</li>
+          </ul>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Prepare the Topping:</strong> In a small saucepan, combine the cherries, syrup, and lemon juice.
+            Cook over medium heat for 5–7 minutes until the cherries soften and release their juices into a syrup
+            consistency. Set aside.</li>
+          <li><strong>Mix Dry Ingredients:</strong> In a large mixing bowl, whisk together the flour, sugar, baking
+            powder, and salt.</li>
+          <li><strong>Combine Wet Ingredients:</strong> In a separate bowl, whisk the egg, milk, and melted butter. Pour
+            this into the dry ingredients and stir until just combined (a few lumps are fine).</li>
+          <li><strong>Cook Pancakes:</strong> Heat a non-stick skillet over medium heat with a little butter. Scoop 1/4
+            cup of batter per pancake onto the skillet. Cook until bubbles form on the surface, then flip and cook until
+            golden brown (about 2 minutes per side).</li>
+          <li><strong>Assemble:</strong> Stack the warm pancakes on a plate. Pour the warm cherry mixture over the top,
+            allowing the syrup to drizzle down the sides. Serve immediately.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="category" id="Main" style="display:none;">
+
+    <!-- Crispy Korean Fried Chicken Rice Bowl -->
+    <div class="recipe-card" id="card4">
+
+      <div class="content">
+        <h1>Crispy Korean Fried Chicken Rice Bowl</h1>
+        <p class="meta">⏱️ Prep 20 min | 🔥 Cook 25 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+
+        <!-- IMAGE SECTION SIDE BY SIDE -->
+        <div class="image-row">
+          <img src="Images/Crispy Korean Fried Chicken Rice Bowl1.jpg" alt="Crispy Korean Fried Chicken Rice Bowl">
+          <img src="Images/Crispy Korean Fried Chicken Rice Bowl2.jpg" alt="Crispy Korean Fried Chicken Rice Bowl">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>For the Chicken:</i></b>
+            <ul>
+              <li>600 g boneless chicken thighs, cut into bite-sized pieces</li>
+              <li>1 cup buttermilk</li>
+              <li>1 tsp salt</li>
+              <li>1/2 tsp black pepper</li>
+              <li>1 tsp garlic powder</li>
+              <li>1 tsp onion powder</li>
+            </ul>
+          </li>
+
+          <li><b><i>For the Coating:</i></b>
+            <ul>
+              <li>1 cup all-purpose flour</li>
+              <li>1/2 cup cornstarch</li>
+              <li>1 tsp paprika</li>
+              <li>1 tsp baking powder</li>
+              <li>1/2 tsp salt</li>
+              <li>Vegetable oil, for frying</li>
+            </ul>
+          </li>
+
+          <li><b><i>For the Korean Sauce:</i></b>
+            <ul>
+              <li>3 tbsp gochujang (Korean chili paste)</li>
+              <li>2 tbsp honey</li>
+              <li>2 tbsp soy sauce</li>
+              <li>1 tbsp brown sugar</li>
+              <li>2 cloves garlic, minced</li>
+              <li>1 tbsp rice vinegar</li>
+              <li>1 tsp sesame oil</li>
+            </ul>
+          </li>
+
+          <li><b><i>For the Rice Bowl:</i></b>
+            <ul>
+              <li>4 cups cooked jasmine rice</li>
+              <li>4 fried or soft-boiled eggs</li>
+              <li>1 tbsp sesame seeds</li>
+              <li>2 tbsp green onions, sliced</li>
+              <li>Lime wedges, for serving</li>
+              <li>Fresh cilantro, for garnish (optional)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Marinate the Chicken:</strong> Combine the chicken, buttermilk, salt, black pepper, garlic powder,
+            and onion powder in a bowl. Marinate for 20–30 minutes.</li>
+
+          <li><strong>Prepare the Coating:</strong> Mix the flour, cornstarch, paprika, baking powder, and salt in a
+            shallow bowl. Coat each piece of marinated chicken evenly.</li>
+
+          <li><strong>Fry the Chicken:</strong> Heat vegetable oil to 175°C (350°F). Fry the chicken in batches for 6–8
+            minutes, until golden brown and crispy. Drain on a wire rack or paper towels.</li>
+
+          <li><strong>Make the Korean Sauce:</strong> In a small saucepan, combine gochujang, honey, soy sauce, brown
+            sugar, garlic, rice vinegar, and sesame oil. Simmer for 2–3 minutes, stirring until smooth and slightly
+            thickened.</li>
+
+          <li><strong>Coat the Chicken:</strong> Add the fried chicken to a large bowl and pour the warm Korean sauce
+            over it. Toss until every piece is evenly coated.</li>
+
+          <li><strong>Assemble the Bowl:</strong> Divide the steamed rice among serving plates. Arrange the glazed
+            chicken around the rice. Top with a fried or soft-boiled egg.</li>
+
+          <li><strong>Garnish &amp; Serve:</strong> Sprinkle with sesame seeds and sliced green onions. Garnish with
+            fresh cilantro and serve with lime wedges. Enjoy immediately while the chicken is hot and crispy.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biang Biang Noodles Card -->
+    <div class="recipe-card" id="card5">
+
+      <div class="content">
+        <h1>Biang Biang Noodles</h1>
+        <p class="meta">⏱️ Prep 30 min | 🔥 Cook 20 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+
+        <!-- IMAGE SECTION SIDE BY SIDE -->
+        <div class="image-row">
+          <img src="Images/Biang Biang Noodle recipe1.jpg" alt="Biang Biang Noodle recipe">
+          <img src="Images/Biang Biang Noodle recipe2.jpg" alt="Biang Biang Noodle recipe">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>For the Noodles:</i></b>
+            <ul>
+              <li>500 g all-purpose flour</li>
+              <li>250 ml warm water</li>
+              <li>1 tsp salt</li>
+              <li>1 tbsp vegetable oil</li>
+            </ul>
+
+          <li><b><i>For the Toppings:</i></b>
+            <ul>
+              <li>250 g beef, thinly sliced (optional)</li>
+              <li>2 heads bok choy</li>
+              <li>100 g bean sprouts</li>
+              <li>2 tbsp cilantro, chopped</li>
+              <li>2 cloves garlic, minced</li>
+              <li>2 stalks green onions, sliced</li>
+            </ul>
+
+          <li><b><i>For the Chili Oil Sauce:</i></b>
+            <ul>
+              <li>3 tbsp chili flakes</li>
+              <li>2 tbsp light soy sauce</li>
+              <li>1 tbsp Chinese black vinegar</li>
+              <li>1 tsp sugar</li>
+              <li>4 tbsp hot vegetable oil</li>
+              <li>to taste salt</li>
+            </ul>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Prepare the Dough:</strong> Mix flour, salt, and warm water until a smooth dough forms. Knead for
+            8–10 minutes, coat lightly with oil, cover, and let rest for 30 minutes.</li>
+          <l i><strong>Cook the Beef:</strong> Season the beef lightly with salt and pepper. Sear in a hot pan for 2–3
+            minutes until cooked through. Set aside.</li>
+            <li><strong>Prepare the Vegetables:</strong> Blanch the bok choy and bean sprouts in boiling water for 1–2
+              minutes. Remove and drain.</li>
+            <li><strong>Stretch the Noodles:</strong> Divide the dough into equal portions. Roll each into a long strip
+              and
+              gently stretch into wide, belt-like noodles. Boil for 2–3 minutes until tender.</li>
+            <li><strong>Assemble the Bowl:</strong> Place the cooked noodles into serving bowls. Top with garlic, chili
+              flakes, green onions, cilantro, cooked beef, bok choy, and bean sprouts.</li>
+            <li><strong>Make the Chili Oil:</strong> Heat the vegetable oil until very hot. Carefully pour it over the
+              garlic and chili flakes to release their aroma.</li>
+            <li><strong>Season & Serve:</strong> Add light soy sauce, dark soy sauce, black vinegar, and sugar. Toss
+              everything together until evenly coated. Serve immediately while hot.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card6">
+      <div class="content">
+        <h1>Marina's House Lasagna</h1>
+        <p class="meta">⏱️ Prep 45 min | 🔥 Cook 60 min | 👥 Serves 8</p>
+        <p class="rating">⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Lasagna1.jpg" alt="Lasagna">
+          <img src="Images/Lasagna2.jpg" alt="Lasagna">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>Meat Sauce:</i></b></li>
+          <ul>
+            <li>1 tbsp olive oil</li>
+            <li>1 lb sweet Italian sausage:</li>
+            <li>1 lb ground beef</li>
+            <li>1 cup onion, diced</li>
+            <li>1/2 cup carrot, diced</li>
+            <li>2 cloves garlic, minced</li>
+            <li>2 jars high-quality marinara sauce</li>
+          </ul>
+
+          <li><b><i>Cheese Layer & Assembly:</i></b></li>
+          <ul>
+            <li>2 packs fresh lasagna sheets</li>
+            <li>16 oz ricotta cheese</li>
+            <li>1 cup Parmigiano-Reggiano, grated</li>
+            <li>1 large egg, beaten</li>
+            <li>1 lb mozzarella, grated
+            <li>Lasagna noodles, marinara sauce</li>
+            <li>Ground meat, ricotta, mozzarella</li>
+            <li>Fresh basil for garnish</li>
+          </ul>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Make the Sauce:</strong> Sauté sausage, beef, onion, and carrot in olive oil until browned. Add
+            garlic for 1 minute. Pour in the marinara sauce, reduce heat, and simmer for 20–30 minutes. Season to taste.
+          </li>
+          <li><strong>Prepare the Cheese: </strong> In a bowl, stir together the ricotta, Parmigiano-Reggiano, and
+            beaten egg until smooth.</li>
+          <li><strong>Layer: </strong> Preheat your oven to 375°F. In a 13 × 9-inch baking dish, spread 3/4 cup of sauce
+            on the bottom. Add layers of:
+            <ul>
+              <li>Fresh pasta sheets</li>
+              <li>Ricotta mixture</li>
+              <li>Meat sauce</li>
+              <li>Mozzarella</li>
+            </ul>
+            Repeat until the pan is full.
+
+          <li><strong>Bake & Rest:</strong>
+            Cover with foil and bake for 45–60 minutes. Remove foil for the last 5–10 minutes to brown the cheese. Let
+            rest for 15–20 minutes before slicing. Bake at 190°C (375°F) for 45-60 minutes until bubbling and golden.
+          <li><strong>Server: </strong> Rest for 10 minutes before serving with fresh basil.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card7">
+      <div class="content">
+        <h1>Chicken Katsu with Rice</h1>
+        <p class="meta">⏱️ Prep 15 min | 🔥 Cook 15 min | 👥 Serves 2</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Chicken Katsu with Rice1.jpg" alt="Chicken Katsu">
+          <img src="Images/Chicken Katsu with Rice2.jpg" alt="Chicken Katsu">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>For the Chicken Katsu:</i></b></li>
+          <ul>
+            <li>2 large chicken breasts, halved horizontally to make 4 thin fillets</li>
+            <li>1/3 cup all-purpose flour</li>
+            <li>2 large eggs, beaten</li>
+            <li>1 (1/2) cups Panko breadcrumbs</li>
+            <li>Salt and black pepper to taste</li>
+            <li>Neutral frying oil (e.g., vegetable or canola)</li>
+          </ul>
+        </ul>
+        <ul>
+          <li><b><i>For the Rice and Serving:</i></b></li>
+          <ul>
+            <li>2 cups Japanese short-grain or sushi rice, rinsed until the water runs clear</li>
+            <li>Water (per rice package instructions)</li>
+            <li>Tonkatsu sauce (store-bought or whisk together 2 tbsp ketchup, 1 tbsp Worcestershire sauce, 1 tbsp soy
+              sauce, and 1 tsp sugar)</li>
+          </ul>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Cook the Rice:</strong> Add the rinsed rice and water to a pot or rice cooker. Cook until fluffy.
+          </li>
+          <li><strong>Prepare the Chicken:</strong> Place the chicken fillets between sheets of parchment paper and
+            pound evenly to about (1/2)-inch thickness. Season generously with salt and pepper</li>
+          <li><strong>Bread the Chicken:</strong> Set up three shallow bowls: one with flour, one with beaten egg, and
+            one with Panko. Dredge each chicken piece in the flour (shake off excess), dip in the egg, and then press
+            firmly into the Panko until fully coated.</li>
+          <li><strong>Fry:</strong> Heat about (1/2)-inch of oil in a large skillet over medium-high heat. Fry the
+            chicken for 3 to 4 minutes per side until golden brown and the internal temperature reaches 74°C / 165°F.
+          </li>
+          <li><strong>Serve:</strong> Rest the cooked chicken on a wire rack for a minute, then slice into strips.
+            Divide the rice into bowls, top with the sliced chicken katsu, and drizzle heavily with Tonkatsu sauce</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card8">
+      <div class="content">
+        <h1>Tomato Basil Pasta</h1>
+        <p class="meta">⏱️ Prep 5 min | 🔥 Cook 10 min | 👥 Serves 2</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Tomato Basil Pasta1.jpg" alt="Tomato Basil Pasta">
+          <img src="Images/Tomato Basil Pasta2.jpg" alt="Tomato Basil Pasta">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>200g fusilli pasta</li>
+          <li>2 large tomatoes, diced</li>
+          <li>2 tbsp olive oil</li>
+          <li>Handful of fresh basil, chopped</li>
+          <li>1 tablespoon fresh garlic, minced</li>
+          <li>1 tablespoon unsalted butter</li>
+          <li>¼ cup fresh mozzarella or grated Parmesan cheese (optional, for serving)</li>
+          <li>Salt and black pepper to taste</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Cook the Pasta:</strong> Bring a large pot of water to a rolling boil and add the salt. Cook the
+            pasta according to the package directions until just al dente. Reserve ½ cup of the starchy pasta water,
+            then drain the pasta and set it aside.</li>
+          <li><strong>Sauté the Garlic:</strong> Heat the olive oil in a large skillet over a low flame. Add the minced
+            garlic and cook for 2 to 3 minutes until it becomes fragrant, ensuring it does not burn.</li>
+          <li><strong>Blister the Tomatoes:</strong> Turn the heat up to medium and add the cherry tomatoes along with
+            two small pinches of salt. Sauté for a few minutes until they soften and start to blister. Gently press down
+            on the tomatoes with the back of a wooden spoon to break them open and let their juices out.</li>
+          <li><strong>Build the Sauce:</strong> Pour in the reserved pasta water and let the mixture simmer on medium
+            heat for about 5 minutes until the liquid reduces into a light, glossy sauce.</li>
+          <li><strong>Toss and Finish:</strong> Add the cooked pasta and the butter to the skillet, tossing everything
+            vigorously to coat the strands evenly. Stir in the fresh basil leaves and mix for another 30 seconds until
+            the basil just begins to wilt from the residual heat.</li>
+          <li><strong>Garnish and Serve:</strong> Turn off the heat. Top with torn pieces of fresh mozzarella or a
+            dusting of Parmesan cheese. Serve immediately while piping hot.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card9">
+      <div class="content">
+        <h1>Classic Beef Tacos</h1>
+        <p class="meta">⏱️ Prep 15 min | 🔥 Cook 15 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Tacos1.jpg" alt="Beef Tacos">
+          <img src="Images/Tacos2.jpg" alt="Beef Tacos">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><strong>Taco Meat:</strong>
+            <ul>
+              <li>500g lean ground beef</li>
+              <li>1 tbsp olive oil or vegetable oil</li>
+              <li>1/2 cup tomato sauce or water</li>
+            </ul>
+          </li>
+          <li><strong>The Ultimate Spice Blend:</strong>
+            <ul>
+              <li>1 tbsp chili powder, 1 tsp ground cumin</li>
+              <li>1/2 tsp each: garlic powder, onion powder, dried oregano, salt, black pepper</li>
+              <li>1/4 tsp cayenne pepper (optional)</li>
+            </ul>
+          </li>
+          <li><strong>For Serving:</strong>
+            <ul>
+              <li>8 hard taco shells or soft flour tortillas</li>
+              <li>1 cup shredded lettuce, 1 cup shredded cheddar cheese</li>
+              <li>1 large tomato (diced), sour cream, and salsa</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Brown the Beef:</strong> Heat oil in a large skillet over medium-high heat. Add ground beef,
+            breaking it apart with a spoon. Cook for 5–7 minutes until browned. Drain excess grease.</li>
+          <li><strong>Season the Meat:</strong> Reduce heat to medium. Sprinkle all spices evenly over the beef. Toss
+            well to ensure the meat is fully coated.</li>
+          <li><strong>Simmer and Sauce:</strong> Pour in the tomato sauce or water. Stir and simmer for 3–5 minutes
+            until the liquid reduces into a thick, glossy coat. Remove from heat.</li>
+          <li><strong>Warm the Shells:</strong> Place hard taco shells on a baking sheet and heat at 180°C (350°F) for 3
+            minutes for maximum crispiness.</li>
+          <li><strong>Assemble:</strong> Spoon beef into shells. Layer with lettuce, tomatoes, cheddar cheese, and top
+            with sour cream or salsa. Serve immediately!</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card10">
+      <div class="content">
+        <h1>Classic Omurice</h1>
+        <p class="meta">⏱️ Prep 10 min | 🔥 Cook 10 min | 👥 Serves 1</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Omurice1.jpg" alt="Omurice">
+          <img src="Images/Omurice2.jpg" alt="Omurice">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><strong><i>For Chicken Fried Rice:</i></strong></li>
+          <ul>
+            <li>2 cups day-old cooked short-grain white rice (warmed slightly)</li>
+            <li>100g boneless chicken thigh, cut into ½-inch bite-sized cubes</li>
+            <li>½ medium yellow onion, finely chopped</li>
+            <li>¼ cup frozen peas and carrots blend</li>
+            <li>1 tbsp vegetable oil</li>
+            <li>3 tbsp ketchup</li>
+            <li>1 tsp soy sauce</li>
+            <li>Salt and black pepper to taste</li>
+          </ul>
+          </li>
+          <li><strong><i>For Omelette (Per Serving):</i></strong></li>
+          <ul>
+            <li>4 large eggs (split into 2 eggs per serving)</li>
+            <li>2 tsp milk or heavy cream</li>
+            <li>2 tsp unsalted butter (split for two pans)</li>
+            <li>Extra ketchup for drizzling</li>
+          </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <h4>Step 1: Cook the Fried Rice</h4>
+        <ol>
+          <li><strong>Sauté the Protein and Veggies:</strong> Heat vegetable oil in a large non-stick skillet over
+            medium heat. Add the chopped chicken pieces and cook until they turn white. Toss in the onions, peas, and
+            carrots, cooking for about 3 minutes until softened.</li>
+          <li><strong>Season the Mix:</strong> Push the ingredients to the outer edge of your skillet. Squeeze the
+            ketchup and soy sauce directly onto the cleared center of the hot pan, letting it bubble for 10 seconds to
+            caramelise slightly before tossing it completely into the chicken and vegetables.</li>
+          <li><strong>Incorporate the Rice:</strong> Add the cooked rice to the pan. Use your spatula to break up any
+            large clumps. Toss everything vigorously for 2 to 3 minutes until every grain of rice turns a uniform red
+            hue. Season lightly with salt and pepper.</li>
+          <li><strong>Mould the Rice:</strong> Divide the finished rice evenly between two small bowls or
+            football-shaped moulds. Pack it tightly, invert it onto the middle of two serving plates, and lift the bowl
+            to leave a neat mound of rice.</li>
+        </ol>
+
+        <h4>Step 2: Create the Omelette Jacket</h4>
+        <ol>
+          <li><strong>Whisk the Eggs:</strong> Crack 2 eggs into a small bowl with 1 teaspoon of milk and a pinch of
+            salt. Whisk intensely with chopsticks until the egg yolks and whites blend smoothly without stringy residue.
+          </li>
+          <li><strong>Cook the Egg:</strong> Melt 1 teaspoon of butter in a clean, small 8-inch non-stick skillet over
+            medium-low heat. Pour in the egg mixture. Stir quickly with your chopsticks while shaking the pan back and
+            forth to create small curds.</li>
+          <li><strong>Wrap or Slide:</strong> When the egg is mostly set on the bottom but still slightly wet and
+            custard-like on top, remove from heat. Gently slide the open omelette sheet directly over one of your
+            prepared rice mounds, letting it drape neatly over the edges like a blanket.</li>
+          <li><strong>Shape and Garnish:</strong> Place a clean piece of paper towel over the omelette and gently press
+            with your hands to sculpt it into a smooth, oval football shape. Drizzle a zig-zag decoration of fresh
+            ketchup across the top. Repeat for the second serving.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="category" id="Snacks" style="display:none;">
+
+    <div class="recipe-card active" id="card11">
+      <div class="content">
+        <h1>Garlic Butter Shrimp</h1>
+        <p class="meta">⏱️ Prep 10 min | 🔥 Cook 15 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+
+        <!-- IMAGE SECTION SIDE BY SIDE -->
+        <div class="image-row">
+          <img src="Images/Garlic Butter Shrimp1.PNG" alt="Garlic Butter Shrimp">
+          <img src="Images/Garlic Butter Shrimp2.png" alt="Garlic Butter Shrimp">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>500 g large shrimp, peeled & deveined</li>
+          <li>3 tbsp unsalted butter</li>
+          <li>2 tbsp olive oil</li>
+          <li>4 cloves garlic, finely minced</li>
+          <li>1 lemon, juiced</li>
+          <li>½ cup dry white wine (optional)</li>
+          <li>Salt & freshly ground black pepper, to taste</li>
+          <li>½ tsp chili flakes</li>
+          <li>2 tbsp fresh parsley, chopped</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Prepare shrimp:</strong> Pat shrimp dry with paper towels and season lightly with salt and pepper.
+          </li>
+          <li><strong>Sauté aromatics:</strong> Heat butter and olive oil in a skillet over medium heat. Add garlic and
+            cook until fragrant, about 1 minute.</li>
+          <li><strong>Cook shrimp:</strong> Add shrimp to the pan. Cook 2–3 minutes per side until pink and opaque.</li>
+          <li><strong>Deglaze:</strong> Pour in white wine (if using) and let it reduce for 2 minutes.</li>
+          <li><strong>Finish sauce:</strong> Stir in lemon juice, chili flakes, and parsley. Toss shrimp to coat and
+            serve
+            immediately.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grilled Butter Corn on the Cob -->
+    <div class="recipe-card" id="card12">
+
+      <div class="content">
+        <h1>Grilled Butter Corn on the Cob</h1>
+        <p class="meta">⏱️ Prep 10 min | 🔥 Cook 20 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️</p>
+
+        <!-- IMAGE SECTION SIDE BY SIDE -->
+        <div class="image-row">
+          <img src="Images/Grilled Butter Corn on the Cob1.jpg" alt="Grilled Butter Corn on the Cob">
+          <img src="Images/Grilled Butter Corn on the Cob2.jpg" alt="Grilled Butter Corn on the Cob">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>For the Corn:</i></b>
+            <ul>
+              <li>4 ears fresh sweet corn, husks removed</li>
+              <li>2 tbsp olive oil</li>
+            </ul>
+
+          <li><b><i>For the Garlic Butter:</i></b>
+            <ul>
+              <li>4 tbsp unsalted butter, melted</li>
+              <li>2 cloves garlic, minced</li>
+              <li>1 tbsp fresh parsley, finely chopped</li>
+              <li>1 tsp smoked paprika</li>
+              <li>1/2 tsp chili powder (optional)</li>
+              <li>1/2 tsp sea salt</li>
+              <li>1/4 tsp freshly ground black pepper</li>
+            </ul>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Prepare the Corn:</strong> Remove the husks and silk from the corn. Rinse well and pat dry.
+            Brush
+            each ear lightly with olive oil.</li>
+          <li><strong>Make the Garlic Butter:</strong> In a small bowl, combine melted butter, minced garlic, parsley,
+            smoked paprika, chili powder, salt, and black pepper. Mix until well combined.</li>
+          <li><strong>Grill the Corn:</strong> Preheat the grill to medium-high heat (200°C / 400°F). Grill the corn
+            for
+            15–20 minutes, turning every 3–4 minutes until lightly charred and evenly cooked.</li>
+          <li><strong>Brush with Butter:</strong> During the last 5 minutes of grilling, generously brush the garlic
+            butter over each ear of corn, turning frequently to coat all sides.</li>
+          <li><strong>Garnish:</strong> Remove the corn from the grill. Sprinkle with Parmesan cheese (if using) and
+            additional chopped parsley.</li>
+          <li><strong>Serve:</strong> Serve immediately with lime wedges on the side. Brush with any remaining garlic
+            butter before serving for extra flavor.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card13">
+      <div class="content">
+        <h1>Savory Pastry Cups</h1>
+        <p class="meta">⏱️ Prep 15 min | 🔥 Cook 20 min | 👥 Serves 6</p>
+        <p class="rating">⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/PastryCups1.jpg" alt="Savory Pastry Cups">
+          <img src="Images/PastryCups2.jpg" alt="Savory Pastry Cups">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>1 sheet pre-rolled puff pastry (thawed but cold)</li>
+          <li>1 tbsp olive oil or butter</li>
+          <li>200g button mushrooms, finely chopped</li>
+          <li>2 cloves garlic, minced</li>
+          <li>¼ cup cream cheese or goat cheese (at room temperature)</li>
+          <li>½ cup shredded mozzarella or Gruyère cheese</li>
+          <li>1 tsp fresh thyme leaves</li>
+          <li>Salt and black pepper to taste</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Prep the Oven and Tin:</strong> Preheat your oven to 200°C (400°F). Lightly grease a 12-cup mini
+            muffin tin with cooking spray or a touch of oil.</li>
+          <li><strong>Sauté the Filling:</strong> Heat the olive oil or butter in a pan over medium heat. Add the
+            chopped mushrooms and cook for 5 minutes until their moisture evaporates. Stir in the minced garlic and
+            thyme, cooking for 1 more minute until fragrant. Remove from heat, stir in the cream cheese until smooth,
+            and season with salt and pepper.</li>
+          <li><strong>Cut the Pastry Sheets:</strong> Unroll your cold puff pastry sheet onto a lightly floured surface.
+            Use a knife or pizza cutter to slice the sheet into 12 equal squares.</li>
+          <li><strong>Form the Pastry Cups:</strong> Gently press one pastry square into the bottom and up the sides of
+            each muffin tin slot, leaving the corners hanging slightly over the top edges. Prick the bottom of each
+            pastry cup a few times with a fork to prevent it from puffing up too much.</li>
+          <li><strong>Fill and Top:</strong> Spoon a generous tablespoon of the mushroom mixture into each pastry cup.
+            Top each one with a heavy sprinkle of shredded mozzarella or Gruyère cheese.</li>
+          <li><strong>Bake Until Golden:</strong> Bake for 12 to 15 minutes until the pastry edges turn a deep golden
+            brown and the cheese filling is bubbling hot. Let them cool in the tin for 2 minutes before transferring
+            them to a platter. Serve warm.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card14">
+      <div class="content">
+        <h1>Spicy Ramen Bowl</h1>
+        <p class="meta">⏱️ Prep 5 min | 🔥 Cook 5 min | 👥 Serves 1</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Ramen1.jpg" alt="Spicy Ramen">
+          <img src="Images/Ramen2.jpg" alt="Spicy Ramen">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><strong><i>For Spicy Soup Base:</i></strong>
+            <ul>
+              <li>2 packets instant ramen noodles (discard flavor packets)</li>
+              <li>4 cups low-sodium chicken or vegetable broth</li>
+              <li>2 tbsp chili oil or chili crisp</li>
+              <li>1 tbsp gochujang or Sriracha</li>
+              <li>2 tbsp soy sauce</li>
+              <li>1 tbsp toasted sesame oil</li>
+              <li>3 cloves garlic, minced</li>
+              <li>1 tsp fresh ginger, grated</li>
+            </ul>
+          </li>
+          <li><strong><i>For Toppings:</i></strong>
+            <ul>
+              <li>2 large eggs</li>
+              <li>2 stalks green onions, sliced</li>
+              <li>1 cup baby bok choy or spinach leaves</li>
+              <li>1 tbsp toasted sesame seeds</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Boil the Eggs:</strong> Boil eggs for 6 minutes and 30 seconds for a jammy yolk, then transfer to
+            ice water to stop cooking. Peel, slice in half, and set aside.</li>
+          <li><strong>Sauté the Aromatics:</strong> Heat sesame oil in a saucepan and cook garlic and ginger for 1
+            minute until fragrant.</li>
+          <li><strong>Build the Fiery Broth:</strong> Stir in gochujang (or Sriracha) and chili oil. Add broth and soy
+            sauce, bringing to a simmer for 5 minutes.</li>
+          <li><strong>Cook the Greens:</strong> During the last 2 minutes, add bok choy or spinach to the broth to wilt.
+          </li>
+          <li><strong>Cook the Noodles:</strong> Cook ramen noodles in a separate pot per package instructions (2–3
+            minutes) and drain well.</li>
+          <li><strong>Assemble the Bowl:</strong> Divide noodles into bowls, ladle hot broth and greens over them, and
+            top with eggs, green onions, and sesame seeds.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card15">
+      <div class="content">
+        <h1>Japanese BBQ Skewers</h1>
+        <p class="meta">⏱️ Prep 20 min | 🔥 Cook 15 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Skewers1.jpg" alt="BBQ Skewers">
+          <img src="Images/Skewers2.jpg" alt="BBQ Skewers">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><strong><i>For Sweet Soy Glaze (Tare Sauce):</i></strong>
+            <ul>
+              <li>1/2 cup soy sauce</li>
+              <li>1/2 cup mirin</li>
+              <li>1/2 cup sake</li>
+              <li>1/4 cup packed brown sugar</li>
+              <li>1 stalk green onion (green part only, smashed)</li>
+            </ul>
+          </li>
+          <li><strong><i>For Skewers:</i></strong>
+            <ul>
+              <li>500g (1 lb) boneless, skinless chicken thighs (cut into 1-inch cubes)</li>
+              <li>2 bunches Tokyo negi or thick scallions (cut into 1-inch pieces)</li>
+              <li>1 tbsp vegetable oil (for brushing)</li>
+              <li>8 bamboo skewers (soaked for 30 minutes)</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <h4>Step 1: Simmer the Sauce (Tare)</h4>
+        <ol>
+          <li><strong>Combine Ingredients:</strong> Stir soy sauce, mirin, sake, brown sugar, and the smashed green
+            onion in a small saucepan over medium-high heat.</li>
+          <li><strong>Reduce and Thicken:</strong> Bring to a boil, then simmer for 8–10 minutes until reduced by half
+            into a glossy glaze. Divide into two bowls (one for cooking, one for dipping).</li>
+        </ol>
+
+        <h4>Step 2: Assemble the Skewers</h4>
+        <ol>
+          <li><strong>Thread the Ingredients:</strong> Slide a cube of chicken followed by a piece of scallion onto a
+            soaked skewer.</li>
+          <li><strong>Repeat and Pack:</strong> Alternate until you have 3–4 pieces of meat per skewer, ending with
+            chicken. Press tightly together.</li>
+        </ol>
+
+        <h4>Step 3: Grill to Perfection</h4>
+        <ol>
+          <li><strong>Prep the Cooktop:</strong> Heat your grill or broiler to medium-high and grease grates with oil.
+          </li>
+          <li><strong>Initial Sear:</strong> Grill for 3–4 minutes to develop marks, then flip and cook for 3 minutes.
+          </li>
+          <li><strong>Glaze and Caramelize:</strong> Brush heavily with the cooking Tare, flip, and cook 1 more minute
+            until bubbling and caramelized. Coat once more and serve with clean dipping sauce.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card16">
+      <div class="content">
+        <h1>Steamed Bao Buns</h1>
+        <p class="meta">⏱️ Prep 60 min | 🔥 Cook 15 min | 👥 Serves 6</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Bao1.jpg" alt="Steamed Buns">
+          <img src="Images/Bao2.jpg" alt="Steamed Buns">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>350g (approx. 2 ¾ cups) all-purpose flour or low-protein wheat flour</li>
+          <li>2 tbsp white caster sugar</li>
+          <li>1 tsp instant yeast</li>
+          <li>1 tsp baking powder</li>
+          <li>180ml (approx. ¾ cup) lukewarm water or whole milk</li>
+          <li>1 tbsp vegetable oil (plus extra for brushing)</li>
+          <li>½ tsp fine salt</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <h4>Step 1: Make and Knead the Dough</h4>
+        <ol>
+          <li><strong>Activate the Yeast:</strong> Dissolve sugar and instant yeast in warm water or milk; let sit for 5
+            minutes until foamy.</li>
+          <li><strong>Mix the Dry Ingredients:</strong> Whisk flour, baking powder, and salt in a large bowl.</li>
+          <li><strong>Form a Dough:</strong> Stir in the wet mixture and oil until a shaggy dough forms.</li>
+          <li><strong>Knead Smooth:</strong> Knead by hand for 8-10 minutes (or 5 minutes by mixer) until smooth,
+            elastic, and non-sticky.</li>
+        </ol>
+
+        <h4>Step 2: Shape the Folded Buns</h4>
+        <ol>
+          <li><strong>The First Proof:</strong> Place dough in an oiled bowl, cover, and let rise in a warm spot for 1
+            to 1.5 hours until doubled.</li>
+          <li><strong>Divide and Roll:</strong> Punch down the dough, roll into a log, and slice into 10-12 pieces;
+            shape into balls.</li>
+          <li><strong>Create the Tongue Shape:</strong> Flatten each ball into an oval about ¼-inch thick.</li>
+          <li><strong>Brush and Fold:</strong> Brush the top with oil, place a small parchment square in the center, and
+            fold the oval in half like a taco.</li>
+        </ol>
+
+        <h4>Step 3: Steam to Perfection</h4>
+        <ol>
+          <li><strong>The Second Proof:</strong> Place folded buns on parchment squares in a steamer basket; rest for
+            15-20 minutes until puffy.</li>
+          <li><strong>Steam Gently:</strong> Steam over steady, medium heat.</li>
+          <li><strong>The Cool Down:</strong> Steam for exactly 10 minutes, then turn off the heat and let rest closed
+            for 5 minutes to prevent wrinkling. Remove the lid, discard the inner parchment, and add fillings!</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card17">
+      <div class="content">
+        <h1>Takoyaki</h1>
+        <p class="meta">⏱️ Prep 20 min | 🔥 Cook 15 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Takoyaki1.jpg" alt="Takoyaki">
+          <img src="Images/Takoyaki2.jpg" alt="Takoyaki">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><strong><i>For Thin Batter:</i></strong>
+            <ul>
+              <li>100g all-purpose or cake flour</li>
+              <li>340ml cold dashi stock</li>
+              <li>1 large egg</li>
+              <li>1 tsp soy sauce</li>
+              <li>¼ tsp salt</li>
+            </ul>
+          </li>
+          <li><strong><i>For Fillings:</i></strong>
+            <ul>
+              <li>80g cooked octopus, cut into ½-inch cubes</li>
+              <li>2 green onions, finely chopped</li>
+              <li>1 tbsp beni shoga (pickled ginger), chopped</li>
+              <li>¼ cup tenkasu (tempura scraps)</li>
+            </ul>
+          </li>
+          <li><strong><i>For Classic Toppings:</i></strong>
+            <ul>
+              <li>Takoyaki sauce, Kewpie mayo, Aonori, and Katsuobushi</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Whisk the Batter:</strong> Whisk egg, dashi, and soy sauce. Slowly sift in flour and salt until
+            smooth, thin, and watery.</li>
+          <li><strong>Preheat and Oil:</strong> Generously coat a takoyaki pan with oil over medium heat.</li>
+          <li><strong>Pour the First Layer:</strong> Fill each mold completely with batter; overflow is expected.</li>
+          <li><strong>Drop the Fillings:</strong> Place octopus in each hole and scatter green onions, ginger, and
+            tempura scraps over the griddle.</li>
+          <li><strong>The 90-Degree Flip:</strong> Once base edges are firm (2–3 minutes), use a skewer to trace
+            gridlines and turn each ball 90 degrees.</li>
+          <li><strong>Shape the Spheres:</strong> Sweep excess batter into the holes and rotate again to let liquid
+            batter cook, forming a sphere.</li>
+          <li><strong>Crisp and Rotate:</strong> Roll balls for 4–5 minutes, swapping positions for even heat until deep
+            golden-brown.</li>
+          <li><strong>Sauce and Serve:</strong> Serve hot, drizzled with takoyaki sauce, mayo, aonori, and bonito
+            flakes.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card18">
+      <div class="content">
+        <h1>Classic Pepperoni Pizza</h1>
+        <p class="meta">⏱️ Prep 20 min | 🔥 Cook 15 min | 👥 Serves 4</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Classic Pepperoni Pizza1.jpg" alt="Pepperoni Pizza">
+          <img src="Images/Classic Pepperoni Pizza2.jpg" alt="Pepperoni Pizza">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li><strong><i>For No-Knead Pizza Dough:</i></strong>
+            <ul>
+              <li>500g bread flour or Type 00 flour</li>
+              <li>1 tsp instant yeast</li>
+              <li>1 tsp fine salt</li>
+              <li>1 ½ cups lukewarm water</li>
+              <li>1 tbsp olive oil (plus extra for brushing)</li>
+            </ul>
+          </li>
+          <li><strong><i>For Pizza Toppings:</i></strong>
+            <ul>
+              <li>1 cup canned crushed San Marzano tomatoes (seasoned)</li>
+              <li>2 cups low-moisture, whole-milk mozzarella cheese, shredded</li>
+              <li>100g high-quality pepperoni, thinly sliced</li>
+              <li>¼ cup grated Parmesan cheese (optional)</li>
+              <li>Dried red pepper flakes or hot honey for serving</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <h4>Step 1: Prep the Dough and Oven</h4>
+        <ol>
+          <li><strong>Mix the Dough:</strong> Whisk flour, yeast, and salt; stir in water and oil until a sticky dough
+            forms.</li>
+          <li><strong>The First Rise:</strong> Cover tightly and let rest in a warm spot for 1–2 hours until doubled and
+            bubbly (or 24 hours in the fridge for flavor).</li>
+          <li><strong>Crank up the Heat:</strong> Preheat oven to 260°C (500°F) for at least 45 minutes.</li>
+        </ol>
+
+        <h4>Step 2: Shape and Assemble</h4>
+        <ol>
+          <li><strong>Divide and Stretch:</strong> Divide dough into two portions and gently stretch one into a 12-inch
+            circle on parchment paper.</li>
+          <li><strong>Sauce and Cheese:</strong> Spread ½ cup sauce over the base, leaving a border, and scatter 1 cup
+            of mozzarella uniformly.</li>
+          <li><strong>Load the Pepperoni:</strong> Arrange pepperoni slices in a single layer, placing them close
+            together.</li>
+        </ol>
+
+        <h4>Step 3: Bake Until Blistered</h4>
+        <ol>
+          <li><strong>Slide it In:</strong> Use a flat sheet or peel to slide the parchment onto your hot oven steel,
+            stone, or baking sheet.</li>
+          <li><strong>Bake to a Golden Crunch:</strong> Bake for 8–10 minutes at 260°C (500°F) until the crust is golden
+            and cheese is caramelized.</li>
+          <li><strong>Garnish and Slice:</strong> Dust with Parmesan, drizzle with hot honey if desired, cool for 2
+            minutes, then slice.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card19">
+      <div class="content">
+        <h1>Assorted Oden Cup</h1>
+        <p class="meta">⏱️ Prep 10 min | 🔥 Cook 20 min | 👥 Serves 1</p>
+        <p class="rating">⭐️⭐️⭐️⭐️</p>
+        <div class="image-row">
+          <img src="Images/Assorted Oden Cup1.jpg" alt="Assorted Oden Cup">
+          <img src="Images/Assorted Oden Cup2.jpg" alt="Assorted Oden Cup">
+        </div>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Dashi broth (soy sauce, mirin, sake base)</li>
+          <li>Assorted fish cakes (chikuwa, satsuma-age)</li>
+          <li>Boiled eggs</li>
+          <li>Tofu cubes</li>
+          <li>Skewers for serving</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+          <li>Simmer your dashi broth in a pot over low heat.</li>
+          <li>Add the fish cakes, tofu, and boiled eggs to the broth.</li>
+          <li>Let everything simmer gently until flavors are absorbed (about 15-20 minutes).</li>
+          <li>Serve in a deep cup or bowl, skewering the items as you add them for that classic street-food look.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="category" id="Sweets" style="display:none;">
+
+    <!-- Salted Caramel Cheesecake Card -->
+    <div class="recipe-card" id="card20">
+      <div class="content">
+        <h1>Salted Caramel Cheesecake</h1>
+        <p class="meta">⏱️ Prep 30 min | 🔥 Cook 55 min | ❄️ Chill 6 hrs | 👥 Serves 8</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+
+        <div class="image-row">
+          <img src="Images/Salted Caramel Cheesecake1.jpg" alt="Salted Caramel Cheesecake">
+          <img src="Images/Salted Caramel Cheesecake2.jpg" alt="Salted Caramel Cheesecake">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li><b><i>For the Crust:</i></b>
+            <ul>
+              <li>200 g digestive biscuits, crushed</li>
+              <li>100 g unsalted butter, melted</li>
+              <li>1 tbsp granulated sugar</li>
+              <li>1 tbsp vegetable oil</li>
+            </ul>
+          </li>
+
+          <li><b><i>For the Cheesecake Filling:</i></b>
+            <ul>
+              <li>500 g cream cheese, softened</li>
+              <li>150 g granulated sugar</li>
+              <li>2 large eggs</li>
+              <li>200 ml heavy cream</li>
+              <li>1 tsp vanilla extract</li>
+              <li>1 tbsp cornstarch</li>
+              <li>1 tbsp lemon juice</li>
+            </ul>
+          </li>
+
+          <li><b><i>For the Salted Caramel Sauce:</i></b>
+            <ul>
+              <li>200 g granulated sugar</li>
+              <li>60 g unsalted butter</li>
+              <li>120 ml heavy cream</li>
+              <li>1 tsp sea salt</li>
+              <li>1 tsp vanilla extract</li>
+            </ul>
+          </li>
+
+          <li><b><i>For the Topping:</i></b>
+            <ul>
+              <li>2 tbsp caramelized crushed nuts or toffee bits</li>
+              <li>Extra salted caramel sauce for drizzling</li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Prepare the Crust:</strong> Preheat the oven to 160°C (320°F). Combine crushed biscuits, melted
+            butter, and sugar. Press firmly into the bottom of a springform pan and bake for 10 minutes. Let cool.</li>
+          <li><strong>Make the Filling:</strong> Beat the cream cheese until smooth. Add sugar and mix well. Beat in the
+            eggs one at a time, then add heavy cream, vanilla extract, cornstarch, and lemon juice. Mix until silky
+            smooth.</li>
+          <li><strong>Bake the Cheesecake:</strong> Pour the filling over the cooled crust. Bake for 50–55 minutes, or
+            until the edges are set and the center has a slight wobble.</li>
+          <li><strong>Cool and Chill:</strong> Turn off the oven and leave the cheesecake inside with the door slightly
+            open for 1 hour. Refrigerate for at least 6 hours, preferably overnight.</li>
+          <li><strong>Prepare the Salted Caramel:</strong> Heat the sugar in a saucepan over medium heat until melted
+            and
+            amber in color. Stir in the butter until fully combined. Slowly whisk in the heavy cream, then add the sea
+            salt and vanilla extract. Allow to cool slightly.</li>
+          <li><strong>Decorate:</strong> Pour the salted caramel over the chilled cheesecake, letting it drip naturally
+            down the sides. Sprinkle caramelized nuts or toffee bits on top.</li>
+          <li><strong>Serve:</strong> Slice with a warm knife for clean cuts. Drizzle each slice with extra salted
+            caramel
+            sauce and enjoy chilled.</li>
+        </ol>
+
+        <div class="buttons">
+          <button onclick="nextCard()">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-card" id="card21">
+      <div class="content">
+        <h1>Classic Chocolate Chip Cookies</h1>
+        <p class="meta">⏱️ Prep 15 min | 🔥 Cook 12 min | 👥 Makes 18 cookies</p>
+        <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+
+        <div class="image-row">
+          <img src="Images/Cookies1.jpg" alt="Chocolate Chip Cookies">
+          <img src="Images/Cookies2.jpg" alt="Chocolate Chip Cookies">
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>250g all-purpose flour</li>
+          <li>1/2 tsp baking soda</li>
+          <li>150g unsalted butter, softened</li>
+          <li>100g granulated sugar</li>
+          <li>100g brown sugar</li>
+          <li>1 tsp vanilla extract</li>
+          <li>1 large egg</li>
+          <li>200g semi-sweet chocolate chips</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+          <li><strong>Preheat:</strong> Preheat your oven to 180°C (350°F) and line a baking sheet with parchment paper.
+          </li>
+          <li><strong>Cream Butter & Sugar:</strong> In a large bowl, beat the softened butter with both sugars until
+            creamy. Beat in the egg and vanilla.</li>
+          <li><strong>Combine Dry Ingredients:</strong> Stir in the flour and baking soda until just combined. Fold in
+            the chocolate chips.</li>
+          <li><strong>Bake:</strong> Scoop rounded tablespoons of dough onto the baking sheet. Bake for 10–12 minutes
+            until the edges are lightly golden.</li>
+          <li><strong>Cool:</strong> Let cookies cool on the baking sheet for 5 minutes before transferring to a wire
+            rack.</li>
+        </ol>
+        <div class="buttons">
+          <button onclick="prevCard()">Previous</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+  <!-- javascript -->
+  <script src="Script.js"></script>
+</body>
+
+</html>
