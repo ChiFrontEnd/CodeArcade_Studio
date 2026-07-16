@@ -13,13 +13,13 @@ CodeArcade Studio/
 │
 ├── 3D Card Animation/   # Card Animation (HTML/CSS/JS)
 ├── Amezon Clone/        # Amezon Website clone (HTML/CSS/JS)
+├── Art Print Showcase/  # Amezon Website clone (HTML/CSS/JS)
 ├── Cookbook/            # Recipe Cookbook (HTML/CSS/JS)
 ├── Foodies Cafe Manu/   # Cafe Manu (HTML/CSS/JS)
 ├── Grocery List/        # Grocery List (HTML/CSS/JS)
 ├── Hangman/             # Word-puzzle game (HTML/CSS/JS)
 ├── Light & Dark Mode/   # Light and Dark Theme (HTML/CSS/JS)
 ├── Maze/                # Procedural maze generation game (HTML/CSS/JS)
-├── Sample Page/         # Page create (HTML/CSS/JS)
 ├── Sample Paragraph/    # Sample Paragraph Generator (HTML/CSS/JS)
 ├── Wikipedia/           # Wikipedia Sample (HTML/CSS/JS)
 └── README.md            # This documentation
