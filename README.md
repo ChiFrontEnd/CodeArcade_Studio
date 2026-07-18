@@ -21,6 +21,7 @@ CodeArcade Studio/
 ├── Light & Dark Mode/   # Light and Dark Theme (HTML/CSS/JS)
 ├── Maze/                # Procedural maze generation game (HTML/CSS/JS)
 ├── Sample Paragraph/    # Sample Paragraph Generator (HTML/CSS/JS)
+├── Starry Night Moon/   # Sample Paragraph Generator (HTML/CSS/JS)
 ├── Wikipedia/           # Wikipedia Sample (HTML/CSS/JS)
 └── README.md            # This documentation
 ```
@@ -63,7 +64,7 @@ For major changes, please open an issue first to discuss what you’d like to im
 ## 🧑‍💻 Author
     Auther Name:     Trupti Y. Sabale  
     Created:         01-Jul-2026
-    Updated:         14-Jul-2026
+    Updated:         18-Jul-2026
 ---   
 
 ## 📜 License
