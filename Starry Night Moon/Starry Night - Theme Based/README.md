@@ -4,7 +4,7 @@
 ---
 
 ## ✨ Features
-* **Theme Switching:** Add a toggle to switch between different times of day (e.g., sunset, deep night, sunrise).
+* **Theme Switching:** Add a toggle to switch between different times of day (e.g., night, sunrise).
 
 ---
 
