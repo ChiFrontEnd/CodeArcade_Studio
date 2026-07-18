@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starry Night - Theme Switcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://img.icons8.com/keek/100/sparkling.png">
+  <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle">Change Time of Day</button>
+
+  <div class="sky">
+    <div class="star" style="top: 10%; left: 40%;"></div>
+    <div class="star" style="top: 20%; left: 80%;"></div>
+    <div class="star" style="top: 4%; left: 3%;"></div>
+    <div class="star" style="top: 50%; left: 30%;"></div>
+    <div class="star" style="top: 60%; left: 70%;"></div>
+    <div class="star" style="top: 36%; left: 50%;"></div>
+    <div class="star" style="top: 60%; left: 1%;"></div>
+    <div class="star" style="top: 45%; left: 94%;"></div>
+
+    <div class="moon"></div>
+  </div>
+
+  <div class="skyline"></div>
+  <div class="light"></div>
+  <div class="skyline"></div>
+
+  <!-- Elements referenced in your CSS but missing from the original DOM -->
+  <div id="left-white"></div>
+  <div id="right-white"></div>
+  <div id="top-white"></div>
+  <div id="lighting"></div>
+
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const body = document.body;
+    const themes = ['night', 'sunrise'];
+    let index = 0;
+
+    btn.addEventListener('click', () => {
+      // Remove previous class
+      body.classList.remove(themes[index]);
+      
+      // Increment index
+      index = (index + 1) % themes.length;
+      
+      // Add new class
+      body.classList.add(themes[index]);
+      
+      console.log('Current theme:', themes[index]);
+    });
+  </script>
+</body>
+</html>
