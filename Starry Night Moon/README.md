@@ -5,29 +5,27 @@
 ---
 
 ## ✨ Features
-
-* **Sophisticated Aesthetic -** Utilizes a warm, serif-based design with subtle shadows and rotation effects to give the art a "gallery-ready" feel.
-* **Floating UI Elements -** Includes a stylized card overlay on the hero art to highlight "New drops" or collections effectively.
-* **Responsive Layout -** Uses CSS Flexbox to ensure the text-and-image pairing looks great across different screen sizes.
-* **Print-Ready Details -** A clear, bulleted list section specifically tailored for showcasing technical print specifications (DPI, file sizes, etc.).
-* **Polished Typography -** Carefully balanced font hierarchy and spacing for a professional, high-end look.
+* **Procedural Skyline:** A complex city silhouette built entirely using CSS `clip-path` and multiple background gradients.
+* **Animated Elements:** 
+    * **Twinkling Stars:** Responsive, randomized star patterns with custom twinkle animations.
+    * **Moon Phase:** A stylized, glowing moon animation using radial gradients and shadows.
+* **Responsive Design:** Includes media queries to adjust the lighting effects for portrait-oriented mobile devices.
+* **Zero Dependencies:** Pure HTML and CSS—no frameworks or JavaScript libraries required.
 
 ---
 
 ## 🚀 Getting Started
-
 1. Clone or download this repository.
 2. Open `index.html` in your browser to view the showcase.
 
 ---
 
 ## 📂 Project Structure
-
 ```text
-Art-Print-Showcase/
+Starry Night Moon/
 │
-├── index.html        # Main landing page structure
-├── index.html        # Main landing page Style
+├── Index.html        # Main landing page structure
+├── Style.css         # Main landing page Style
 └── README.md         # This documentation
 
 ```
