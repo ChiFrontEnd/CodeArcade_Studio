@@ -1,6 +1,5 @@
 ## 🎨 Starry Night Moon
-
-***Starry Night Moon*** is an elegant, minimalist landing page template designed to display digital art prints. It features a sophisticated layout that balances descriptive text with a stylized, framed hero image, perfect for creators looking to sell or exhibit digital downloads.
+***Starry Night Moon*** is a captivating, pure CSS/HTML night sky project featuring a twinkling starfield, an animated moon, and a procedurally generated CSS skyline. This project demonstrates advanced CSS techniques, including `clip-path` shapes, complex `radial-gradient` layers, and CSS keyframe animations.
 
 ---
 
@@ -43,7 +42,5 @@ Starry Night Moon/
 ---
 
 ## 📌 Future Enhancements
-* **Image Carousel -** Allow users to cycle through different prints within the same frame.
-* **Lightbox Integration -** Click the frame to open a full-screen, high-resolution view of the artwork.
-* **Dynamic Data -** Connect to an external JSON file to manage multiple collections without changing the HTML.
-* **Hover Animations -** Add subtle interactions (e.g., the frame scales slightly when hovered).
+* **Interactivity:** Use JavaScript to trigger lighting effects or star twinkles based on user clicks or mouse movement.
+* **Performance Optimization:** Refactor complex clip-path shapes into an SVG for better performance and easier maintainability.
