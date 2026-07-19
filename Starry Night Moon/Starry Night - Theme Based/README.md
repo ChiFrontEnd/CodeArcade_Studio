@@ -1,15 +1,10 @@
-## 🎨 Starry Night Moon
+## 🎨 Starry Night Moon - Theme Based
 ***Starry Night Moon*** is a captivating, pure CSS/HTML night sky project featuring a twinkling starfield, an animated moon, and a procedurally generated CSS skyline. This project demonstrates advanced CSS techniques, including `clip-path` shapes, complex `radial-gradient` layers, and CSS keyframe animations.
 
 ---
 
 ## ✨ Features
-* **Procedural Skyline:** A complex city silhouette built entirely using CSS `clip-path` and multiple background gradients.
-* **Animated Elements:** 
-    * **Twinkling Stars:** Responsive, randomized star patterns with custom twinkle animations.
-    * **Moon Phase:** A stylized, glowing moon animation using radial gradients and shadows.
-* **Responsive Design:** Includes media queries to adjust the lighting effects for portrait-oriented mobile devices.
-* **Zero Dependencies:** Pure HTML and CSS—no frameworks or JavaScript libraries required.
+* **Theme Switching:** Add a toggle to switch between different times of day (e.g., night, sunrise).
 
 ---
 
