@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Bounce Letters</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="https://img.icons8.com/pulsar-gradient/48/menu.png">
+  </head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      place-content: center;
+      background: #003049;
+      font-family: monospace;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2em;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fdf0d5;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: inherit;
+      display: flex;
+      gap: 0.15em;
+    }
+
+    ul li.smooth a span {
+      display: inline-block;
+      transform-origin: bottom center;
+    }
+
+    ul li.smooth a:hover span {
+      animation: fallBounceSoft 1.6s ease-out;
+      animation-fill-mode: both;
+    }
+
+    /* smoother bounce with gradual settle */
+    @keyframes fallBounceSoft {
+      0%   { transform: translateY(0); }
+      55%  { transform: translateY(120px); }   /* fall down */
+      70%  { transform: translateY(90px); }    /* bounce up */
+      80%  { transform: translateY(110px); }   /* bounce down */
+      88%  { transform: translateY(95px); }    /* smaller bounce */
+      94%  { transform: translateY(105px); }   /* tiny bounce */
+      100% { transform: translateY(100px); }   /* settle smoothly */
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li class="smooth">
+      <a href="#" id="dynamic-text">🥎 Bounce 🥎</a>
+    </li>
+  </ul>
+
+  <script>
+    // Select the link
+    const link = document.getElementById("dynamic-text");
+    const text = link.textContent; // original text
+    link.textContent = ""; // clear
+
+    // Wrap each character in a span and add delay
+    [...text].forEach((char, i) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.animationDelay = `${i * 0.1}s`; // dynamic delay
+      link.appendChild(span);
+    });
+  </script>
+</body>
+</html>
