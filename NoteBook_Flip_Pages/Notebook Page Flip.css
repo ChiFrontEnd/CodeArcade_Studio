@@ -1,0 +1,201 @@
+    body {
+      background-color: #222;
+      margin: 0;
+      height: 100vh;
+      font-family: "Life Savers", serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .main-content {
+      display: flex;
+      justify-content: space-around; /* 👈 left & right */
+      align-items: center;
+      padding: 10em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      text-align: center;
+      letter-spacing: 2px;
+      margin: 0 auto 1.5em;
+      font-size: 30px;
+      color: yellow;
+      font-weight: bold;
+      }
+
+    h1 small {
+      text-transform: none;
+      display: block;
+      margin: 20px 0;
+      font: 300 20px "Life Savers", serif;
+      color: #fff;
+
+      }
+
+    .notebook-wrapper {
+      perspective: 1200px; /* depth for 3D flip */
+    }
+
+    .notebook {
+      width: 200px;
+      height: 280px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    /* Cover */
+    .notebook-cover{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: plum;
+      border-radius: 5px 15px 15px 5px;
+      transform-origin: left center;
+      transition: transform 0.8s ease;
+      z-index: 10;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .notebook-cover:before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: calc(100% + 2px);
+      top: -1px;
+      z-index: 100;
+      border-radius: 2px;
+      right: 25px;
+      transition: 2s ease;
+      background: linear-gradient(
+        to right,
+        #6A476B 0%,
+        #7C587E 12%,
+        #8F6B90 25%,
+        #A180A2 37%,
+        #583759 50%,
+        #A180A2 62%,
+        #8F6B90 75%,
+        #7C587E 87%,
+        #6A476B 100%
+      );
+    }
+
+.notebook-cover .skin {
+  height: 50px;
+  background: #e8e8e0;
+  margin-top: 80px;
+  padding: 15px;
+  font-size: 12px;
+  font-weight: 900;
+  position: relative;
+  z-index: 10;
+  color: #222;
+  text-align: left;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.notebook-cover .skin:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  left: 0;
+  bottom: 0;
+  background: #cddc39;
+}
+
+    /* Page */
+    .page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fbfae8;
+      border-radius: 5px 15px 15px 5px;
+      transform-origin: left center;
+      transition: transform 0.8s ease;
+      backface-visibility: hidden;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.1),
+                  0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .dotted {
+      background: linear-gradient(90deg, #fbfae8 10px, transparent 1%) center,
+                  linear-gradient(#fbfae8 10px, transparent 1%) center,
+                  #6e6c6c;
+      background-size: 11px 11px;
+    }
+
+     /* layering */
+    .page1 { z-index: 2; 
+    transform: translateX(0px);}
+    .page2 { z-index: 3; 
+    transform: translateX(1px);}
+    .page3 { z-index: 4; 
+    transform: translateX(1.2px);}
+    .page1 { z-index: 5; 
+    transform: translateX(1.4px);}
+    .page2 { z-index: 6; 
+    transform: translateX(1.6px);}
+    .page3 { z-index: 7; 
+    transform: translateX(1.7px);}
+
+    /* Hover effect: cover half open */
+    .notebook:hover .notebook-cover {
+      transform: rotateY(-160deg); /* half flip */
+      transition: transform 0.8s ease; /* pehle cover flip hoga */
+      box-shadow: 20px 10px 50px rgba(0,0,0,0.3);
+    }
+
+    /* Hover effect: page flips */
+    /* Hover effect: pages flip sequentially */
+    .notebook:hover .page1 {
+      transform: rotateY(-20deg);
+      transition-delay: 0.5s; /* after cover */
+    }
+    .notebook:hover .page2 {
+      transform: rotateY(-40deg);
+      transition-delay: 0.9s; /* after page1 */
+    }
+    .notebook:hover .page3 {
+      transform: rotateY(-60deg);
+      transition-delay: 1.3s; /* after page2 */
+    }    
+    .notebook:hover .page4 {
+      transform: rotateY(-80deg);
+      transition-delay: 1.7s; /* after cover */
+    }
+    .notebook:hover .page5 {
+      transform: rotateY(-100deg);
+      transition-delay: 2.1s; /* after page1 */
+    }
+    .notebook:hover .page6 {
+      transform: rotateY(-120deg);
+      transition-delay: 2.5s; /* after page2 */
+    }
+
+    footer {
+  text-align: center;
+  margin: 8em auto;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed #fff;
+  color: #fff;
+  margin: 5px;
+}
+footer a:hover {
+  background: rgba(255,255,255,0.1);
+}
+footer a .icons {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 20px;
+}
