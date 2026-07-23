@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Glass UI Desktop OS</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/3d-sugary/100/apple-display.png">
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+  <!-- macOS Status Menu Bar with Interactive Menu's and Dropdowns -->
+  <div class="menu-bar-wrapper">
+    <div class="menu-bar">
+      <div class="menu-bar-left">
+        <!-- Apple Menu Dropdown -->
+        <div class="menu-dropdown" id="apple-menu">
+          <span class="menu-item" style="display: flex; align-items: center;">
+            <svg viewBox="0 0 170 170" width="20" height="20" style="fill: currentColor;">
+              <path
+                d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.92-3.19-7.85-7.9-11.79-14.12-6.19-9.84-11.04-20.73-14.54-32.67-3.5-11.94-5.25-23.3-5.25-34.08 0-14.12 3.52-25.75 10.56-34.88 7.04-9.13 15.93-13.8 26.68-14.02 5.01-.11 10.23 1.34 15.65 4.35 5.43 3.01 9.07 4.54 10.93 4.54 1.74 0 5.47-1.57 11.19-4.72 5.73-3.14 10.84-4.52 15.34-4.14 12.92.87 22.84 5.92 29.77 15.16-10.84 6.58-16.14 15.53-15.91 26.85.22 8.91 3.76 16.27 10.63 22.1 6.87 5.82 15.12 8.92 24.77 9.31-2.99 9.17-7.23 18.52-12.72 28.05zM119.22 32.55c0-7.82 2.78-15.07 8.35-21.75 5.56-6.68 12.39-10.54 20.48-11.58.11 1.09.16 2.07.16 2.94 0 7.82-2.91 15.22-8.72 22.2-5.82 6.98-12.76 10.91-20.82 11.79-.32-.87-.47-2.31-.47-4.6z" />
+            </svg>
+          </span>
+          <div class="dropdown-content">
+            <div class="dropdown-item">About This Mac</div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">System Settings...</div>
+            <div class="dropdown-item">App Store...</div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">Sleep</div>
+            <div class="dropdown-item">Restart...</div>
+            <div class="dropdown-item">Shut Down...</div>
+          </div>
+        </div>
+
+        <!-- Active App Name Indicator -->
+        <span class="menu-item" id="active-app-name" style="font-weight:600;">Finder</span>
+
+        <!-- File Menu Dropdown -->
+        <div class="menu-dropdown">
+          <span class="menu-item">File</span>
+          <div class="dropdown-content">
+            <div class="dropdown-item">New Finder Window</div>
+            <div class="dropdown-item">New Folder</div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">Close Window</div>
+          </div>
+        </div>
+
+        <!-- Edit Menu Dropdown -->
+        <div class="menu-dropdown">
+          <span class="menu-item">Edit</span>
+          <div class="dropdown-content">
+            <div class="dropdown-item">Undo</div>
+            <div class="dropdown-item">Redo</div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">Cut</div>
+            <div class="dropdown-item">Copy</div>
+            <div class="dropdown-item">Paste</div>
+          </div>
+        </div>
+
+        <span class="menu-item">View</span>
+        <span class="menu-item">Window</span>
+      </div>
+
+      <div class="menu-bar-right">
+        <!-- Control Center (Audio & Language) -->
+        <div class="menu-dropdown">
+          <span class="menu-item" style="display: flex; align-items: center; gap: 5px;"> Audio
+            <svg viewBox="0 0 24 24" width="14" height="14" style="fill: currentColor;">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+            </svg>
+          </span>
+          <div class="dropdown-content">
+            <div class="dropdown-item" style="font-weight: 600; opacity: 0.7; font-size: 0.75rem;">SOUND & LANG</div>
+            <div class="dropdown-item">Output: Built-in Speakers</div>
+          </div>
+        </div>
+
+        <!-- Wi-Fi Icon & Dropdown -->
+        <div class="menu-dropdown">
+          <span class="menu-item" style="display: flex; align-items: center; gap: 5px;"> Wi-Fi
+            <svg viewBox="0 0 24 24" width="15" height="15" style="fill: currentColor;">
+              <path
+                d="M12 3c-4.97 0-9.5 2.01-12.8 5.25l1.42 1.42C3.69 6.88 7.63 5 12 5s8.31 1.88 11.38 4.67l1.42-1.42C21.5 5.01 16.97 3 12 3zm0 6c-3.14 0-6 1.28-8.07 3.34l1.42 1.42C7.03 12.3 9.4 11.5 12 11.5s4.97.8 6.65 2.26l1.42-1.42C18 10.28 15.14 9 12 9zm0 6c-1.3 0-2.5.5-3.41 1.34L12 21l3.41-4.66C14.5 15.5 13.3 15 12 15z" />
+            </svg>
+          </span>
+          <div class="dropdown-content">
+            <div class="dropdown-item" style="font-weight: 600; opacity: 0.7; font-size: 0.75rem;">WI-FI NETWORKS</div>
+            <div class="dropdown-item">Private_5G ✓</div>
+            <div class="dropdown-item">Home_Network</div>
+          </div>
+        </div>
+
+        <!-- Battery Icon & Dropdown -->
+        <div class="menu-dropdown">
+          <span class="menu-item" style="display: flex; align-items: center; gap: 5px;">
+            <span>⚡ 100%</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" style="fill: currentColor;">
+              <path
+                d="M16 4h-2V2h-4v2H8C6.9 4 6 4.9 6 6v14c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H8V6h8v14z" />
+            </svg>
+          </span>
+          <div class="dropdown-content">
+            <div class="dropdown-item" style="font-weight: 600; opacity: 0.7; font-size: 0.75rem;">POWER SOURCE</div>
+            <div class="dropdown-item">Battery: 100% (Charged)</div>
+          </div>
+        </div>
+
+        <!-- Add this inside your <div class="menu-bar-right"> section -->
+        <div class="menu-dropdown">
+          <span class="menu-item" style="display: flex; align-items: center; gap: 5px;">
+            <svg viewBox="0 0 24 24" width="15" height="15" style="fill: currentColor;">
+              <path
+                d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1.01c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1.01c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.63c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1.01c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.63z" />
+            </svg>
+          </span>
+
+          <div class="macos-popup-panel" style="right: 0;">
+            <div class="panel-section">
+              <div class="toggles-grid">
+                <div class="toggle-btn active" id="bt-toggle">
+                  <div class="toggle-icon">
+                    <svg viewBox="0 0 24 24" width="14" height="14" style="fill: currentColor;">
+                      <path
+                        d="M17.71 7.71L12 2h-1v7.59L6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 11 14.41V22h1l5.71-5.71-4.3-4.29 4.3-4.29zM13 5.83l1.88 1.88L13 9.59V5.83zm1.88 10.46L13 18.17v-3.76l1.88 1.88z" />
+                    </svg>
+                  </div>
+                  <div class="toggle-info">
+                    <span class="toggle-name">Bluetooth</span>
+                    <span class="toggle-status">On</span>
+                  </div>
+                </div>
+
+                <div class="toggle-btn active" id="airdrop-toggle">
+                  <div class="toggle-icon">
+                    <svg viewBox="0 0 24 24" width="14" height="14" style="fill: currentColor;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                    </svg>
+                  </div>
+                  <div class="toggle-info">
+                    <span class="toggle-name">AirDrop</span>
+                    <span class="toggle-status">Contacts Only</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-section">
+              <div class="slider-card">
+                <div class="slider-header">
+                  <span>Display Brightness</span>
+                  <span>85%</span>
+                </div>
+                <input type="range" class="slider-input" min="0" max="100" value="85">
+              </div>
+
+              <div class="slider-card">
+                <div class="slider-header">
+                  <span>Sound Volume</span>
+                  <span>60%</span>
+                </div>
+                <input type="range" class="slider-input" min="0" max="100" value="60">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification Center Dropdown -->
+        <div class="menu-dropdown" id="notif-center-dropdown">
+          <span class="menu-item notif-badge-icon" id="notif-trigger" style="display: flex; align-items: center;">
+            <span class="badge-dot"></span>
+            <svg viewBox="0 0 24 24" width="15" height="15" style="fill: currentColor;">
+              <path
+                d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+            </svg>
+          </span>
+
+          <!-- Notification Center Panel -->
+          <div class="notification-panel" id="notification-panel">
+            <div class="notif-section">
+              <div class="calendar-grid">
+                <div class="calendar-header-row">
+                  <span id="cal-month-year" style="font-size: 0.8rem;">July 2026</span>
+                  <span style="font-size: 0.7rem; opacity: 0.6; cursor: pointer;">Today</span>
+                </div>
+                <div class="calendar-days-header">
+                  <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                </div>
+                <div class="calendar-days-grid" id="cal-days-container"></div>
+              </div>
+            </div>
+
+            <div class="notif-section">
+              <div class="notif-title" style="font-weight: 600; opacity: 0.7; font-size: 0.75rem;">UPCOMING REMINDERS
+              </div>
+              <div class="notif-card">
+                <div class="notif-card-header">
+                  <span>Team Sync Meeting</span>
+                  <span class="notif-card-time">10:30 AM</span>
+                </div>
+                <div class="notif-card-desc">Review macOS glassmorphism UI specs</div>
+              </div>
+              <div class="notif-card">
+                <div class="notif-card-header">
+                  <span>Design Review</span>
+                  <span class="notif-card-time">4:00 PM</span>
+                </div>
+                <div class="notif-card-desc">Check spotlight search modal behavior</div>
+              </div>
+            </div>
+
+            <div class="notif-section">
+              <div class="notif-title" style="font-weight: 600; opacity: 0.7; font-size: 0.75rem;">RECENT ALERTS</div>
+              <div class="notif-card">
+                <div class="notif-card-header">
+                  <span>System Update</span>
+                  <span class="notif-card-time">2m ago</span>
+                </div>
+                <div class="notif-card-desc">macOS Glass components successfully installed.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Workspace Grid containing widgets and player -->
+  <div class="workspace">
+    <div class="column">
+      <!-- Music Player Card -->
+      <div class="glass-container glass-container--rounded">
+        <div class="glass-filter"></div>
+        <div class="glass-overlay"></div>
+        <div class="glass-specular"></div>
+        <div class="glass-content">
+          <div class="player">
+            <div class="player__thumb">
+              <img class="player__img"
+                src="https://images.unsplash.com/photo-1619983081593-e2ba5b543168?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+                alt="album">
+              <div class="player__legend">
+                <h3 class="player__legend__title">All Of Me</h3>
+                <span class="player__legend__sub-title">Nao</span>
+                <div class="audio-visualizer">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+            </div>
+            <div class="player__controls">
+              <svg viewBox="0 0 448 512" width="16">
+                <path
+                  d="M64 468V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v176.4l195.8-118.2C358.5 90.3 384 105.7 384 130v252c0 24.3-25.5 39.7-52.2 23.8L136 287.6V468c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12z" />
+              </svg>
+              <svg viewBox="0 0 448 512" width="20">
+                <path
+                  d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+              </svg>
+              <svg viewBox="0 0 448 512" width="16">
+                <path
+                  d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V287.6l-195.8 118.2C89.5 421.7 64 406.3 64 382V130c0-24.3 25.5-39.7 52.2-23.8L312 224.4V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Bar -->
+      <div class="glass-container glass-container--rounded">
+        <div class="glass-filter"></div>
+        <div class="glass-overlay"></div>
+        <div class="glass-specular"></div>
+        <div class="glass-content">
+          <div class="glass-item glass-item--active">
+            <svg viewBox="0 0 576 512" width="18">
+              <path
+                d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0z" />
+            </svg>
+            Home
+          </div>
+          <div class="glass-item"><svg viewBox="0 0 512 512" width="18">
+              <path
+                d="M12.41 148.02l232.94 105.67c6.8 3.09 14.49 3.09 21.29 0l232.94-105.67c16.55-7.51 16.55-32.52 0-40.03L266.65 2.31a25.607 25.607 0 0 0-21.29 0L12.41 107.98c-16.55 7.51-16.55 32.53 0 40.04z" />
+            </svg>New</div>
+          <div class="glass-item"><svg viewBox="0 0 640 512" width="18">
+              <path
+                d="M634.91 154.88C457.74-8.99 182.19-8.93 5.09 154.88c-6.66 6.16-6.79 16.59-.35 22.98l34.24 33.97c6.14 6.1 16.02 6.23 22.4.38 145.92-133.68 371.3-133.71 517.25 0 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.97c6.43-6.39 6.3-16.82-.36-22.98z" />
+            </svg>Wifi</div>
+          <div class="glass-item"><svg viewBox="0 0 512 512" width="18">
+              <path
+                d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z" />
+            </svg>Library</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <!-- Live Clock Widget -->
+      <div class="glass-container glass-container--rounded">
+        <div class="glass-filter"></div>
+        <div class="glass-overlay"></div>
+        <div class="glass-specular"></div>
+        <div class="glass-content">
+          <div class="clock-widget">
+            <div class="clock-time" id="main-clock"></div>
+            <div class="clock-date" id="main-date"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weather Widget -->
+      <div class="glass-container glass-container--rounded">
+        <div class="glass-filter"></div>
+        <div class="glass-overlay"></div>
+        <div class="glass-specular"></div>
+        <div class="glass-content">
+          <div class="weather-widget">
+            <div class="weather-info">
+              <h4>Yosemite Park</h4>
+              <p>Partly Cloudy</p>
+            </div>
+            <div class="weather-temp">22°C</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer wrapper containing Spotlight Search and macOS Dock -->
+  <div class="dock-wrapper">
+    <!-- Spotlight Search Bar -->
+    <!--<div class="glass-container glass-container--rounded" id="open-spotlight-trigger"  style="width: min(360px, 90vw);">
+      <div class="glass-filter"></div>
+      <div class="glass-overlay"></div>
+      <div class="glass-specular"></div>
+      <div class="glass-content" style="padding: 10px 16px; cursor: pointer;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #ffffff; opacity: 0.85;">
+          <svg viewBox="0 0 512 512" width="16" style="fill: #ffffff;">
+            <path
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34z" />
+          </svg>
+          <span style="font-size: 0.85rem; font-weight: 500;">Spotlight Search</span>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- Add this floating window structure inside your <body> -->
+    <!-- Spotlight Search Bar -->
+    <div class="glass-container glass-container--rounded" id="open-spotlight-trigger" style="width: min(360px, 90vw);">
+      <div class="glass-filter"></div>
+      <div class="glass-overlay"></div>
+      <div class="glass-specular"></div>
+      <div class="glass-content" style="padding: 10px 16px; cursor: pointer;">
+        <div style="display: flex; align-items: center; gap: 10px; color: #ffffff; opacity: 0.85;">
+          <svg viewBox="0 0 512 512" width="16" style="fill: #ffffff;">
+            <path
+              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34z" />
+          </svg>
+          <span style="font-size: 0.85rem; font-weight: 500;">Spotlight Search</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Floating Application Window -->
+    <div class="floating-window" id="app-window">
+      <div class="window-header">
+        <div class="window-controls">
+          <button class="win-btn win-close" id="win-close-btn" data-tooltip="Close"></button>
+          <button class="win-btn win-minimize" id="win-min-btn" data-tooltip="Minimize"></button>
+          <button class="win-btn win-maximize" id="win-max-btn" data-tooltip="Maximize"></button>
+        </div>
+        <div class="window-title" id="window-title-text">Application Window</div>
+      </div>
+      <div class="window-body" id="window-content-body">
+        <p>Welcome to the interactive window panel. You can interact with these controls just like macOS!</p>
+      </div>
+    </div>
+
+    <!-- Spotlight Modal Overlay -->
+    <div class="spotlight-overlay" id="spotlight-overlay">
+      <div class="spotlight-modal">
+        <div class="spotlight-search-box">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+          </svg>
+          <input type="text" class="spotlight-input" id="spotlight-input"
+            placeholder="Spotlight Search (e.g. Safari, Settings, Finder)..." autofocus>
+        </div>
+        <div class="spotlight-results" id="spotlight-results"></div>
+      </div>
+    </div>
+
+
+    <!-- macOS Style App Dock -->
+    <div class="glass-container glass-container--rounded" style="max-width: fit-content; margin: 0 auto;">
+      <div class="glass-filter"></div>
+      <div class="glass-overlay"></div>
+      <div class="glass-specular"></div>
+      <div class="glass-content" style="padding: 10px 18px; gap: 14px;">
+        <a class="glass-content__link" href="#" data-app="Finder"><img src="https://assets.codepen.io/923404/finder.png"
+            alt="Finder"></a>
+        <a class="glass-content__link" href="#" data-app="Maps"><img src="https://assets.codepen.io/923404/map.png"
+            alt="Maps"></a>
+        <a class="glass-content__link" href="#" data-app="Messages"><img
+            src="https://assets.codepen.io/923404/messages.png" alt="Messages"></a>
+        <a class="glass-content__link" href="#" data-app="Safari"><img src="https://assets.codepen.io/923404/safari.png"
+            alt="Safari"></a>
+        <a class="glass-content__link" href="#" data-app="Books"><img src="https://assets.codepen.io/923404/books.png"
+            alt="Books"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG Refraction Filter -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <filter id="lensFilter" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+      <feComponentTransfer in="SourceAlpha" result="alpha">
+        <feFuncA type="identity" />
+      </feComponentTransfer>
+      <feGaussianBlur in="alpha" stdDeviation="30" result="blur" />
+      <feDisplacementMap in="SourceGraphic" in2="blur" scale="35" xChannelSelector="A" yChannelSelector="A" />
+    </filter>
+  </svg>
+
+  <!-- javascript -->
+  <script src="Script.js"></script>
+</body>
+
+</html>
