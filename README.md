@@ -8,30 +8,42 @@ Welcome to CodeArcade Studio a collection of interactive, browser‑based projec
 ---
 
 ## 📁 Repository Structure
-```text
-CodeArcade Studio/
-│
-├── 3D Card Animation/                      # Card Animation (HTML/CSS/JS)
-├── Amezon Clone/                           # Amezon Website clone (HTML/CSS/JS)
-├── Art Print Showcase/                     # Art Print Showcase (HTML/CSS/JS)
-├── BrainKick/                              # Danglaing and Bouncing letters (HTML/CSS/JS)
-├── Comic Style Text/                       # Comic Bubble Text (HTML/CSS/JS)
-├── Cookbook/            		                # Recipe Cookbook (HTML/CSS/JS)
-├── Foodies Cafe Manu/   		                # Cafe Manu (HTML/CSS/JS)
-├── Grocery List/        		                # Grocery List (HTML/CSS/JS)
-├── Hanging Menu/        		                # Hanging Menu (HTML/CSS/JS)
-├── Hangman/             		                    # Word Puzzle Game (HTML/CSS/JS)
-├── Light & Dark Mode/   		                    # Light and Dark Theme (HTML/CSS/JS)
-├── MacOS Desktop Clone/ 		                    # MacOS UI (HTML/CSS/JS)
-├── Maze/                		                    # Procedural Maze Generation Game (HTML/CSS/JS)
-├── Mordern Animated Image Slider/              # Animated Image Slider (HTML/CSS/JS)
-├── Nootbook Flip Pages/                        # Notebook Pages Filp (HTML/CSS/JS)
-├── Sample Paragraph/    		                    # Sample Paragraph Generator (HTML/CSS/JS)
-├── Starry Night Moon/                          # Starry Night Moon (HTML/CSS/JS)
-├── Weverse Live Receipes/                      # Weverse Live Recipe's (HTML/CSS/JS)
-├── Wikipedia/                                  # Wikipedia Sample (HTML/CSS/JS)
-└── README.md                                   # This is documentation
-```
+Below is the directory map of all featured projects categorized by type:
+### 🎮 Games & Interactive Apps
+| Project Folder | Description | Tech Stack |
+| :--- | :--- | :--- |
+| [`/Hangman`](./Hangman) | Interactive word-guessing puzzle game | HTML, CSS, JS |
+| [`/Maze`](./Maze) | Procedural maze generation & navigation game | HTML, CSS, JS |
+| [`/Grocery List`](./Grocery%20List) | Dynamic item list & tracker app | HTML, CSS, JS |
+| [`/Sample Paragraph`](./Sample%20Paragraph) | Lorem ipsum / text sample generator tool | HTML, CSS, JS |
+
+---
+
+### 🖥️ UI Clones & Web Layouts
+| Project Folder | Description | Tech Stack |
+| :--- | :--- | :--- |
+| [`/Amezon Clone`](./Amezon%20Clone) | Front-end E-commerce clone of Amazon | HTML, CSS, JS |
+| [`/MacOS Desktop Clone`](./MacOS%20Desktop%20Clone) | Interactive MacOS web desktop interface | HTML, CSS, JS |
+| [`/Wikipedia`](./Wikipedia) | Clean Wikipedia article layout replica | HTML, CSS, JS |
+| [`/Cookbook`](./Cookbook) | Recipe collection app | HTML, CSS, JS |
+| [`/Foodies Cafe Manu`](./Foodies%20Cafe%20Manu) | Interactive Cafe menu card | HTML, CSS, JS |
+| [`/Weverse Live Receipes`](./Weverse%20Live%20Receipes) | Live stream-inspired recipe showcase | HTML, CSS, JS |
+| [`/Art Print Showcase`](./Art%20Print%20Showcase) | Portfolio-style gallery for art prints | HTML, CSS, JS |
+
+---
+
+### 🎨 Animations & Visual Effects
+| Project Folder | Description | Tech Stack |
+| :--- | :--- | :--- |
+| [`/3D Card Animation`](./3D%20Card%20Animation) | 3D depth tilt & hover card effect | HTML, CSS, JS |
+| [`/BrainKick`](./BrainKick) | Dangling and bouncing letter physics effect | HTML, CSS, JS |
+| [`/Comic Style Text`](./Comic%20Style%20Text) | Pop-art style comic speech bubble text | HTML, CSS, JS |
+| [`/Hanging Menu`](./Hanging%20Menu) | Physics-inspired hanging menu design | HTML, CSS, JS |
+| [`/Light & Dark Mode`](./Light%20%26%20Dark%20Mode) | Smooth theme toggler implementation | HTML, CSS, JS |
+| [`/Mordern Animated Image Slider`](./Mordern%20Animated%20Image%20Slider) | Animated image carousel with smooth transitions | HTML, CSS, JS |
+| [`/Nootbook Flip Pages`](./Nootbook%20Flip%20Pages) | Realistic 3D notebook page-flipping effect | HTML, CSS, JS |
+| [`/Starry Night Moon`](./Starry%20Night%20Moon) | Animated night sky canvas/CSS background | HTML, CSS, JS |
+
 ---
 
 ## 🎮 Available Games
