@@ -11,8 +11,8 @@ Welcome to CodeArcade Studio a collection of interactive, browser‑based projec
 ```text
 CodeArcade Studio/
 │
-├── 3D Card Animation/				           # Card Animation (HTML/CSS/JS)
-├── Amezon Clone/     				           # Amezon Website clone (HTML/CSS/JS)
+├── 3D Card Animation/                    # Card Animation (HTML/CSS/JS)
+├── Amezon Clone/                  # Amezon Website clone (HTML/CSS/JS)
 ├── Art Print Showcase/				           # Art Print Showcase (HTML/CSS/JS)
 ├── BrainKick/                           # Danglaing and Bouncing letters (HTML/CSS/JS)
 ├── Comic Style Text/    		                    # Comic Bubble Text (HTML/CSS/JS)
