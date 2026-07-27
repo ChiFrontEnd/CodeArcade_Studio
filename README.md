@@ -11,19 +11,26 @@ Welcome to CodeArcade Studio a collection of interactive, browser‑based projec
 ```text
 CodeArcade Studio/
 │
-├── 3D Card Animation/   # Card Animation (HTML/CSS/JS)
-├── Amezon Clone/        # Amezon Website clone (HTML/CSS/JS)
-├── Art Print Showcase/  # Amezon Website clone (HTML/CSS/JS)
-├── Cookbook/            # Recipe Cookbook (HTML/CSS/JS)
-├── Foodies Cafe Manu/   # Cafe Manu (HTML/CSS/JS)
-├── Grocery List/        # Grocery List (HTML/CSS/JS)
-├── Hangman/             # Word-puzzle game (HTML/CSS/JS)
-├── Light & Dark Mode/   # Light and Dark Theme (HTML/CSS/JS)
-├── Maze/                # Procedural maze generation game (HTML/CSS/JS)
-├── Sample Paragraph/    # Sample Paragraph Generator (HTML/CSS/JS)
-├── Starry Night Moon/   # Sample Paragraph Generator (HTML/CSS/JS)
-├── Wikipedia/           # Wikipedia Sample (HTML/CSS/JS)
-└── README.md            # This documentation
+├── 3D Card Animation/   		      # Card Animation (HTML/CSS/JS)
+├── Amezon Clone/                             # Amezon Website clone (HTML/CSS/JS)
+├── Art Print Showcase/  		      # Amezon Website clone (HTML/CSS/JS)
+├── BrainKick/                                # Danglaing and Bouncing letters (HTML/CSS/JS)
+├── Comic Style Text/    		      # Comic Bubble Text (HTML/CSS/JS)
+├── Cookbook/            		      # Recipe Cookbook (HTML/CSS/JS)
+├── Foodies Cafe Manu/   		      # Cafe Manu (HTML/CSS/JS)
+├── Grocery List/        		      # Grocery List (HTML/CSS/JS)
+├── Hanging Menu/        		      # Hanging Menu (HTML/CSS/JS)
+├── Hangman/             		      # Word-puzzle game (HTML/CSS/JS)
+├── Light & Dark Mode/   		      # Light and Dark Theme (HTML/CSS/JS)
+├── MacOS Desktop Clone/ 		      # MacOS UI (HTML/CSS/JS)
+├── Maze/                		      # Procedural maze generation game (HTML/CSS/JS)
+├── Mordern Animated Image Slider/            # Animated Image Slider (HTML/CSS/JS)
+├── Nootbook Flip Pages/                      # Notebook Pages Filp (HTML/CSS/JS)
+├── Sample Paragraph/    		      # Sample Paragraph Generator (HTML/CSS/JS)
+├── Starry Night Moon/                        # Sample Paragraph Generator (HTML/CSS/JS)
+├── Weverse Live Receipes/                    # Weverse Live Recipe's (HTML/CSS/JS)
+├── Wikipedia/                                # Wikipedia Sample (HTML/CSS/JS)
+└── README.md                                 # This is documentation
 ```
 ---
 
@@ -65,7 +72,7 @@ For major changes, please open an issue first to discuss what you’d like to im
 ## 🧑‍💻 Author
     Auther Name:     Trupti Y. Sabale  
     Created:         01-Jul-2026
-    Updated:         18-Jul-2026
+    Updated:         27-Jul-2026
 ---   
 
 ## 📜 License
