@@ -30,10 +30,10 @@
 ```text
 Sample Paragraph/
 │
-├── Images/           # Images
 ├── index.html        # Main game structure
 ├── Style.css         # Responsive styling and animations
-├── Script.js         # Core game logic
+├─  Script.js         # Core game logic
+|--  Recipes.js         # Receipe logic
 └── README.md         # Documentation
 ```
 
