@@ -32,7 +32,9 @@ The-Purple-Kitchen/
 ├── Style.css         # Glassmorphism styles, dark/light themes, animations
 ├── Script.js        # Dynamic pagination, hero section toggle, theme logic
 ├── Recipe.js        # Recipe dataset (titles, ingredients, steps, metadata)
-└── README.md         # Documentation
+└── README.md         # Documentatio
+```
+
 ---
 
 
