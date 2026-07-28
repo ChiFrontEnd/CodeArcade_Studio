@@ -1,7 +1,6 @@
 # Weverse Live Recipe's
 
-***Weverse Live Recipe's
-***A clean, professional, and classy placeholder text generator designed for designers and developers. 
+***Weverse Live Recipe's***A clean, professional, and classy placeholder text generator designed for designers and developers. 
 
 ---
 
