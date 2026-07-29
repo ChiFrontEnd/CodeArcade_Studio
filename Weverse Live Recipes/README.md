@@ -1,21 +1,18 @@
 # 💜 Weverse Live Recipes – The Purple Kitchen
-
 A modern, elegant, fan-inspired web application featuring comforting pasta recipes inspired by BTS Jungkook's Weverse cooking live streams. Built with dynamic page transitions, a dark/light theme switcher, and a sleek glassmorphism design.
 
 ---
 
 ## 🚀 Features
-
-- **💜 Glassmorphism UI:** Frosted-glass cards over a dynamic, animated purple gradient background.
-- **☀️ / 🌙 Theme Toggle:** Switch seamlessly between Dark Mode and Light Mode with preferences saved in `localStorage`.
-- **📖 Interactive Recipe Pagination:** Smooth single-page navigation to explore dishes with Next and Previous controls.
-- **📱 Responsive Layout:** Optimized for mobile phones, tablets, and desktop screens.
-- **⚡ Pure Vanilla Web Stack:** Zero external JavaScript framework dependencies for lightweight, fast rendering.
+- **Glassmorphism UI:** Frosted-glass cards over a dynamic, animated purple gradient background.
+- **Theme Toggle:** Switch seamlessly between Dark Mode and Light Mode with preferences saved in `localStorage`.
+- **Interactive Recipe Pagination:** Smooth single-page navigation to explore dishes with Next and Previous controls.
+- **Responsive Layout:** Optimized for mobile phones, tablets, and desktop screens.
+- **Pure Vanilla Web Stack:** Zero external JavaScript framework dependencies for lightweight, fast rendering.
 
 ---
 
 ## 📖 How to Use
-
 1. Click **Explore Recipes** on the landing hero banner to view the recipe collection.
 2. Use the **Next Recipe →** and **← Previous Recipe** buttons to flip through dishes.
 3. Toggle the **🌙 Dark / ☀️ Light** button in the navbar anytime to switch your visual theme.
@@ -24,7 +21,6 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 ---
 
 ## 📂 Project Structure
-
 ```text
 The-Purple-Kitchen/
 │
@@ -41,11 +37,6 @@ The-Purple-Kitchen/
 
 1. Clone or download this repository.
 2. Open `index.html` in your browser to start playing.
-
----
-
-## 🖼️ Screenshots
-![Screenshot of Gallery](Images/Image.PNG)
 
 ---
 
