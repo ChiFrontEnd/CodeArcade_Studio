@@ -20,6 +20,13 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 
 ---
 
+## 🚀 Getting Started
+1. Clone or download this repository.
+2. Ensure you have valid image link paths.
+3. Open `index.html` in your browser to start playing.
+
+---
+
 ## 📂 Project Structure
 ```text
 The-Purple-Kitchen/
@@ -30,14 +37,6 @@ The-Purple-Kitchen/
 ├── Recipe.js        # Recipe dataset (titles, ingredients, steps, metadata)
 └── README.md         # Documentatio
 ```
-
----
-
-
-
-1. Clone or download this repository.
-2. Open `index.html` in your browser to start playing.
-
 ---
 
 ## 🛠 Tech Stack
