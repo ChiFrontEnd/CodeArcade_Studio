@@ -1,4 +1,5 @@
 # 💜 Weverse Live Recipes – The Purple Kitchen
+## 📌 Overview
 A modern, elegant, fan-inspired web application featuring comforting pasta recipes inspired by BTS Jungkook's Weverse cooking live streams. Built with dynamic page transitions, a dark/light theme switcher, and a sleek glassmorphism design.
 
 ---
@@ -45,6 +46,6 @@ The-Purple-Kitchen/
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
   <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <img src="https://img.shields.io/badge/GITHUB%20DESKTOP-852EA5?style=for-the-badge&logo=github&logoColor=white">
   <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
-  <img src="https://img.shields.io/badge/WINDOWS-0078D4?style=for-the-badge&logo=windows&logoColor=white">
 </div>
