@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career - Dreame Technolabs</title>
+    <!-- Google Font for Typewriter Effect -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/keek/50/message-squared.png">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        body {
+
+            font-family: 'Special Elite', monospace;
+            color: #3b2b1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .paper-container {
+            background-color: #f4ebd0;
+            background: linear-gradient(to right, #ede1c1 0%, #f4ebd0 5%, #f4ebd0 95%, #ede1c1 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4),
+                inset 0 0 40px rgba(139, 90, 43, 0.25);
+            border-radius: 3px;
+            width: 100%;
+            max-width: 790px;
+            padding: 40px;
+            position: relative;
+            box-sizing: border-box;
+            border: 1px solid #d4c5ab;
+        }
+
+        /* 1. Coffee Stain Effect Simulation */
+        .coffee-stain {
+            position: absolute;
+            top: 35px;
+            right: 30px;
+            width: 140px;
+            height: 140px;
+            border: 5px solid rgba(110, 75, 45, 0.25);
+            border-radius: 50%;
+            pointer-events: none;
+            box-shadow: inset 0 0 20px rgba(110, 75, 45, 0.15);
+            z-index: 1;
+
+        }
+
+
+        .stamp-image {
+            position: absolute;
+            top: 35px;
+
+            right: 30px;
+            width: 150px;
+
+            height: auto;
+            z-index: 2;
+
+            pointer-events: none;
+
+            border-radius: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .date {
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 3;
+            /* Date content stamp ke bhi upar rahe */
+        }
+
+        h2,
+        h3 {
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        p,
+        h2,
+        h3,
+        li {
+            color: #2b2118;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+            /* Ink bleed effect */
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .dashed-line {
+            border: none;
+            border-top: 1px dashed #7a6b5d;
+            margin: 20px 0;
+        }
+
+        ul.job-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.job-list li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .footer-team {
+            margin-top: 30px;
+        }
+
+        .signature {
+            font-size: 20px;
+            margin-top: 5px;
+            color: #1a1412;
+        }
+
+        /* Company stamp */
+        .company-stamp-bottom {
+            margin: 10px 60px 30px 0;
+            text-align: center;
+            border: 2px solid #5c4033;
+            padding: 5px;
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+
+        .company-stamp-bottom h4 {
+            margin: 0;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .company-stamp-bottom p {
+            margin: 5px 0 0 0;
+            font-size: 10px;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            background-color: #3b2b1e;
+            color: #f4ebd0;
+            padding: 10px 20px;
+            font-family: 'Special Elite', monospace;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border: 1px solid #2b2118;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .apply-btn:hover {
+            background-color: #5c4033;
+            transform: translateY(-2px);
+        }
+
+        .paper-clip {
+            position: absolute;
+            top: -30px;
+            left: 33px;
+            font-size: 60px;
+            transform: rotate(-20deg);
+            color: #5c4033;
+            z-index: 4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="paper-container">
+        <!-- The Visual Elements: Stain and Stamp -->
+
+        <div class="paper-clip">📎</div>
+        <div class="coffee-stain"></div>
+        <img src="a.png" alt="Shiv Technolabs Stamp" class="stamp-image">
+
+        <div class="date">DATED: 28 JULY, 2026</div>
+
+        <p>TO WHOM IT MAY CONCERN,</p>
+
+        <p>If this letter has somehow found its way to you, perhaps it wasn't by accident.</p>
+
+        <p>We're looking for a few remarkable people to join our growing team.</p>
+
+        <hr class="dashed-line">
+
+        <ul class="job-list">
+            <li>💼 Database Administrator (DBA)</li>
+            <li>📅 Business Development Executive (BDE)</li>
+            <li>👤 Business Development Manager (BDM)</li>
+            <li>✏️ Jr. Content Writer</li>
+            <li>📊 SEO Executive</li>
+            <li>💻 Shopify App Developer</li>
+        </ul>
+
+        <hr class="dashed-line">
+
+        <h3>WHAT WE LOOK FOR:</h3>
+        <p>Curiosity. Ownership. Consistency.<br>
+            The hunger to learn and the heart to grow.</p>
+
+        <hr class="dashed-line">
+
+        <p>
+            📍 LOCATION: Pune<br>
+            📅 WORK WEEK: Monday - Friday (5 Days)
+        </p>
+
+        <p>If you believe your story deserves a better chapter, reply to this letter with your résumé. We'd love to hear
+            from you.</p>
+
+        <div class="footer-team">
+            <p>Until then...</p>
+            <p>Sincerely,</p>
+            <div class="signature">The Team</div>
+        </div>
+
+        <div style="text-align: right;">
+            <div class="company-stamp-bottom">
+                <h4>★ DREAME TECHNOLABS ★</h4>
+                <p>Building Careers. Delivering Excellence.</p>
+            </div>
+        </div>
+
+
+        <div style="text-align: center; margin-top: 25px;">
+            <a href="mailto:hr@Dreametechnolabs.com?subject=Application for Career - [Your Position]" class="apply-btn">
+                ✉ APPLY VIA EMAIL
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 15px; font-size: 11px; letter-spacing: 1px; opacity: 0.8;">
+            VISIT US: WWW.DREAMETECHNOLABS.COM
+        </div>
+
+    </div>
+
+</body>
+
+</html>
