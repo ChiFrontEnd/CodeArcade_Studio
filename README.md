@@ -29,6 +29,7 @@ Below is the directory map of all featured projects categorized by type:
 | [`/Foodies Cafe Manu`](./Foodies%20Cafe%20Manu) | Interactive Cafe menu card | HTML, CSS, JS |
 | [`/Weverse Live Receipes`](./Weverse%20Live%20Receipes) | Live stream-inspired recipe showcase | HTML, CSS, JS |
 | [`/Art Print Showcase`](./Art%20Print%20Showcase) | Portfolio-style gallery for art prints | HTML, CSS |
+| [`/Job Post's`](./Job%20Post's) | Job Post's with old vintage style | HTML, CSS |
 
 ---
 
