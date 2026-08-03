@@ -16,12 +16,8 @@ A cozy, aesthetic, graph-paper style web application to keep track of your Studi
 
 ## 🚀 Getting Started
 
-To run this project locally on your machine, follow these simple steps:
-
-1. Copy the complete HTML code from the project file (`index.html`)[cite: 1].
-2. Create a new file on your computer and name it `index.html`.
-3. Paste the code into the file and save it.
-4. Double-click the `index.html` file to open it in any modern web browser (Chrome, Firefox, Edge, Safari).
+1. Clone or download this repository.
+2. Open `index.html` in your browser to view the showcase.
 
 ---
 
