@@ -29,9 +29,7 @@ To run this project locally on your machine, follow these simple steps:
 ```text
 Studio Ghibli/
 │
-├── index.html        # Main HTML markup structure
-├── Style.css         # Glassmorphism styles, dark/light themes, animations
-├── Script.js         # Dynamic pagination, hero section toggle, theme logic
+├── Index.html        # Main HTML markup structure
 └── README.md         # Documentatio
 ```
 ---
