@@ -25,9 +25,22 @@ To run this project locally on your machine, follow these simple steps:
 
 ---
 
-## 🛠️ Built With
+## 📂 Project Structure
+```text
+Studio Ghibli/
+│
+├── index.html        # Main HTML markup structure
+├── Style.css         # Glassmorphism styles, dark/light themes, animations
+├── Script.js         # Dynamic pagination, hero section toggle, theme logic
+└── README.md         # Documentatio
+```
+---
 
-* HTML5 – For structured document markup[cite: 1].
-* CSS3 – For styling, custom aesthetics, layout design, and grid backgrounds[cite: 1].
-* JavaScript (Vanilla) – For interactive DOM manipulation to add custom movies dynamically[cite: 1].
-* Google Fonts – Utilizing the *Quicksand* font family for a soft, handwritten look[cite: 1].
+## 🛠 Tech Stack
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/GITHUB%20DESKTOP-852EA5?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
+</div>
