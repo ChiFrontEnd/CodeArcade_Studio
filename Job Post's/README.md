@@ -38,8 +38,9 @@ Dreame-Technolabs-Career/
 <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
 </div>
 
----
-## future enhancement
+--- 
+
+## 📌 Future Enhancements
 * **Interactive Application Form:** Replace the direct mail-to link with an interactive modal form allowing users to submit their details and upload resumes directly on the page.
 
 * **Filter by Department:** Add dynamic filtering tabs or search functionality to let candidates easily sort through technical, marketing, and management open roles.
