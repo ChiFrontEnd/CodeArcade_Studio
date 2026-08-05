@@ -37,3 +37,11 @@ Dreame-Technolabs-Career/
 <img src="https://img.shields.io/badge/GITHUB%20DESKTOP-852EA5?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
 </div>
+
+---
+## future enhancement
+* **Interactive Application Form:** Replace the direct mail-to link with an interactive modal form allowing users to submit their details and upload resumes directly on the page.
+
+* **Filter by Department:** Add dynamic filtering tabs or search functionality to let candidates easily sort through technical, marketing, and management open roles.
+
+* **Dark/Vintage Mode Toggle:** Introduce a toggle switch between the default weathered parchment paper look and a dark-themed "midnight typewriter" mode.
