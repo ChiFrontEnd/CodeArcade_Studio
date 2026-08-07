@@ -15,7 +15,7 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <imges/Output.PNG
+  <img src="Images/Output.PNG" alt="Screenshot of 
 </p>
 
 ---
