@@ -13,7 +13,10 @@
 ---
 
 ## 📸 Screenshots
-![Screenshot of Gallery](Images/Output.png)
+
+<p align="center">
+  <imges/Output.PNG
+</p>
 
 ---
 ## 🚀 Getting Started
