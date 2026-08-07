@@ -12,6 +12,10 @@
 
 ---
 
+## 📸 Screenshots
+![Screenshot of Gallery](Images/Output.png)
+
+---
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Ensure you have valid image link paths.
