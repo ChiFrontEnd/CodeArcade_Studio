@@ -14,8 +14,14 @@
 
 ---
 
-## 🚀 Getting Started
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
 
+---
+
+## 🚀 Getting Started
 1. Clone or download this repository.
 2. Ensure you have an `images/` folder in the root directory containing the relevant assets (logo, hero image, and product box images).
 3. Open `index.html` in your browser to view the interface.
