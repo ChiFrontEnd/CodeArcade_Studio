@@ -5,7 +5,6 @@
 ---
 
 ## ✨ Features
-
 * **Interactive Text Effects:** Combines a continuous dangling animation with a multi-step bounce landing.
 * **Dynamic JavaScript Setup:** Automatically wraps each letter in a span tag for precise, individual control.
 * **Staggered Motion:** Uses index-based delays to create a smooth, cascading wave effect across words.
@@ -13,15 +12,21 @@
 
 ---
 
-## 🚀 Getting Started
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output1.PNG" alt="Screenshot">
+  <img src="Images/Output2.PNG" alt="Screenshot">
+</p>
 
+---
+
+## 🚀 Getting Started
 1. Clone or download the repository.
 2. Open `.html` in any modern web browser to view the animations.
 
 ---
 
 ## 📂 Project Structure
-
 ```text
 Kinetic-Typography-Lab/
 │
