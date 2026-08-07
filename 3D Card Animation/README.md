@@ -13,16 +13,12 @@
 ---
 
 ## 📸 Screenshots
-
 <p align="center">
-<<<<<<< HEAD
-  <img src="Images/Output.PNG" alt="Screenshot of 
-=======
-  <Images/Output.PNG
->>>>>>> 372426b2f8db5024ec9eddf6486c9707d117491f
+  <img src="Images/Output.PNG" alt="Screenshot">
 </p>
 
 ---
+
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Ensure you have valid image link paths.
