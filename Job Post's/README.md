@@ -1,4 +1,4 @@
-## 📄 Job Post's - Dreame Technolabs
+## 📄 Job Post's - Dream Technolabs
 ## 📌 Overview
 A vintage, typewriter-styled career page template built with HTML and CSS, designed to resemble an old physical letter with realistic details like coffee stains, a paper clip, and custom stamps.
 
