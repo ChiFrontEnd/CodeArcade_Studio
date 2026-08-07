@@ -5,7 +5,6 @@
 ---
 
 ## ✨ Features
-
 * **Sophisticated Aesthetic -** Utilizes a warm, serif-based design with subtle shadows and rotation effects to give the art a "gallery-ready" feel.
 * **Floating UI Elements -** Includes a stylized card overlay on the hero art to highlight "New drops" or collections effectively.
 * **Responsive Layout -** Uses CSS Flexbox to ensure the text-and-image pairing looks great across different screen sizes.
@@ -14,8 +13,14 @@
 
 ---
 
-## 🚀 Getting Started
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
 
+---
+
+## 🚀 Getting Started
 1. Clone or download this repository.
 2. Open `index.html` in your browser to view the showcase.
 3. Replace the `img` source URL with your own artwork to customize the page.
@@ -23,7 +28,6 @@
 ---
 
 ## 📂 Project Structure
-
 ```text
 Art-Print-Showcase/
 │
