@@ -12,6 +12,13 @@
 
 ---
 
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Open `Comic Style Text Bubbles.html` in any modern web browser to view the comic layout.
