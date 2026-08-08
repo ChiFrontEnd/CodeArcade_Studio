@@ -13,6 +13,13 @@
 
 ---
 
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Open `index.html` in your browser to begin managing your list.
