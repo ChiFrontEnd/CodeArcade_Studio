@@ -47,6 +47,12 @@ Comic-Style-Text-Bubbles/
 
 ---
 
+## 🎨 Credits
+- Inspired by CodePen work.  
+- Icons from [Icons8](https://icons8.com).   
+
+---
+
 ## 📌 Future Enhancements
 * **Interactive Hover Actions:** Add popup or scaling animations when hovering over individual panels.
 * **Dynamic Content Support:** Allow users to easily customize or swap out comic bubble text via a simple script.
