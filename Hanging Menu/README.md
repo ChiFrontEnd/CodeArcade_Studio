@@ -11,6 +11,13 @@
 
 ---
 
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Ensure both `index.html` and `Style.css` are in the same directory.
