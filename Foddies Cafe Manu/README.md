@@ -12,6 +12,13 @@
 
 ---
 
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Ensure you have an `images/` folder in the root directory containing the corresponding item images (item-1.jpeg, item-2.jpeg, etc.).
