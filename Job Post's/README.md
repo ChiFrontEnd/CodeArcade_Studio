@@ -12,6 +12,13 @@ A vintage, typewriter-styled career page template built with HTML and CSS, desig
 
 ---
 
+## 📸 Screenshots
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 1. Save the HTML code into a file named `index.html`.
 2. Ensure you have the required assets in your directory (e.g., the stamp image referenced as `a.png`).
