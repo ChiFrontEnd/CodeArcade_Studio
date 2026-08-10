@@ -39,7 +39,7 @@ Sample Paragraph/
 
 ---
 
-## 🖼️ Screenshots
+## 🖼️ Preview
 ![Screenshot of Gallery](Images/Image.PNG)
 
 ---
