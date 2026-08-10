@@ -12,7 +12,7 @@ A vintage, typewriter-styled career page template built with HTML and CSS, desig
 
 ---
 
-## 📸 Screenshots
+## 🖼️ Preview
 <p align="center">
   <img src="Images/Output.PNG" alt="Screenshot">
 </p>
