@@ -13,6 +13,13 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 
 ---
 
+## 🖼️ Preview
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 📖 How to Use
 1. Click **Explore Recipes** on the landing hero banner to view the recipe collection.
 2. Use the **Next Recipe →** and **← Previous Recipe** buttons to flip through dishes.
