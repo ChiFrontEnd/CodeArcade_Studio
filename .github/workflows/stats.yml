@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   update-stats:
-  - runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,3 +24,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/collect.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/current.json data/history.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update daily github stats" && git push)
