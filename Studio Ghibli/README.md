@@ -14,6 +14,13 @@ A cozy, aesthetic, graph-paper style web application to keep track of your Studi
 
 ---
 
+## 🖼️ Preview
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 
 1. Clone or download this repository.
