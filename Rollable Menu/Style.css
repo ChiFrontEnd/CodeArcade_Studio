@@ -162,13 +162,6 @@ input#switch:checked + label:after {
     left: -17.95vmin;
 }
 
-
-
-
-
-
-
-
 .parts {
 	perspective: 100vmin;
     top: 9.2vh;
@@ -230,10 +223,6 @@ input#switch:checked ~ .part .part {
 	 99% { transform: rotateX(-90deg); }
 	100% { transform: rotateX(-245deg); }
 }
-
-
-
-
 
 .part:before, .part:after {
     content: "";
@@ -312,11 +301,6 @@ input#switch:checked ~ .part .part {
     right: 2vmin;
     left: inherit !important;
 }
-
-
-
-
-
 
 /*** ICONS ***/
 /* burger */
