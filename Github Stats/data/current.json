@@ -1,36 +1,47 @@
 {
   "repos": {
     "CodeArcade_Studio": {
-      "stars": 120,
-      "forks": 15,
-      "visitors_14d": 300,
-      "views_14d": 850,
-      "cloners_14d": 45,
-      "clones_14d": 120,
-      "total_downloads": 540,
-      "open_issues": 3,
+      "stars": 18,
+      "forks": 4,
+      "visitors_14d": 85,
+      "views_14d": 240,
+      "cloners_14d": 12,
+      "clones_14d": 45,
+      "total_downloads": 35,
+      "open_issues": 1,
       "daily_views": [
-        { "timestamp": "2026-08-01T00:00:00Z", "uniques": 50 }
+        { "timestamp": "2026-08-01T00:00:00Z", "uniques": 5 },
+        { "timestamp": "2026-08-02T00:00:00Z", "uniques": 8 },
+        { "timestamp": "2026-08-03T00:00:00Z", "uniques": 3 },
+        { "timestamp": "2026-08-04T00:00:00Z", "uniques": 12 },
+        { "timestamp": "2026-08-05T00:00:00Z", "uniques": 19 },
+        { "timestamp": "2026-08-06T00:00:00Z", "uniques": 14 },
+        { "timestamp": "2026-08-07T00:00:00Z", "uniques": 7 },
+        { "timestamp": "2026-08-08T00:00:00Z", "uniques": 10 },
+        { "timestamp": "2026-08-09T00:00:00Z", "uniques": 22 },
+        { "timestamp": "2026-08-10T00:00:00Z", "uniques": 16 },
+        { "timestamp": "2026-08-11T00:00:00Z", "uniques": 9 },
+        { "timestamp": "2026-08-12T00:00:00Z", "uniques": 15 },
+        { "timestamp": "2026-08-13T00:00:00Z", "uniques": 18 }
       ],
       "daily_clones": [
-        { "timestamp": "2026-08-01T00:00:00Z", "uniques": 10 }
+        { "timestamp": "2026-08-01T00:00:00Z", "uniques": 1 },
+        { "timestamp": "2026-08-02T00:00:00Z", "uniques": 3 },
+        { "timestamp": "2026-08-03T00:00:00Z", "uniques": 2 },
+        { "timestamp": "2026-08-04T00:00:00Z", "uniques": 5 },
+        { "timestamp": "2026-08-05T00:00:00Z", "uniques": 8 },
+        { "timestamp": "2026-08-06T00:00:00Z", "uniques": 4 },
+        { "timestamp": "2026-08-07T00:00:00Z", "uniques": 2 },
+        { "timestamp": "2026-08-08T00:00:00Z", "uniques": 3 },
+        { "timestamp": "2026-08-09T00:00:00Z", "uniques": 9 },
+        { "timestamp": "2026-08-10T00:00:00Z", "uniques": 6 },
+        { "timestamp": "2026-08-11T00:00:00Z", "uniques": 2 },
+        { "timestamp": "2026-08-12T00:00:00Z", "uniques": 4 },
+        { "timestamp": "2026-08-13T00:00:00Z", "uniques": 7 }
       ],
       "releases": [
-        { "tag": "v1.0.0", "name": "Initial Release", "published": "2026-08-01T00:00:00Z", "downloads": 540, "prerelease": false }
+        { "tag": "v1.0.0", "name": "Initial Release", "published": "2026-08-10T00:00:00Z", "downloads": 35, "prerelease": false }
       ]
-    },
-    "repo-two": {
-      "stars": 45,
-      "forks": 2,
-      "visitors_14d": 80,
-      "views_14d": 200,
-      "cloners_14d": 10,
-      "clones_14d": 25,
-      "total_downloads": 90,
-      "open_issues": 1,
-      "daily_views": [],
-      "daily_clones": [],
-      "releases": []
     }
   }
 }
