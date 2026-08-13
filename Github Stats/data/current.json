@@ -1,0 +1,36 @@
+{
+  "repos": {
+    "CodeArcade_Studio": {
+      "stars": 120,
+      "forks": 15,
+      "visitors_14d": 300,
+      "views_14d": 850,
+      "cloners_14d": 45,
+      "clones_14d": 120,
+      "total_downloads": 540,
+      "open_issues": 3,
+      "daily_views": [
+        { "timestamp": "2026-08-01T00:00:00Z", "uniques": 50 }
+      ],
+      "daily_clones": [
+        { "timestamp": "2026-08-01T00:00:00Z", "uniques": 10 }
+      ],
+      "releases": [
+        { "tag": "v1.0.0", "name": "Initial Release", "published": "2026-08-01T00:00:00Z", "downloads": 540, "prerelease": false }
+      ]
+    },
+    "repo-two": {
+      "stars": 45,
+      "forks": 2,
+      "visitors_14d": 80,
+      "views_14d": 200,
+      "cloners_14d": 10,
+      "clones_14d": 25,
+      "total_downloads": 90,
+      "open_issues": 1,
+      "daily_views": [],
+      "daily_clones": [],
+      "releases": []
+    }
+  }
+}
