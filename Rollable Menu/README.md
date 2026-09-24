@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
 *   **3D Rollable Animation -** Implements CSS `perspective` and `rotateX` keyframe animations to give the menu a physical paper-roll opening and closing effect.
 *   **Nested Structural Layout -** Cleverly utilizes nested container elements (`.part`) to cascade through multiple food categories (Burgers, Fries, Salads, Shakes, and Sweets).
