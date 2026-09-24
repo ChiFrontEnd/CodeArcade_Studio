@@ -1,14 +1,21 @@
 # Sample Text Generator
-
-A clean, professional, and classy placeholder text generator designed for designers and developers. 
+## 📌 Overview
+***Sample Text Generator*** is a clean, professional, and classy placeholder text generator designed for designers and developers. 
 
 ---
 
 ## 🚀 Features
+
 - **Professional Typography:** Uses the Merriweather Serif font for a classic, high-end reading experience.
 - **Dynamic Content:** Generates unique paragraphs with randomized sentence lengths to mimic natural writing.
 - **Minimalist Design:** A clean, distraction-free interface built for efficiency.
 - **Responsive Layout:** Perfectly centered and readable across all device sizes.
+
+---
+
+## 🖼️ Preview
+
+![Screenshot of Gallery](Images/Image.PNG)
 
 ---
 
@@ -21,12 +28,15 @@ A clean, professional, and classy placeholder text generator designed for design
 ---
 
 ## 🚀 Getting Started
+
 1. Clone or download this repository.
-2. Open `index.html` in your browser to start playing.
+2. Ensure you have an `Images/` folder in the root directory containing the relevant assets (logo, hero image, and product box images).
+3. Open `Index.html` in your browser to view the interface.
 
 ---
 
 ## 📂 Project Structure
+
 ```text
 Sample Paragraph/
 │
@@ -39,12 +49,8 @@ Sample Paragraph/
 
 ---
 
-## 🖼️ Preview
-![Screenshot of Gallery](Images/Image.PNG)
-
----
-
 ## 🛠 Tech Stack
+
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
