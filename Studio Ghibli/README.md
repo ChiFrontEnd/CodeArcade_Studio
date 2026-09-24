@@ -1,4 +1,4 @@
-## 🌿 Studio Ghibli Movie list 
+# 🌿 Studio Ghibli Movie list 
 ## 📌 Overview
 ***Studio Ghibli Movie List*** is a cozy, aesthetic, graph-paper style web application to keep track of your Studio Ghibli movie-watching journey! 
 
