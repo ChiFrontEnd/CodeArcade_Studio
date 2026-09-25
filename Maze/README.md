@@ -1,12 +1,13 @@
-# 🧩 Maze Escape
-
-Maze Escape is a browser-based puzzle game built with **HTML, CSS, and JavaScript**.  
+## 🧩 Maze Escape
+## 📌 Overview
+***Maze Escape*** is a browser-based puzzle game built with **HTML, CSS, and JavaScript**.  
 Your mission: guide the player 😊 through a procedurally generated maze and reach the 🏠 house.  
 Each level gets progressively larger and more challenging, testing your logic and patience.
 
 ---
 
 ## 🎮 Features
+
 - **Keyboard controls** (⬅️ ⬆️ ⬇️ ➡️) for smooth movement.
 - **On-screen buttons** for mobile/touch users.
 - **Procedural maze generation** using Depth-First Search (DFS).
@@ -16,7 +17,14 @@ Each level gets progressively larger and more challenging, testing your logic an
 
 ---
 
+## 🖼️ Preview
+
+![Screenshot of Gallery](Images/Image.PNG)
+
+---
+
 ## 🚀 Getting Started
+
 1. Clone or download this repository.
 2. Open `index.html` in your browser.
 3. Press **Start Game** and begin your maze adventure!
@@ -24,6 +32,7 @@ Each level gets progressively larger and more challenging, testing your logic an
 ---
 
 ## 📂 Project Structure
+
 ```text
 MazeGame/
 │
@@ -34,12 +43,8 @@ MazeGame/
 ```
 ---
 
-## 🖼️ Screenshots
-![Screenshot of Gallery](Images/Image.PNG)
-
----
-
 ## 🛠 Tech Stack
+
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -54,6 +59,7 @@ MazeGame/
 ---
 
 ## 📌 Future Enhancements
+
 - Add **timer and scoring system**
 - Introduce **obstacles and collectibles**
 - More **maze themes** (dark mode, neon, retro)
