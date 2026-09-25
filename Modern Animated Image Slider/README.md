@@ -35,7 +35,8 @@ A sleek, modern, and fully responsive animated image slider featuring smooth tra
 ```text
 Animated-Image-Slider/
 │
-├── index.html        # Main HTML structure
+├── Images/           # Contains Images
+├── Index.html        # Main HTML structure
 ├── Style.css         # Styling, layout, and keyframe animations
 ├── Script.js         # Interactive slider logic & event listeners
 └── README.md         # Project documentation
