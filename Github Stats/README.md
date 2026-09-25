@@ -13,6 +13,14 @@
 
 ---
 
+## 🖼️ Preview
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+  <img src="Images/Output1.PNG" alt="Screenshot">
+</p>
+
+---
+
 ## 🚀 Getting Started
 1. Clone or download this repository.
 2. Ensure the `data/` folder contains `current.json` and `history.json` files.
