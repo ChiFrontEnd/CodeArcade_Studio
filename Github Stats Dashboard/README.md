@@ -1,34 +1,41 @@
-## 👩🏻‍🍳 Github Stats
+## 📊 GitHub Stats Dashboard
+
 ## 📌 Overview
-***Github Stats*** is a dynamic web application built with **HTML, CSS, and JavaScript**. It allows users to filter food items by category (e.g., breakfast, lunch, shakes) in real-time, providing a seamless browsing experience.
+**GitHub Stats Dashboard** is a dynamic web application and automated tracker built with **HTML, CSS, JavaScript, and Chart.js**. It tracks and visualizes live repository metrics—such as stars, forks, traffic (views/visitors), clones, downloads, and releases—providing a comprehensive analytics view inspired by modern developer dashboards.
 
 ---
 
 ## ✨ Features
-* **Dynamic Filtering -** JavaScript-powered category filtering that instantly updates the displayed menu items.
-* **Data-Driven UI -** Menu items are rendered dynamically from an array of objects, making it easy to add or remove dishes.
-* **Responsive Layout -** Uses CSS Grid and Flexbox to ensure a clean, professional look on both mobile devices and desktops.
-* **Clean Aesthetic -** Minimalist design with a focus on typography and visual hierarchy, inspired by modern restaurant websites.
+* **Interactive Charts -** Powered by Chart.js to render trends like stars over time, daily traffic, and cumulative downloads with smooth visual lines and bar graphs.
+* **Multi-Repo Management -** Clean tab-based navigation to easily switch and view statistics across different repositories.
+* **Automated Data Collection -** Uses GitHub Actions to automatically fetch daily metrics via the GitHub REST API and update data logs.
+* **Responsive Layout -** Built using CSS Grid and Flexbox for a clean, GitHub-inspired dark-mode aesthetic on both mobile and desktop devices.
+
+---
+
+## 🖼️ Preview
+<p align="center">
+  <img src="Images/Output.PNG" alt="Screenshot">
+  <img src="Images/Output1.PNG" alt="Screenshot">
+</p>
 
 ---
 
 ## 🚀 Getting Started
 1. Clone or download this repository.
-2. Ensure you have an `Images/` folder in the root directory containing the corresponding item images (item-1.jpeg, item-2.jpeg, etc.).
-3. Open `Index.html` in your browser to interact with the menu.
+2. Ensure the `data/` folder contains `current.json` and `history.json` files.
+3. Open `index.html` using a local web server (like VS Code's **Live Server** extension) to view the live dashboard.
 
 ---
 
 ## 📂 Project Structure
 ```text
-Github Stats/
+CodeArcade_Studio/
 │
-├── data/             # Contains JSON Files
-├── Images/           # Contains menu item photos
-├── scripts/          # Contains Javascript File
-├── Index.html        # Main structure and menu containers
-└── README.md         # Project documentation
-
+├── data/                 # Contains JSON data files (current.json, history.json)
+├── scripts/              # Contains backend stats collector script (collect.js)
+├── index.html            # Main frontend dashboard structure & charts
+└── README.md             # Project documentation
 ```
 
 ---
@@ -47,7 +54,6 @@ Github Stats/
 ---
 
 ## 📌 Future Enhancements
-* **Search Bar -** Add a search input to filter menu items by name.
-* **Sorting Options -** Allow users to sort dishes by price (low-to-high or high-to-low).
-* **Animations -** Add entrance animations using `CSS transitions` or `GSAP` when filtering items.
-* **Admin Dashboard -** Create a simple interface to add or edit menu items dynamically without touching the code.
+* **Custom Date Range Filter** - Allow users to filter analytics charts by custom date ranges (e.g., last 7 days, 30 days, year).
+* **Export Data** - Add options to export stats summaries as CSV or PDF reports.
+* **Webhook Alerts** - Trigger notifications when star milestones or significant traffic spikes occur.
