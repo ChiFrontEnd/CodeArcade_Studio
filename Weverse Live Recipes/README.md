@@ -5,6 +5,7 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 ---
 
 ## 🚀 Features
+
 - **Glassmorphism UI:** Frosted-glass cards over a dynamic, animated purple gradient background.
 - **Theme Toggle:** Switch seamlessly between Dark Mode and Light Mode with preferences saved in `localStorage`.
 - **Interactive Recipe Pagination:** Smooth single-page navigation to explore dishes with Next and Previous controls.
@@ -14,6 +15,7 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 ---
 
 ## 🖼️ Preview
+
 <p align="center">
   <img src="Images/Output.PNG" alt="Screenshot">
 </p>
@@ -21,6 +23,7 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 ---
 
 ## 📖 How to Use
+
 1. Click **Explore Recipes** on the landing hero banner to view the recipe collection.
 2. Use the **Next Recipe →** and **← Previous Recipe** buttons to flip through dishes.
 3. Toggle the **🌙 Dark / ☀️ Light** button in the navbar anytime to switch your visual theme.
@@ -29,6 +32,7 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 ---
 
 ## 🚀 Getting Started
+
 1. Clone or download this repository.
 2. Ensure you have valid image link paths.
 3. Open `index.html` in your browser to start playing.
@@ -36,18 +40,21 @@ A modern, elegant, fan-inspired web application featuring comforting pasta recip
 ---
 
 ## 📂 Project Structure
+
 ```text
 The-Purple-Kitchen/
 │
-├── index.html        # Main HTML markup structure
+├── Images/           # Contains Images
+├── Index.html        # Main HTML markup structure
 ├── Style.css         # Glassmorphism styles, dark/light themes, animations
-├── Script.js        # Dynamic pagination, hero section toggle, theme logic
-├── Recipe.js        # Recipe dataset (titles, ingredients, steps, metadata)
-└── README.md         # Documentatio
+├── Script.js         # Dynamic pagination, hero section toggle, theme logic
+├── Recipe.js         # Recipe dataset (titles, ingredients, steps, metadata)
+└── README.md         # Documentation
 ```
 ---
 
 ## 🛠 Tech Stack
+
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
