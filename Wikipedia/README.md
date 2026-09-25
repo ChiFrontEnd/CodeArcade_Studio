@@ -1,4 +1,4 @@
-## 🔍 Wikipedia Search
+# 🔍 Wikipedia Search
 ## 📌 Overview
 ***Wikipedia Search*** is a dynamic, asynchronous web application that allows users to search the Wikipedia database in real-time. It leverages the **Wikipedia API** to fetch and display relevant articles, providing a clean and responsive search interface.
 
@@ -15,6 +15,7 @@
 ---
 
 ## 🖼️ Preview
+
 <p align="center">
   <img src="Images/Output.PNG" alt="Screenshot">
 </p>
@@ -34,9 +35,12 @@
 ```text
 Wikipedia-Search/
 │
-├── index.html        # Main interface structure
+├── Images/           # Contains Images
+├── Index.html        # Main interface structure
 ├── Style.css         # CSS variables, grid layouts, and styling
 ├── Script.js         # API integration, fetch logic, and DOM rendering
+├── wiki-logo.png     # Wikipedia Logo
+├── wiki-urls.js      # Url's
 └── README.md         # Project documentation
 
 ```
@@ -44,6 +48,7 @@ Wikipedia-Search/
 ---
 
 ## 🛠 Tech Stack
+
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -55,6 +60,7 @@ Wikipedia-Search/
 ---
 
 ## 📌 Future Enhancements
+
 * **Debounced Search -** Implement debouncing to fetch results automatically as the user types, rather than requiring a button click.
 * **History Tracking -** Display a "Recent Searches" section using `localStorage`.
 * **Advanced Filters -** Add filters for language or result limits.
