@@ -1,11 +1,12 @@
-# 📖 Notebook Pages Flip
-
-An interactive HTML + CSS project that simulates a **school notebook with multiple pages flipping open** when hovered.  
+## 📖 Notebook Pages Flip
+## 📌 Overview
+***Notebook Pages Flip*** is an interactive HTML + CSS project that simulates a **school notebook with multiple pages flipping open** when hovered. 
 This project uses 3D transforms, sequential transitions, and creative layering to create a realistic page-flip effect.
 
 ---
 
 ## ✨ Features
+
 - **Notebook Cover**
   - Plum-colored cover with gradient spine shading.  
   - Custom "NOTEBOOK" skin label with decorative strip.  
@@ -22,41 +23,32 @@ This project uses 3D transforms, sequential transitions, and creative layering t
 
 ---
 
-## 📂 File Structure
-```
-Notebook-Pages-Flip/
-│── Notebook Page Flip.html              # Main HTML structure
-│── Notebook Page Flip.css  # Styling and animations
-│── README.md               # Project documentation
-```
----
-
-## 🚀 Usage
-1. Clone or download this repository.  
-2. Open `index.html` in your browser.  
-3. Hover over the notebook to see the cover flip open and pages turn sequentially.  
-
----
-
-## 🌍 Accessibility
-- Clear headings (`h1`) with descriptive labels.  
-- Semantic structure with wrapper divs for notebook and pages.  
-
----
-
 ## 🖼️ Preview
+
 ![Screenshot of Gallery](Images/Image.PNG)
 
 ---
 
-## 🎨 Credits
-- Inspired by CodePen: **Olivia Ng**  
-- Icons: [Icons8 Doodle Books](https://icons8.com/icons/set/books)  
-- Social icons: [Simple Line Icons](https://cdnjs.com/libraries/simple-line-icons)  
+## 🚀 Getting Started
+1. Clone or download this repository.
+2. Ensure you have an `Images/` folder in the root directory containing the relevant assets (logo, hero image, and product box images).
+3. Open `.html` in your browser to view the interface.
 
 ---
 
+## 📂 Project Structure
+```
+Notebook-Pages-Flip/
+|
+├── Images/                   # Contains Images
+│── Notebook Page Flip.html   # Main HTML structure
+│── Notebook Page Flip.css    # Styling and animations
+│── README.md                 # Project documentation
+```
+---
+
 ## 🛠 Tech Stack
+
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -67,3 +59,11 @@ Notebook-Pages-Flip/
   <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
   <img src="https://img.shields.io/badge/WINDOWS-0078D4?style=for-the-badge&logo=windows&logoColor=white">
 </div>
+
+---
+
+## 🎨 Credits
+
+- Inspired by CodePen: **Olivia Ng**  
+- Icons: [Icons8 Doodle Books](https://icons8.com/icons/set/books)  
+- Social icons: [Simple Line Icons](https://cdnjs.com/libraries/simple-line-icons)  
