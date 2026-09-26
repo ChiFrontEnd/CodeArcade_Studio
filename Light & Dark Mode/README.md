@@ -1,4 +1,4 @@
-## 🌗 Light & Dark Mode
+# 🌗 Light & Dark Mode
 ## 📌 Overview
 ***Light & Dark Mode*** is a clean, modern web application that demonstrates real-time theme switching using **CSS Variables** and **Vanilla JavaScript**. It also features dynamic content rendering with **Moment.js** for formatting blog post dates.
 
