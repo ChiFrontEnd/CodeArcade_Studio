@@ -1,4 +1,4 @@
-## BrainKick (Kinetic Typography Lab)
+# BrainKick (Kinetic Typography Lab)
 ## 📌 Overview
 ***Kinetic Typography Lab*** is a lightweight, interactive project built with vanilla JavaScript and CSS keyframes. It features two engaging text hover effects: letters that fall and dangle like a swing, and letters that bounce smoothly to a stop.
 
