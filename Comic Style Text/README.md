@@ -1,4 +1,4 @@
-## Comic Style Text
+# 💬 Comic Style Text
 ## 📌 Overview
 ***Comic Style Text Bubbles*** is a pure CSS and HTML project featuring vibrant comic-book-inspired speech bubbles, splash graphics, and stylized typography. It uses modern CSS clip-paths, gradients, and custom web fonts to recreate a dynamic pop-art layout.
 
