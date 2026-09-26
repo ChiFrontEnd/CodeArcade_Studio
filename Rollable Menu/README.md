@@ -50,3 +50,17 @@ Rollable_Menu/
   <img src="https://img.shields.io/badge/GITHUB%20DESKTOP-852EA5?style=for-the-badge&logo=github&logoColor=white">
   <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
 </div>
+
+---
+
+## 📌 Future Enhancements
+
+* **JavaScript Sound Effects -** Add tactile mechanical rolling, clicking, and paper-unfolding audio effects when opening or closing the menu.
+
+* **Interactive Ordering Cart -** Allow users to click menu items to add them to a slide-out shopping cart and calculate totals.
+
+* **Dynamic Menu CMS/JSON -** Load menu categories and items dynamically from an external JSON file instead of hardcoding them in HTML.
+
+* **Online Reservation System -** Add a working modal for table bookings or takeout time slot selections.
+
+* **Expanded Theme Switcher -** Provide a button to toggle between different restaurant styles (e.g., Retro Diner, Neon Cyberpunk, or Minimalist Cafe).
