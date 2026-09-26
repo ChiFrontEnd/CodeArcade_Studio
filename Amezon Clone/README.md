@@ -1,4 +1,4 @@
-## 🛒 Amazon UI Clone
+# 🛒 Amazon UI Clone
 ## 📌 Overview
 ***Amazon UI Clone*** is a responsive front-end project that replicates the layout and design of the Amazon homepage. This project focuses on mastering CSS Flexbox, 3D structure, and clean component-based layout design using **HTML and CSS**.
 
