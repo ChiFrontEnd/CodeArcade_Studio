@@ -1,4 +1,4 @@
-## 🌄 Modern Animated Image Slider 
+# 🌄 Modern Animated Image Slider 
 ## 📌 Overview
 ***Modern Animated Image Slider*** is a sleek, modern, and fully responsive animated image slider featuring smooth transitions, background glassmorphism effects, and dynamic card rearrangement!
 
