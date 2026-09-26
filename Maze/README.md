@@ -1,4 +1,4 @@
-## 🧩 Maze Escape
+# 🧩 Maze Escape
 ## 📌 Overview
 ***Maze Escape*** is a browser-based puzzle game built with **HTML, CSS, and JavaScript**.  
 Your mission: guide the player 😊 through a procedurally generated maze and reach the 🏠 house.  
