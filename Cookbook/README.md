@@ -1,4 +1,4 @@
-## 👩🏻‍🍳 Cookbook
+# 👩🏻‍🍳 Cookbook
 ## 📌 Overview
 ***Cookbook*** is a dynamic web application built with **HTML, CSS, and JavaScript**. It allows users to filter food items by category (e.g., breakfast, lunch, shakes) in real-time, providing a seamless browsing experience.
 
