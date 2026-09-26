@@ -1,6 +1,6 @@
-## 🖥️ macOS Glassmorphic Desktop Clone
+# 🖥️ macOS Desktop Clone
 ## 📌 Overview
-***macOS Glassmorphic Desktop Clone*** is a modern, high-end web-based desktop environment replicating the macOS aesthetic using advanced **Glassmorphism** design principles, fully interactive UI components, and vanilla JavaScript.
+***macOS Desktop Clone*** is a modern, high-end web-based desktop environment replicating the macOS aesthetic using advanced **Glassmorphism** design principles, fully interactive UI components, and vanilla JavaScript.
 
 ---
 
