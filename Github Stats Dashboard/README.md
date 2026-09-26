@@ -1,5 +1,4 @@
-## 📊 GitHub Stats Dashboard
-
+# 📊 GitHub Stats Dashboard
 ## 📌 Overview
 **GitHub Stats Dashboard** is a dynamic web application and automated tracker built with **HTML, CSS, JavaScript, and Chart.js**. It tracks and visualizes live repository metrics—such as stars, forks, traffic (views/visitors), clones, downloads, and releases—providing a comprehensive analytics view inspired by modern developer dashboards.
 
