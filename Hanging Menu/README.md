@@ -1,5 +1,5 @@
-## Hanging Menu
-
+# 😊 Hanging Menu
+## 📌 Overview
 ***Hanging Menu*** is a clean and creative navigation menu template featuring individual character span elements styled for interactive typography layouts. It provides a structured, modern layout suitable for personal portfolios and creative landing pages.
 
 ---
