@@ -1,4 +1,4 @@
-## 🍽️ Interactive Restaurant Menu
+# 🍽️ Interactive Restaurant Menu
 ## 📌 Overview
 ***Interactive Restaurant Menu*** is a dynamic web application built with **HTML, CSS, and JavaScript**. It allows users to filter food items by category (e.g., breakfast, lunch, shakes) in real-time, providing a seamless browsing experience.
 
