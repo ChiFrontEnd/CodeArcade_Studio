@@ -6,6 +6,7 @@ Your mission: guess the hidden word before the hangman figure is fully drawn!
 ---
 
 ## Features
+
 - **Dynamic Word List -** Multiple categories of words with helpful hints.
 
 - **Visual Feedback -** Hangman stages (SVG) progress with each wrong guess.
@@ -16,7 +17,14 @@ Your mission: guess the hidden word before the hangman figure is fully drawn!
 
 ---
 
+## 🖼️ Preview
+
+![Screenshot of Gallery](images/Image.PNG)
+
+---
+
 ## 🚀 Getting Started
+
 1. Clone or download this repository.
 2. Ensure you have the images/ folder containing the required .svg and .gif files.
 3. Open `index.html` in your browser to start playing.
@@ -37,12 +45,8 @@ Hangman/
 
 ---
 
-## 🖼️ Screenshots
-![Screenshot of Gallery](images/Image.PNG)
-
----
-
 ## 🛠 Tech Stack
+
 <div style="display: flex; flex-wrap: wrap; gap: 8px;">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -57,6 +61,7 @@ Hangman/
 ---
 
 ## 📌 Future Enhancements
+
 - Add **timer and scoring system**
 - **Sound effects and background music**
 - Save **progress across sessions**
