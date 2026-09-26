@@ -1,5 +1,5 @@
 # 🎮 Hangman Game
-
+## 📌 Overview
 ***Hangman Game*** is a browser-based puzzle game built with **HTML, CSS, and JavaScript**.  
 Your mission: guess the hidden word before the hangman figure is fully drawn!
 
