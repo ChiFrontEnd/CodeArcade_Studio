@@ -1,4 +1,4 @@
-## 🛍 Grocery Goods List
+# 🛍 Grocery Goods List
 ## 📌 Overview
 ***Grocery Goods*** is a functional, browser-based **To-Do/Grocery List application** built with **HTML, CSS, and Vanilla JavaScript**. It enables users to efficiently manage their shopping lists with CRUD (Create, Read, Update, Delete) functionality and persistent data storage.
 
