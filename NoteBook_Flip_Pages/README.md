@@ -1,4 +1,4 @@
-## 📖 Notebook Pages Flip
+# 📖 Notebook Pages Flip
 ## 📌 Overview
 ***Notebook Pages Flip*** is an interactive HTML + CSS project that simulates a **school notebook with multiple pages flipping open** when hovered. 
 This project uses 3D transforms, sequential transitions, and creative layering to create a realistic page-flip effect.
