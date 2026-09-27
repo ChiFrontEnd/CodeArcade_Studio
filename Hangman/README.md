@@ -5,7 +5,7 @@ Your mission: guess the hidden word before the hangman figure is fully drawn!
 
 ---
 
-## Features
+## ✨ Features
 
 - **Dynamic Word List -** Multiple categories of words with helpful hints.
 
