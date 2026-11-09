@@ -17,7 +17,7 @@
 
 ## 🖼️ Preview
 <p align="center">
-  <img src="images/Output.PNG" alt="Happy Diwali Preview">
+  <img src="Images/Output.PNG" alt="Happy Diwali Preview">
 </p>
 
 ---
@@ -33,7 +33,7 @@
 ```text
 Happy-Diwali-Animation/
 │
-├── images/           # Contains screenshot assets (Output.PNG)
+├── Images/           # Contains screenshot assets (Output.PNG)
 ├── index.html        # Main HTML file with CSS styling and Canvas JS script
 └── README.md         # Project documentation
 ```
