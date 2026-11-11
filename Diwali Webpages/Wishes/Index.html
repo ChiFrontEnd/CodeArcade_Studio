@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0d0914;
+            font-family: 'Sacramento', cursive;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Sparkle Overlay */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #ffd700, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, #ff9900, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 160px 120px, #ffd700, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.4;
+        }
+
+        .main-stage {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        /* Greetings Styling */
+        .greeting-box {
+            text-align: center;
+            z-index: 5;
+            animation: floatUp 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .title {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            color: #ffe45e;
+            text-align: center;
+            text-shadow: 
+                0 0 10px #ffe45e,
+                0 0 20px #e5c654,
+                0 0 40px #ff6b00,
+                0 0 80px #ff0000;
+            line-height: 1.1;
+            margin: 5px 0;
+        }
+
+        .sub-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px #ff9900;
+        }
+
+        .brand-name {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.5rem, 4vw, 2.8rem);
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #ffd700, #ff8c00, #fff8dc, #ffd700);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease infinite;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            margin-top: 10px;
+        }
+
+        /* Traditional Diyas Section */
+        .diya-row {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            z-index: 5;
+        }
+
+        .diya-wrapper {
+            position: relative;
+            width: 70px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Diya Base (Mitti Ka Diya) */
+        .diya-base {
+            width: 70px;
+            height: 32px;
+            background: linear-gradient(180deg, #c05621 0%, #7b341e 70%, #4a1d0d 100%);
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top: 3px solid #dd6b20;
+            box-shadow: 
+                0 8px 15px rgba(0, 0, 0, 0.7),
+                inset 0 4px 6px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        .diya-base::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 8px;
+            background: #9c4221;
+            border-radius: 50%;
+        }
+
+        /* Cotton Wick (Ruu ki Baati) */
+        .wick {
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 16px;
+            background: linear-gradient(to top, #333 0%, #e2e8f0 70%, #2d3748 100%);
+            border-radius: 3px 3px 1px 1px;
+            z-index: 2;
+        }
+
+        /* Flame Animation */
+        .flame {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 28px;
+            background: linear-gradient(to bottom, #ffffff 0%, #ffeb3b 25%, #ff9800 60%, #ff5722 100%);
+            border-top-left-radius: 50% 80%;
+            border-top-right-radius: 50% 80%;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+            z-index: 3;
+            animation: flicker 0.15s ease-in-out infinite alternate;
+            transform-origin: center bottom;
+            filter: drop-shadow(0 0 10px #ff9800) drop-shadow(0 0 20px #ff5722);
+        }
+
+        /* Inner Flame Core */
+        .flame::after {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 12px;
+            background: #ffffff;
+            border-top-left-radius: 50% 80%;
+            border-top-right-radius: 50% 80%;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+            opacity: 0.9;
+        }
+
+        /* Glow Aura below flame */
+        .flame-glow {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, rgba(255, 152, 0, 0.5) 0%, rgba(255, 87, 34, 0.2) 50%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+            animation: pulseGlow 0.3s ease-in-out infinite alternate;
+        }
+
+        /* Fireworks Explosions */
+        .firework-burst {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            animation: burst 3.5s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+        }
+
+        .burst-1 {
+            width: 140px;
+            height: 140px;
+            border: 2px dashed #ffea00;
+            box-shadow: 0 0 20px #ffea00, inset 0 0 20px #ffea00;
+            top: 15%;
+            left: 10%;
+            animation-delay: 0.2s;
+        }
+
+        .burst-2 {
+            width: 180px;
+            height: 180px;
+            border: 3px dotted #ff0055;
+            box-shadow: 0 0 25px #ff0055, inset 0 0 25px #ff0055;
+            top: 10%;
+            right: 12%;
+            animation-delay: 1.2s;
+        }
+
+        .burst-3 {
+            width: 120px;
+            height: 120px;
+            border: 2px dashed #00e5ff;
+            box-shadow: 0 0 20px #00e5ff, inset 0 0 20px #00e5ff;
+            bottom: 25%;
+            left: 8%;
+            animation-delay: 2.1s;
+        }
+
+        .burst-4 {
+            width: 160px;
+            height: 160px;
+            border: 2px dotted #76ff03;
+            box-shadow: 0 0 22px #76ff03, inset 0 0 22px #76ff03;
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 2.8s;
+        }
+
+        /* Keyframe Animations */
+        @keyframes flicker {
+            0% { transform: translateX(-50%) scale(1) rotate(-1deg); }
+            100% { transform: translateX(-50%) scale(1.08, 1.15) rotate(1deg); }
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.6; transform: translateX(-50%) scale(0.9); }
+            100% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(60px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes burst {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            70% {
+                transform: scale(1.3);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="main-stage">
+        <!-- Fireworks Ambient -->
+        <div class="firework-burst burst-1"></div>
+        <div class="firework-burst burst-2"></div>
+        <div class="firework-burst burst-3"></div>
+        <div class="firework-burst burst-4"></div>
+
+        <!-- Greeting Header -->
+        <div class="greeting-box">
+            <div class="title">Happy Diwali</div>
+        </div>
+
+        <!-- Diyas Row with Correct Cotton Wick -->
+        <div class="diya-row">
+            <div class="diya-wrapper">
+                <div class="flame-glow"></div>
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="diya-base"></div>
+            </div>
+            <div class="diya-wrapper">
+                <div class="flame-glow"></div>
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="diya-base"></div>
+            </div>
+            <div class="diya-wrapper">
+                <div class="flame-glow"></div>
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="diya-base"></div>
+            </div>
+            <div class="diya-wrapper">
+                <div class="flame-glow"></div>
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="diya-base"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
