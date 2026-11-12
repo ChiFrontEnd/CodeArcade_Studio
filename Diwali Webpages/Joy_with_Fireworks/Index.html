@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali | CHI</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #07030d;
+            --bg-card: rgba(23, 11, 42, 0.75);
+            --gold-main: #ffd700;
+            --gold-accent: #d4af37;
+            --orange-glow: #ff6b00;
+            --magenta-glow: #e6007e;
+            --glass-border: rgba(255, 215, 0, 0.25);
+            --text-main: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Fullscreen Fireworks Canvas */
+        #fireworksCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Ambient Glow & Sparkle Overlay */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 20%, rgba(255, 107, 0, 0.12) 0%, rgba(114, 9, 183, 0.08) 45%, rgba(7, 3, 13, 0.95) 90%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .main-wrapper {
+            position: relative;
+            z-index: 2;
+            padding-bottom: 4rem;
+        }
+
+        /* Glassmorphism Header & Card Styling */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 215, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Title Typography */
+        .script-title {
+            font-family: 'Great Vibes', cursive;
+            color: var(--gold-main);
+            font-size: 3.5rem;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            line-height: 1.1;
+        }
+
+        .brand-heading {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--gold-main) 50%, #ff8c00 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .tech-zone-badge {
+            background: linear-gradient(45deg, #e6007e, #ff6b00);
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 6px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 0 15px rgba(230, 0, 126, 0.5);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        /* Interactive Diya Lamps */
+        .diya-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .diya-item {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            user-select: none;
+        }
+
+        .diya-item:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        .diya-body {
+            width: 70px;
+            height: 36px;
+            background: linear-gradient(180deg, #d4af37 0%, #8b5a2b 60%, #4a2700 100%);
+            border-radius: 0 0 40px 40px;
+            border: 2px solid #ffe45e;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .diya-body::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 12px;
+            background: linear-gradient(90deg, #8b5a2b, #ffe45e, #8b5a2b);
+            border-radius: 50%;
+        }
+
+        /* Flame Animation */
+        .flame {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 32px;
+            background: linear-gradient(0deg, #ff4500 0%, #ff8c00 40%, #ffd700 80%, #ffffff 100%);
+            border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
+            box-shadow: 0 0 20px #ff8c00, 0 0 35px #ffd700, 0 0 50px #ff4500;
+            animation: flicker 0.15s infinite alternate ease-in-out;
+            opacity: 1;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .diya-item.off .flame {
+            opacity: 0;
+            transform: translateX(-50%) scale(0.1);
+        }
+
+        @keyframes flicker {
+            0% { transform: translateX(-50%) rotate(-2deg) scale(0.98); opacity: 0.95; }
+            100% { transform: translateX(-50%) rotate(2deg) scale(1.05); opacity: 1; }
+        }
+
+        /* Audio Indicator Badge */
+        .audio-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(23, 11, 42, 0.85);
+            border: 1px solid var(--glass-border);
+            padding: 8px 18px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+
+        .audio-indicator:hover {
+            border-color: var(--gold-main);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 576px) {
+            .script-title { font-size: 2.5rem; }
+            .brand-heading { font-size: 1.8rem; }
+            .diya-container { gap: 0.8rem; }
+            .diya-body { width: 55px; height: 30px; }
+            .flame { top: -25px; width: 14px; height: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Glow BG -->
+    <div class="ambient-glow"></div>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Sound Toggle Badge -->
+    <button class="audio-indicator text-white d-flex align-items-center gap-2" id="soundToggle" title="Toggle Synth Audio Fireworks">
+        <i class="fa-solid fa-volume-high text-warning" id="soundIcon"></i>
+        <span id="soundText">Audio: ON</span>
+    </button>
+
+    <!-- Main Experience Content -->
+    <div class="container main-wrapper pt-5">
+        
+        <!-- Header & Greetings Section -->
+        <header class="text-center my-4">
+            <div class="glass-card p-4 p-md-5 mx-auto" style="max-width: 800px;">
+                <div class="script-title">Happy Diwali</div>
+                <h1 class="brand-heading display-8 text-uppercase my-2">From Creative Human Intelligence</h1>
+                <p class="text-white-50 mx-auto fs-6 mb-4">
+                    May your life be illuminated with endless joy, innovation, prosperity, and vibrant light. Enjoy the automated festive celebration!
+                </p>
+
+                <!-- Diya Lighting Row -->
+                <div class="diya-container" id="diyaRow">
+                    <div class="diya-item" onclick="toggleDiya(this)" title="Click to toggle flame">
+                        <div class="flame"></div>
+                        <div class="diya-body"></div>
+                    </div>
+                    <div class="diya-item" onclick="toggleDiya(this)" title="Click to toggle flame">
+                        <div class="flame"></div>
+                        <div class="diya-body"></div>
+                    </div>
+                    <div class="diya-item" onclick="toggleDiya(this)" title="Click to toggle flame">
+                        <div class="flame"></div>
+                        <div class="diya-body"></div>
+                    </div>
+                    <div class="diya-item" onclick="toggleDiya(this)" title="Click to toggle flame">
+                        <div class="flame"></div>
+                        <div class="diya-body"></div>
+                    </div>
+                    <div class="diya-item" onclick="toggleDiya(this)" title="Click to toggle flame">
+                        <div class="flame"></div>
+                        <div class="diya-body"></div>
+                    </div>
+                </div>
+
+                <div class="text-warning small mt-2">
+                    <i class="fa-solid fa-hand-pointer me-1"></i> Click on any Diya to light or extinguish it!
+                </div>
+            </div>
+        </header>
+
+        <!-- Footer -->
+        <footer class="text-center text-white-50 mt-5 pt-3">
+            <p class="mb-0 small">Designed with ❤️ | Happy Diwali 2026 🪔</p>
+        </footer>
+
+    </div>
+
+    <!-- Web Audio & Fireworks Script -->
+    <script>
+        /* ----------------------------------------------------
+           1. Web Audio API Synthesizer (No external MP3 files needed)
+           ---------------------------------------------------- */
+        let audioCtx = null;
+        let soundEnabled = true;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function playLaunchSound() {
+            if (!soundEnabled) return;
+            initAudio();
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(600, audioCtx.currentTime + 0.3);
+                gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.3);
+            } catch (e) {}
+        }
+
+        function playExplosionSound() {
+            if (!soundEnabled) return;
+            initAudio();
+            try {
+                const bufferSize = audioCtx.sampleRate * 0.4;
+                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                const data = buffer.getChannelData(0);
+                for (let i = 0; i < bufferSize; i++) {
+                    data[i] = Math.random() * 2 - 1;
+                }
+                const noise = audioCtx.createBufferSource();
+                noise.buffer = buffer;
+
+                const filter = audioCtx.createBiquadFilter();
+                filter.type = 'lowpass';
+                filter.frequency.setValueAtTime(800, audioCtx.currentTime);
+                filter.frequency.exponentialRampToValueAtTime(50, audioCtx.currentTime + 0.4);
+
+                const gain = audioCtx.createGain();
+                gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+
+                noise.connect(filter);
+                filter.connect(gain);
+                gain.connect(audioCtx.destination);
+                noise.start();
+            } catch (e) {}
+        }
+
+        // Sound Toggle Button
+        document.getElementById('soundToggle').addEventListener('click', function() {
+            soundEnabled = !soundEnabled;
+            document.getElementById('soundText').textContent = `Audio: ${soundEnabled ? 'ON' : 'OFF'}`;
+            document.getElementById('soundIcon').className = soundEnabled ? 'fa-solid fa-volume-high text-warning' : 'fa-solid fa-volume-xmark text-danger';
+        });
+
+
+        /* ----------------------------------------------------
+           2. Canvas Fireworks & Physics Simulation System
+           ---------------------------------------------------- */
+        const canvas = document.getElementById('fireworksCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+
+        function resizeCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        let rockets = [];
+        let particles = [];
+        let textParticles = [];
+
+        const colors = [
+            '#ffd700', '#ff6b00', '#ff0055', '#00f0ff', '#7000ff', '#00ff66', '#ffffff'
+        ];
+
+        class Rocket {
+            constructor(startX, startY, targetX, targetY, type = 'normal') {
+                this.x = startX;
+                this.y = startY;
+                this.targetX = targetX;
+                this.targetY = targetY;
+                this.type = type;
+                this.speed = 8;
+                this.angle = Math.atan2(targetY - startY, targetX - startX);
+                this.velocity = {
+                    x: Math.cos(this.angle) * this.speed,
+                    y: Math.sin(this.angle) * this.speed
+                };
+                this.trail = [];
+                playLaunchSound();
+            }
+
+            update() {
+                this.trail.push({ x: this.x, y: this.y });
+                if (this.trail.length > 6) this.trail.shift();
+
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+
+                const dist = Math.hypot(this.targetX - this.x, this.targetY - this.y);
+                if (dist < 10 || this.y <= this.targetY) {
+                    this.explode();
+                    return false;
+                }
+                return true;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                if (this.trail.length > 0) {
+                    ctx.lineTo(this.trail[0].x, this.trail[0].y);
+                }
+                ctx.strokeStyle = '#ffd700';
+                ctx.lineWidth = 2.5;
+                ctx.stroke();
+            }
+
+            explode() {
+                playExplosionSound();
+                const particleCount = this.type === 'willow' ? 120 : (this.type === 'ring' ? 80 : 70);
+                const color = colors[Math.floor(Math.random() * colors.length)];
+
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle(this.x, this.y, color, this.type, i, particleCount));
+                }
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color, type, index, total) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.type = type;
+                this.alpha = 1;
+                this.friction = 0.96;
+                this.gravity = type === 'willow' ? 0.04 : 0.08;
+
+                if (type === 'ring') {
+                    const angle = (index / total) * Math.PI * 2;
+                    const speed = 5;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed;
+                } else {
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = Math.random() * (type === 'willow' ? 7 : 6) + 1;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed;
+                }
+                this.decay = Math.random() * 0.015 + 0.01;
+            }
+
+            update() {
+                this.vx *= this.friction;
+                this.vy *= this.friction;
+                this.vy += this.gravity;
+                this.x += this.vx;
+                this.y += this.vy;
+                this.alpha -= this.decay;
+                return this.alpha > 0;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        /* ----------------------------------------------------
+           3. User Interactions & Automated Launch Loop
+           ---------------------------------------------------- */
+        window.addEventListener('click', (e) => {
+            if (e.target.closest('.glass-card') || e.target.closest('#soundToggle') || e.target.closest('.diya-item')) return;
+            const startX = width / 2 + (Math.random() * 200 - 100);
+            rockets.push(new Rocket(startX, height, e.clientX, e.clientY));
+        });
+
+        function toggleDiya(element) {
+            element.classList.toggle('off');
+            initAudio();
+        }
+
+        function launchRandomRocket() {
+            const targetX = Math.random() * (width * 0.7) + (width * 0.15);
+            const targetY = Math.random() * (height * 0.4) + (height * 0.1);
+            const types = ['willow', 'ring', 'normal'];
+            const randomType = types[Math.floor(Math.random() * types.length)];
+            rockets.push(new Rocket(width / 2, height, targetX, targetY, randomType));
+        }
+
+        // Automatic continuous fireworks launcher
+        setInterval(() => {
+            launchRandomRocket();
+        }, 900);
+
+
+        /* ----------------------------------------------------
+           4. Main Render Loop
+           ---------------------------------------------------- */
+        function animate() {
+            ctx.fillStyle = 'rgba(7, 3, 13, 0.2)';
+            ctx.fillRect(0, 0, width, height);
+
+            rockets = rockets.filter(r => r.update());
+            rockets.forEach(r => r.draw());
+
+            particles = particles.filter(p => p.update());
+            particles.forEach(p => p.draw());
+
+            requestAnimationFrame(animate);
+        }
+
+        window.onload = function() {
+            animate();
+            // Launch a couple of immediate fireworks on load
+            setTimeout(launchRandomRocket, 300);
+            setTimeout(launchRandomRocket, 700);
+        };
+    </script>
+</body>
+</html>
