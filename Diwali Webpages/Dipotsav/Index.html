@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubh Deepavali | Pinterest Style Inspiration Board</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0612;
+            --bg-card: #160d26;
+            --primary-gold: #d4af37;
+            --primary-gold-bright: #ffd700;
+            --accent-orange: #ff6b35;
+            --accent-pink: #e63946;
+            --accent-purple: #7209b7;
+            --text-main: #f8f9fa;
+            --text-muted: #b0a8b9;
+            --glass-bg: rgba(22, 13, 38, 0.85);
+            --glass-border: rgba(212, 175, 55, 0.25);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Sparkle / Diyas Background Canvas */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Festive Font Headers */
+        .brand-font {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a1b3d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-gold);
+        }
+
+        /* Sticky Glass Navbar */
+        .navbar-custom {
+            background: var(--glass-bg);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1030;
+        }
+
+        .search-bar-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+        }
+        .search-bar-wrap input {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: #fff;
+            border-radius: 50px;
+            padding-left: 42px;
+            transition: all 0.3s ease;
+        }
+        .search-bar-wrap input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 18px rgba(212, 175, 55, 0.4);
+            border-color: var(--primary-gold);
+            color: #fff;
+        }
+        .search-bar-wrap .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-gold);
+        }
+
+        /* Hero Banner */
+        .diwali-hero {
+            background: linear-gradient(135deg, rgba(114, 9, 183, 0.3) 0%, rgba(10, 6, 18, 0.95) 70%),
+                        radial-gradient(circle at top right, rgba(255, 107, 53, 0.25), transparent);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6), inset 0 0 25px rgba(212, 175, 55, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diwali-hero::before {
+            content: '🪔';
+            position: absolute;
+            font-size: 9rem;
+            right: -20px;
+            bottom: -40px;
+            opacity: 0.12;
+            transform: rotate(-15deg);
+        }
+
+        /* Filter Pills */
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-muted);
+            border-radius: 30px;
+            padding: 8px 22px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+        }
+        .filter-btn:hover {
+            color: #fff;
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+        .filter-btn.active {
+            background: linear-gradient(45deg, var(--accent-orange), var(--primary-gold));
+            color: #0a0612;
+            font-weight: 700;
+            border-color: transparent;
+            box-shadow: 0 4px 18px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Pinterest-style Masonry Layout (CSS Columns) */
+        .pin-masonry {
+            column-count: 4;
+            column-gap: 1.25rem;
+            width: 100%;
+        }
+
+        @media (max-width: 1400px) { .pin-masonry { column-count: 4; } }
+        @media (max-width: 1100px) { .pin-masonry { column-count: 3; } }
+        @media (max-width: 768px)  { .pin-masonry { column-count: 2; column-gap: 0.85rem; } }
+        @media (max-width: 480px)  { .pin-masonry { column-count: 1; } }
+
+        /* Pin Card Styling */
+        .pin-card {
+            break-inside: avoid;
+            margin-bottom: 1.25rem;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            position: relative;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pin-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.3);
+            border-color: var(--primary-gold);
+        }
+
+        .pin-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            background: #110820;
+            min-height: 200px;
+        }
+
+        .pin-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .pin-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Overlay Actions on Hover */
+        .pin-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10, 6, 18, 0.3) 0%, rgba(10, 6, 18, 0.85) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+            z-index: 2;
+        }
+
+        .pin-card:hover .pin-overlay {
+            opacity: 1;
+        }
+
+        .save-btn {
+            background: linear-gradient(45deg, var(--accent-pink), #ff477e);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 18px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+            align-self: flex-end;
+            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+        }
+        .save-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #ff477e, var(--accent-pink));
+        }
+
+        .action-icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            color: white;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            margin-left: 6px;
+        }
+        .action-icon-btn:hover {
+            background: white;
+            color: var(--bg-dark);
+            transform: scale(1.1);
+        }
+        .action-icon-btn.liked {
+            color: #ff477e;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .pin-info {
+            padding: 1rem;
+        }
+        .pin-tag-badge {
+            font-size: 0.72rem;
+            color: var(--primary-gold);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+        .pin-title {
+            font-weight: 700;
+            font-size: 0.98rem;
+            margin-bottom: 0.4rem;
+            color: #fff;
+            line-height: 1.35;
+        }
+        .pin-author {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .author-avatar {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--primary-gold);
+        }
+
+        /* Preset Thumbnails in Form */
+        .preset-thumb {
+            width: 65px;
+            height: 65px;
+            border-radius: 12px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            opacity: 0.75;
+        }
+        .preset-thumb:hover, .preset-thumb.active {
+            border-color: var(--primary-gold);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Glow effect toggle animation */
+        body.festive-glow-mode {
+            --bg-dark: #120321;
+        }
+        body.festive-glow-mode .diwali-hero {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Lightbox Modal Custom Style */
+        .modal-content-custom {
+            background-color: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+        }
+
+        .modal-img-container {
+            background-color: #06020a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 420px;
+            max-height: 80vh;
+        }
+        .modal-img-container img {
+            max-height: 80vh;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        /* Comment Section Style */
+        .comment-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 8px 0;
+        }
+
+        /* Create Pin FAB */
+        .fab-create {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--accent-orange), var(--primary-gold));
+            color: #0a0612;
+            border: none;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .fab-create:hover {
+            transform: scale(1.12) rotate(90deg);
+        }
+
+        /* Toast notification */
+        .custom-toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: linear-gradient(45deg, var(--primary-gold), var(--primary-gold-bright));
+            color: #0a0612;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+        .custom-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Sparkle Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-custom px-3 px-lg-4">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2 text-white me-4" href="#">
+                <span class="fs-3 text-warning">🪔</span>
+                <span class="brand-font fw-bold fs-4 text-warning">Deepotsav</span>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="search-bar-wrap mx-auto my-2 my-lg-0">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" class="form-control" placeholder="Search Rangoli, Diyas, Sweets, Outfits...">
+            </div>
+
+            <!-- Header Actions -->
+            <div class="d-flex align-items-center gap-3 ms-auto mt-2 mt-lg-0">
+                <button class="btn btn-outline-warning rounded-pill btn-sm d-none d-md-flex align-items-center gap-2" id="glowToggle">
+                    <i class="fa-solid fa-lightbulb"></i> Ambient Glow
+                </button>
+                <button class="btn btn-warning rounded-pill fw-bold text-dark px-3 btn-sm" data-bs-toggle="modal" data-bs-target="#createPinModal">
+                    <i class="fa-solid fa-plus me-1"></i> Create Pin
+                </button>
+                <div class="dropdown">
+                    <a href="#" class="d-block link-light text-decoration-none" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" width="38" height="38" class="rounded-circle border border-warning">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser">
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-bookmark me-2 text-warning"></i> Saved Boards</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear me-2"></i> Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container-fluid px-3 px-lg-5 py-3">
+
+        <!-- Hero Banner -->
+        <div class="diwali-hero text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-2">
+                        <i class="fa-solid fa-sparkles me-1"></i> Shubh Deepavali Inspiration
+                    </span>
+                    <h1 class="brand-font display-5 fw-bold text-white mb-2">Curated Festive Aesthetic & Traditional Ideas</h1>
+                    <p class="text-white-50 mb-0">Discover authentic peacock rangoli patterns, hand-painted terracotta clay diyas, traditional royal mithai assortments, and ethnic couture for your celebrations.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="d-flex align-items-center gap-2 overflow-auto pb-3 mb-3 no-scrollbar" id="categoryFilters">
+            <button class="filter-btn active" data-category="all">✨ All Ideas</button>
+            <button class="filter-btn" data-category="rangoli">🎨 Rangoli Designs</button>
+            <button class="filter-btn" data-category="diyas">🪔 Diyas & Lighting</button>
+            <button class="filter-btn" data-category="sweets">🍬 Authentic Mithai</button>
+            <button class="filter-btn" data-category="outfits">👗 Festive Outfits</button>
+            <button class="filter-btn" data-category="greetings">✨ Eco Tips & Cards</button>
+        </div>
+
+        <!-- Pinterest Masonry Card Grid -->
+        <div class="pin-masonry" id="pinGrid">
+            <!-- Dynamic Cards Populated via JS -->
+        </div>
+
+        <!-- No Results Fallback -->
+        <div id="noResults" class="text-center py-5 d-none">
+            <div class="fs-1 text-warning mb-2">🪔</div>
+            <h4 class="text-white fw-bold">No Diwali ideas found</h4>
+            <p class="text-muted">Try searching for keywords like "Rangoli", "Motichoor", "Urli", or "Silk".</p>
+        </div>
+    </main>
+
+    <!-- Floating Action Button for Adding Pin -->
+    <button class="fab-create" data-bs-toggle="modal" data-bs-target="#createPinModal" title="Create New Pin">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <!-- Pin Lightbox Modal -->
+    <div class="modal fade" id="pinModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content modal-content-custom">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <!-- Modal Image -->
+                        <div class="col-lg-7 modal-img-container">
+                            <img id="modalPinImg" src="" alt="Diwali Pin detail image">
+                        </div>
+                        <!-- Modal Content Details -->
+                        <div class="col-lg-5 p-4 d-flex flex-column justify-content-between" style="background: var(--bg-card);">
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="badge bg-outline-warning text-warning border border-warning rounded-pill px-3 py-1" id="modalCategory">Category</span>
+                                    <div class="d-flex gap-2">
+                                        <button class="action-icon-btn" id="modalLikeBtn"><i class="fa-regular fa-heart"></i></button>
+                                        <button class="action-icon-btn" onclick="shareCurrentPin()"><i class="fa-solid fa-share-nodes"></i></button>
+                                        <button class="btn btn-danger rounded-pill fw-bold ms-2 px-3" onclick="triggerToast('Pin saved to board!')">Save</button>
+                                    </div>
+                                </div>
+
+                                <h2 class="h3 fw-bold text-white mb-2" id="modalTitle">Pin Title</h2>
+                                <p class="text-white-50 fs-6 mb-3" id="modalDesc">Detailed description...</p>
+                                
+                                <div id="modalTags" class="d-flex flex-wrap gap-2 mb-4">
+                                    <!-- Dynamic Tag Pills -->
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom border-secondary">
+                                    <img src="" id="modalAuthorImg" class="rounded-circle" width="45" height="45" alt="Author">
+                                    <div>
+                                        <h6 class="mb-0 text-white fw-bold" id="modalAuthorName">Author Name</h6>
+                                        <small class="text-muted">Festive Creator</small>
+                                    </div>
+                                </div>
+
+                                <!-- Comments Section -->
+                                <h6 class="fw-bold mb-3 text-warning"><i class="fa-regular fa-comments me-2"></i>Community Comments</h6>
+                                <div id="commentsList" class="overflow-auto pe-2" style="max-height: 160px;">
+                                    <!-- Dynamic Comments -->
+                                </div>
+                            </div>
+
+                            <!-- Comment Input -->
+                            <div class="mt-3 pt-3 border-top border-secondary">
+                                <div class="input-group">
+                                    <input type="text" id="commentInput" class="form-control bg-dark text-white border-secondary rounded-start-pill" placeholder="Share your festive thoughts...">
+                                    <button class="btn btn-warning rounded-end-pill px-3 fw-bold" onclick="addComment()"><i class="fa-solid fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create New Pin Modal (Enhanced & Professional) -->
+    <div class="modal fade" id="createPinModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content modal-content-custom p-3">
+                <div class="modal-header border-bottom border-secondary pb-3">
+                    <div>
+                        <h5 class="modal-header-title text-warning brand-font fw-bold mb-0">Create New Diwali Inspiration Pin</h5>
+                        <small class="text-white-50">Publish your festive Rangoli, Diya setup, Mithai recipe, or Outfit idea</small>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-3">
+                    <form id="createPinForm">
+                        <div class="row g-3">
+                            <div class="col-md-7">
+                                <!-- Title -->
+                                <div class="mb-3">
+                                    <label class="form-label text-white fw-semibold">1. Pin Title</label>
+                                    <input type="text" class="form-control bg-dark text-white border-secondary" id="pinInputTitle" placeholder="e.g. Royal Marigold Flower Urli Setup" required>
+                                    <small class="text-muted">Use a descriptive title highlighting the theme.</small>
+                                </div>
+
+                                <!-- Category Selection -->
+                                <div class="mb-3">
+                                    <label class="form-label text-white fw-semibold">2. Category</label>
+                                    <select class="form-select bg-dark text-white border-secondary" id="pinInputCategory" required>
+                                        <option value="rangoli">🎨 Rangoli Designs</option>
+                                        <option value="diyas" selected>🪔 Diyas & Lighting</option>
+                                        <option value="sweets">🍬 Authentic Mithai & Sweets</option>
+                                        <option value="outfits">👗 Festive Ethnic Outfits</option>
+                                        <option value="greetings">✨ Eco Tips & Greetings</option>
+                                    </select>
+                                </div>
+
+                                <!-- Description -->
+                                <div class="mb-3">
+                                    <label class="form-label text-white fw-semibold">3. Details & Setup Instructions</label>
+                                    <textarea class="form-control bg-dark text-white border-secondary" id="pinInputDesc" rows="3" placeholder="Describe materials used, color combinations, or preparation steps..." required></textarea>
+                                </div>
+
+                                <!-- Tags -->
+                                <div class="mb-2">
+                                    <label class="form-label text-white fw-semibold">4. Tags (Comma separated)</label>
+                                    <input type="text" class="form-control bg-dark text-white border-secondary" id="pinInputTags" placeholder="e.g. #DiwaliDecor, #FlowerRangoli, #EcoFriendly">
+                                </div>
+                            </div>
+
+                            <!-- Image Selection & Quick Presets -->
+                            <div class="col-md-5 border-start border-secondary ps-md-4">
+                                <label class="form-label text-white fw-semibold">5. Image URL or Select Preset</label>
+                                <input type="url" class="form-control bg-dark text-white border-secondary mb-2" id="pinInputImg" placeholder="https://images.unsplash.com/..." required>
+                                
+                                <label class="form-label text-muted small d-block mb-2">Click preset image to quick fill:</label>
+                                <div class="d-flex flex-wrap gap-2 mb-3" id="presetThumbnails">
+                                    <img src="https://images.unsplash.com/photo-1605807646983-377bc5a76493?w=400&auto=format&fit=crop&q=80" class="preset-thumb active" data-url="https://images.unsplash.com/photo-1605807646983-377bc5a76493?w=800&auto=format&fit=crop&q=80" title="Peacock Rangoli" alt="Rangoli">
+                                    <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=400&auto=format&fit=crop&q=80" class="preset-thumb" data-url="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=800&auto=format&fit=crop&q=80" title="Silver Kaju Katli" alt="Mithai">
+                                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&auto=format&fit=crop&q=80" class="preset-thumb" data-url="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=800&auto=format&fit=crop&q=80" title="Silk Kurta Outfit" alt="Outfit">
+                                </div>
+
+                                <div class="p-3 bg-dark rounded-3 border border-secondary text-center mb-3">
+                                    <small class="text-white-50 d-block mb-1">Image Preview</small>
+                                    <img id="formPreviewImg" src="https://images.unsplash.com/photo-1605807646983-377bc5a76493?w=800&auto=format&fit=crop&q=80" class="img-fluid rounded" style="max-height: 120px; object-fit: cover;" alt="Preview">
+                                </div>
+
+                                <button type="button" class="btn btn-outline-warning btn-sm w-100 mb-2" onclick="autoFillStarterSample()">
+                                    <i class="fa-solid fa-magic me-1"></i> Auto-Fill Starter Sample
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-3 border-top border-secondary text-end">
+                            <button type="button" class="btn btn-outline-secondary me-2 rounded-pill px-4" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-warning rounded-pill fw-bold px-4 text-dark">Publish Pin 🪔</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="custom-toast">
+        <i class="fa-solid fa-circle-check me-2"></i> <span id="toastMsg">Action completed!</span>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /* Curated Authentic Diwali Pins Data */
+        const initialPins = [
+            {
+                id: 1,
+                title: "Vibrant Peacock Floral Rangoli Pattern",
+                category: "rangoli",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4b35OWeBminTq6CTeYq2fmZ_ck_bg-Wjnh6NhUXEaBy2W9M6AfdGFrM&s=10",
+                author: "Aarav Sharma",
+                authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
+                likes: 542,
+                tags: ["#PeacockRangoli", "#FloralRangoli", "#EcoColors"],
+                description: "Hand-crafted peacock mandana rangoli using natural organic color powders, yellow marigold petals, and a glowing central clay oil diya for the main courtyard entrance.",
+                comments: ["Stunning color palette!", "The blue and yellow contrast is breathtaking."]
+            },
+            {
+                id: 2,
+                title: "Traditional Terracotta Oil Lamp Setup",
+                category: "diyas",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2-ZNMVyi6mI6gCU8ptUvD9fOyF64LDAeVi1Qbxe1gzmv_JUadurTYAXg&s=10",
+                author: "Priya Patel",
+                authorAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+                likes: 918,
+                tags: ["#HandmadeDiyas", "#DiwaliDecor", "#WarmGlow"],
+                description: "Rustic clay diyas lit with pure sesame oil and cotton wicks, surrounding fresh orange marigold garlands on dark wooden floor.",
+                comments: ["So serene and spiritual ambiance!", "Pure traditional vibes."]
+            },
+            {
+                id: 3,
+                title: "Artisanal Kaju Katli & Pistachio Mithai",
+                category: "sweets",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu05Fi7UOqk0NYJDCmJDnvAznkXnBtE-dnSyYbZYPpHOYks2Cs_J8DXI8&s=10",
+                author: "Chef Rohan Masterchef",
+                authorAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+                likes: 1420,
+                tags: ["#KajuKatli", "#DiwaliSweets", "#SilverFoilMithai"],
+                description: "Authentic cashew fudge (Kaju Katli) coated with edible silver leaf (Vark), served along with saffron-infused cardamom laddoos for festive gifting.",
+                comments: ["Looks so smooth and delicious!", "Can you share the sugar syrup consistency?"]
+            },
+            {
+                id: 4,
+                title: "Royal Silk Kurta & Zardozi Ethnic Outfit",
+                category: "outfits",
+                image: "https://www.mahavir-nx.com/cdn/shop/files/royal-beige-zardosi-work-ethnic-kurta-set-wedding-outfit_1200x.jpg?v=1773647170",
+                author: "Ananya Roy",
+                authorAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+                likes: 820,
+                tags: ["#FestiveOutfits", "#ZardoziSilk", "#PujaLook"],
+                description: "Deep burgundy raw silk ethnic ensemble styled with gold zardozi hand embroidery and statement temple jewelry for Lakshmi Puja evening.",
+                comments: ["Regal look!", "Love the rich color tone."]
+            },
+            {
+                id: 5,
+                title: "Floating Brass Urli with Marigold Flowers",
+                category: "diyas",
+                image: "https://i.pinimg.com/236x/18/27/5a/18275ad0f32efb33925896ea3a2f65aa.jpg?nii=t",
+                author: "Neha Kapoor",
+                authorAvatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80",
+                likes: 1105,
+                tags: ["#BrassUrli", "#FloatingDiyas", "#EntranceDecor"],
+                description: "Traditional hand-hammered brass vessel (Urli) filled with fresh water, orange marigolds, floating wax tea lights, and aromatic rose petals.",
+                comments: ["Recreating this setup at my entrance!", "Floating urlis bring instant warmth."]
+            },
+            {
+                id: 6,
+                title: "Eco Sparklers & Family Light Celebrations",
+                category: "greetings",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89gIrt5xl4jb7VdDBMIV1KWLvOAHvBSwy2eAscAGbsA&s",
+                author: "Kabir Verma",
+                authorAvatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&auto=format&fit=crop&q=80",
+                likes: 640,
+                tags: ["#GreenDiwali", "#EcoCelebration", "#LightHappiness"],
+                description: "Sustainable celebration idea: Light smokeless green sparklers under starry night skies while sharing warm homemade sweets with loved ones.",
+                comments: ["Happy Eco Diwali!", "Beautiful capture of festive joy."]
+            },
+            {
+                id: 7,
+                title: "Saffron Motichoor Ladoo & Dry Fruit Box",
+                category: "sweets",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNYLur23e6x3jBcxOVCl4UMDkNqcAgByA4lZscnGbLng&s",
+                author: "Mithai Connoisseur",
+                authorAvatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80",
+                likes: 1670,
+                tags: ["#MotichoorLadoo", "#GheeMithai", "#DiwaliGifting"],
+                description: "Pure desi ghee Motichoor Laddoos made with tiny gram flour pearls, seasoned with crushed cardamom, saffron, and silvered pistachios.",
+                comments: ["Absolute festive favorite!", "The golden color is perfection."]
+            },
+            {
+                id: 8,
+                title: "Geometric Flower Petal Mandala Rangoli",
+                category: "rangoli",
+                image: "https://m.media-amazon.com/images/I/71eDIJGmgtL._AC_UF894,1000_QL80_.jpg",
+                author: "Sneha Reddi",
+                authorAvatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80",
+                likes: 495,
+                tags: ["#MandalaRangoli", "#FreshPetals", "#QuickRangoli"],
+                description: "Easy 20-minute floral mandala designed using fresh yellow chrysanthemums, red rose petals, and a central brass oil lamp.",
+                comments: ["So simple yet elegant!", "Great step-by-step guide."]
+            },
+            {
+                id: 9,
+                title: "Golden Banarasi Silk Saree Styling",
+                category: "outfits",
+                image: "https://www.meenabazaar.shop/cdn/shop/products/MBS1003TUSSAR-10.jpg?v=1650831039",
+                author: "Kavya Sharma",
+                authorAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+                likes: 890,
+                tags: ["#BanarasiSilk", "#FestiveSaree", "#HeritageJewelry"],
+                description: "Handwoven golden Banarasi silk saree styled with classic Kundan necklace and jasmine floral hair gajra for festive evenings.",
+                comments: ["Timeless elegance!", "Saree drape is perfect."]
+            }
+        ];
+
+        let currentPins = [...initialPins];
+        let activePinId = null;
+
+        // Render Masonry Grid Cards
+        function renderPins(pinsToRender) {
+            const grid = document.getElementById('pinGrid');
+            const noResults = document.getElementById('noResults');
+
+            if (pinsToRender.length === 0) {
+                grid.innerHTML = '';
+                noResults.classList.remove('d-none');
+                return;
+            }
+
+            noResults.classList.add('d-none');
+            grid.innerHTML = pinsToRender.map(pin => `
+                <div class="pin-card" onclick="openPinModal(${pin.id})">
+                    <div class="pin-image-wrapper">
+                        <img src="${pin.image}" alt="${pin.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1605807646983-377bc5a76493?w=800&auto=format&fit=crop&q=80'">
+                        <div class="pin-overlay">
+                            <button class="save-btn" onclick="event.stopPropagation(); triggerToast('Pin Saved to Board!')">Save</button>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <button class="action-icon-btn ${pin.liked ? 'liked' : ''}" onclick="event.stopPropagation(); toggleLike(${pin.id}, this)">
+                                    <i class="${pin.liked ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
+                                </button>
+                                <button class="action-icon-btn" onclick="event.stopPropagation(); sharePin('${pin.title}')">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pin-info">
+                        <span class="pin-tag-badge">${pin.category}</span>
+                        <div class="pin-title">${pin.title}</div>
+                        <div class="pin-author">
+                            <img src="${pin.authorAvatar}" class="author-avatar" alt="${pin.author}">
+                            <span>${pin.author}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Filter Category Tabs
+        document.getElementById('categoryFilters').addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                const category = e.target.getAttribute('data-category');
+                filterCategory(category);
+            }
+        });
+
+        function filterCategory(category) {
+            if (category === 'all') {
+                currentPins = [...initialPins];
+            } else {
+                currentPins = initialPins.filter(pin => pin.category === category);
+            }
+            renderPins(currentPins);
+        }
+
+        // Search Input Instant Filter
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const filtered = initialPins.filter(pin => 
+                pin.title.toLowerCase().includes(query) || 
+                pin.description.toLowerCase().includes(query) ||
+                pin.category.toLowerCase().includes(query)
+            );
+            renderPins(filtered);
+        });
+
+        // Open Lightbox Pin Modal
+        function openPinModal(pinId) {
+            const pin = initialPins.find(p => p.id === pinId);
+            if (!pin) return;
+
+            activePinId = pinId;
+            document.getElementById('modalPinImg').src = pin.image;
+            document.getElementById('modalTitle').textContent = pin.title;
+            document.getElementById('modalDesc').textContent = pin.description;
+            document.getElementById('modalCategory').textContent = pin.category.toUpperCase();
+            document.getElementById('modalAuthorName').textContent = pin.author;
+            document.getElementById('modalAuthorImg').src = pin.authorAvatar;
+
+            // Render Tags
+            const modalTags = document.getElementById('modalTags');
+            if (pin.tags && pin.tags.length > 0) {
+                modalTags.innerHTML = pin.tags.map(t => `<span class="badge bg-dark border border-secondary text-warning">${t}</span>`).join('');
+            } else {
+                modalTags.innerHTML = '<span class="badge bg-dark border border-secondary text-warning">#Diwali2026</span>';
+            }
+
+            const likeBtn = document.getElementById('modalLikeBtn');
+            likeBtn.className = `action-icon-btn ${pin.liked ? 'liked' : ''}`;
+            likeBtn.innerHTML = `<i class="${pin.liked ? 'fa-solid' : 'fa-regular'} fa-heart"></i>`;
+            likeBtn.onclick = () => toggleLike(pin.id, likeBtn);
+
+            renderComments(pin.comments);
+
+            const modal = new bootstrap.Modal(document.getElementById('pinModal'));
+            modal.show();
+        }
+
+        // Comments Rendering
+        function renderComments(comments) {
+            const list = document.getElementById('commentsList');
+            if (!comments || comments.length === 0) {
+                list.innerHTML = '<p class="text-muted small">No comments yet. Share your festive wishes!</p>';
+                return;
+            }
+            list.innerHTML = comments.map(c => `
+                <div class="comment-item">
+                    <span class="text-warning small fw-bold">Guest: </span>
+                    <span class="text-white-50 small">${c}</span>
+                </div>
+            `).join('');
+        }
+
+        function addComment() {
+            const input = document.getElementById('commentInput');
+            const val = input.value.trim();
+            if (!val || !activePinId) return;
+
+            const pin = initialPins.find(p => p.id === activePinId);
+            if (pin) {
+                pin.comments.push(val);
+                renderComments(pin.comments);
+                input.value = '';
+                triggerToast('Comment published!');
+            }
+        }
+
+        // Toggle Like State
+        function toggleLike(pinId, btnElement) {
+            const pin = initialPins.find(p => p.id === pinId);
+            if (pin) {
+                pin.liked = !pin.liked;
+                if (btnElement) {
+                    btnElement.classList.toggle('liked', pin.liked);
+                    const icon = btnElement.querySelector('i');
+                    if (icon) {
+                        icon.className = `${pin.liked ? 'fa-solid' : 'fa-regular'} fa-heart`;
+                    }
+                }
+                triggerToast(pin.liked ? 'Added to liked board' : 'Removed from liked board');
+            }
+        }
+
+        // Preset Thumbnails Selector in Create Form
+        document.getElementById('presetThumbnails').addEventListener('click', (e) => {
+            if (e.target.classList.contains('preset-thumb')) {
+                document.querySelectorAll('.preset-thumb').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+                const url = e.target.getAttribute('data-url');
+                document.getElementById('pinInputImg').value = url;
+                document.getElementById('formPreviewImg').src = url;
+            }
+        });
+
+        document.getElementById('pinInputImg').addEventListener('input', (e) => {
+            document.getElementById('formPreviewImg').src = e.target.value;
+        });
+
+        function autoFillStarterSample() {
+            document.getElementById('pinInputTitle').value = "Handcrafted Brass Diya Entrance Urli";
+            document.getElementById('pinInputCategory').value = "diyas";
+            document.getElementById('pinInputDesc').value = "Beautiful floating marigold flowers paired with terracotta diyas and brass lamps to illuminate courtyard entrances.";
+            document.getElementById('pinInputTags').value = "#DiwaliLighting, #UrliDecor, #WarmGlow";
+            const sampleUrl = "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?w=800&auto=format&fit=crop&q=80";
+            document.getElementById('pinInputImg').value = sampleUrl;
+            document.getElementById('formPreviewImg').src = sampleUrl;
+            triggerToast('Form auto-filled with starter sample!');
+        }
+
+        // Toast Trigger
+        function triggerToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function sharePin(title) {
+            document.execCommand('copy');
+            triggerToast(`Link copied for "${title}"!`);
+        }
+
+        function shareCurrentPin() {
+            const title = document.getElementById('modalTitle').textContent;
+            sharePin(title);
+        }
+
+        // Add New Custom Pin Form Logic
+        document.getElementById('createPinForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const title = document.getElementById('pinInputTitle').value;
+            const category = document.getElementById('pinInputCategory').value;
+            const image = document.getElementById('pinInputImg').value;
+            const description = document.getElementById('pinInputDesc').value;
+            const rawTags = document.getElementById('pinInputTags').value;
+            
+            const tags = rawTags ? rawTags.split(',').map(t => t.trim().startsWith('#') ? t.trim() : `#${t.trim()}`) : ["#Diwali2026"];
+
+            const newPin = {
+                id: Date.now(),
+                title,
+                category,
+                image,
+                author: "You",
+                authorAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+                likes: 1,
+                tags,
+                description,
+                comments: []
+            };
+
+            initialPins.unshift(newPin);
+            filterCategory('all');
+            
+            const modalEl = document.getElementById('createPinModal');
+            const modal = bootstrap.Modal.getInstance(modalEl);
+            modal.hide();
+            e.target.reset();
+            triggerToast('New Diwali Inspiration Pin Published! 🪔');
+        });
+
+        // Ambient Glow Mode Toggle
+        document.getElementById('glowToggle').addEventListener('click', () => {
+            document.body.classList.toggle('festive-glow-mode');
+            triggerToast('Ambient Festive Glow Toggled 🪔');
+        });
+
+        // Floating Diya Sparkles Particle Canvas
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = canvas.height + Math.random() * 100;
+                this.size = Math.random() * 3 + 1;
+                this.speedY = Math.random() * 1.5 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.7 + 0.3;
+                this.hue = Math.random() > 0.5 ? 45 : 25;
+            }
+            update() {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                if (this.y < -10) this.reset();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `hsla(${this.hue}, 100%, 60%, ${this.opacity})`;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = '#ffd700';
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.floor(window.innerWidth / 25);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
+
+        // Initialize Page
+        window.onload = function() {
+            resizeCanvas();
+            initParticles();
+            animateParticles();
+            renderPins(initialPins);
+        };
+    </script>
+</body>
+</html>
